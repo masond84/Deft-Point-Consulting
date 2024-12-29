@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Clash Display';
+    src:    url('./assets/fonts/ClashDisplay/ClashDisplay-Regular.otf') format('opentype'),
+            url('./assets/fonts/ClashDisplay/ClashDisplay-Bold.otf') format('opentype'),
+            url('./assets/fonts/ClashDisplay/ClashDisplay-Light.otf') format('opentype'),
+            url('./assets/fonts/ClashDisplay/ClashDisplay-Medium.otf') format('opentype'),
+            url('./assets/fonts/ClashDisplay/ClashDisplay-Extralight.otf') format('opentype'),
+            url('./assets/fonts/ClashDisplay/ClashDisplay-Semibold.otf') format('opentype');
+    font-weight: 300 700;
+    font-display: swap;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.font-clash {
+    font-family: 'Clash Display', sans-serif;
+}
+
+.glassmorphic-card {
+    background: #57575740;
+    box-shadow: 0 8px 32px 0 rgba(68, 92, 102, 0.452);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.card-gradient-border {
+    background: linear-gradient(180deg, rgba(87, 87, 87, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid transparent;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(68, 92, 102, 0.1);
+}
