@@ -7,7 +7,7 @@ import {
     Button,
     Link
 } from '@nextui-org/react';
-
+import { motion } from "motion/react";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import SparkleIcon from '../../assets/images/SparkleIcon.svg';
 import LightBulbIcon from '../../assets/images/LightBulbIcon.svg';
@@ -68,7 +68,7 @@ const ReasonsToChoose: React.FC = () => {
       <div className="text-center mb-12 max-w-3xl mx-auto">
         <h2 className="text-4xl font-bold mb-4 font-sora leading-tight">
           Reasons to Choose Deft Point for <br />
-          <span className="text-[#666666]">Your Digital Journey</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-l from-[#808080] to-[#b4b4b4]">Your Digital Journey</span>
         </h2>
         <p className="text-white text-md font-light font-sora leading-loose">
           Partnering with Deft Point offers a multitude of advantages. Experience increased brand visibility, 
@@ -80,49 +80,54 @@ const ReasonsToChoose: React.FC = () => {
       {/* Cards Section */}
       <div className='grid grid-cols-1 md:grid-cols-3 gap-8 px-4 max-w-5xl mx-auto items-stretch'>
         {cardContent.map((card, index) => (
-            <Card
-                key={index}
-                isHoverable
-                className="bg-glass-bg shadow-glass backdrop-blur-glass border  border-glass-border p-6 rounded-lg text-center flex flex-col items-center space-y-4 transition h-full w-72 max-w-sm"
-            >
-              {/* Overlay Image */}
-              <div
-                className="absolute inset-0"
-                style={{
-                  backgroundImage: `url('/src/assets/AbstractDesign.svg')`,
-                  backgroundSize: 'cover',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center',
-                  opacity: 0.3, // Adjust opacity for better visibility of the backdrop
-                }}
-              ></div>
+          <motion.div
+            key={index}
+            whileHover={{ rotateY: 10, rotateX: -5 }}
+            transition={{ type: "spring", stiffness: 300, damping: 8 }}
+          >
+          <Card
+            isHoverable
+            className="bg-glass-bg shadow-glass backdrop-blur-glass border  border-glass-border p-6 rounded-lg text-center flex flex-col items-center space-y-4 transition h-full w-72 max-w-sm"
+          >
+          {/* Overlay Image */}
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url('/src/assets/AbstractDesign.svg')`,
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+              opacity: 0.3, // Adjust opacity for better visibility of the backdrop
+            }}
+          ></div>
 
-              {/* Card Header */}
-              <CardHeader className="flex flex-col items-center pb-2">
-                {card.icon}
-              </CardHeader>
+          {/* Card Header */}
+          <CardHeader className="flex flex-col items-center pb-2">
+            {card.icon}
+          </CardHeader>
 
-              {/* Card Content */}
-              <CardBody className='flex flex-col items-center text-center flex-grow mb-4'>
-                <h3 className="text-xl font-medium mb-4 font-sora">{card.title}</h3>
-                <p className="text-gray-400 text-sm font-clash leading-loose">{card.description}</p>
-              </CardBody>
+          {/* Card Content */}
+          <CardBody className='flex flex-col items-center text-center flex-grow mb-4'>
+            <h3 className="text-xl font-medium mb-4 font-sora">{card.title}</h3>
+            <p className="text-gray-400 text-sm font-clash leading-loose">{card.description}</p>
+          </CardBody>
 
-              {/* Card Footer */}
-              <CardFooter className="flex justify-center pt-4">
-                  <div className='flex items-center bg-[#1A1A1A]/20 border border-[#1F1F1F] rounded-full px-5 py-2 space-x-2 hover:bg-[#1A1A1A]/40 transition'>
-                    <Link href={card.link} className='text-white text-sm font-medium font-sora pr-4'>
-                      Learn More
-                    </Link>
-                    <Button className="w-12 h-2 p-4 bg-black rounded-full flex items-center justify-center">
-                      <ArrowRightAltIcon />
-                    </Button>
-                  </div>
-              </CardFooter>
-            </Card>
-            ))}
-        </div>
-    </section>
+          {/* Card Footer */}
+          <CardFooter className="flex justify-center pt-4">
+              <div className='flex items-center bg-[#1A1A1A]/20 border border-[#1F1F1F] rounded-full px-5 py-2 space-x-2 hover:bg-[#1A1A1A]/40 transition'>
+                <Link href={card.link} className='text-white text-sm font-medium font-sora pr-4'>
+                  Learn More
+                </Link>
+                <Button className="w-12 h-2 p-4 bg-black rounded-full flex items-center justify-center">
+                  <ArrowRightAltIcon />
+                </Button>
+              </div>
+          </CardFooter>
+        </Card>
+        </motion.div>
+      ))}
+    </div>
+  </section>
   );
 };
 

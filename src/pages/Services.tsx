@@ -1,16 +1,17 @@
 import React from 'react';
 
+import Hero from '../components/services/Hero';
+import OurServices from '../components/services/OurServices';
+import CallToAction from '../components/layout/CallToAction';
+import ServiceCategories from '../components/services/ServiceCategories';
+
 const Services: React.FC = () => {
     return (
         <div>
-            <h1>Our Services</h1>
-            <p>Welcome to our services page. Here are some of the services we offer:</p>
-            <ul>
-                <li>Web Development</li>
-                <li>Graphic Design</li>
-                <li>SEO Optimization</li>
-                <li>Content Creation</li>
-            </ul>
+            <Hero />
+            <OurServices />
+            <ServiceCategories />
+            <CallToAction />
         </div>
     );
 };
