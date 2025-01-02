@@ -14,23 +14,33 @@ export default {
       },
       colors: {
         'glass-bg': 'rgba(87, 87, 87, 0.15)', // Updated background color
+        'glass-bg-2': 'rgba(26, 26, 26, 0.75)', // Updated background color
         'gradient-start': 'rgba(87, 87, 87, 0.25)',
         'gradient-end': 'rgba(255, 255, 255, 0)',
       },
       boxShadow: {
         'glass': '0 8px 32px 0 rgba(68, 92, 102, 0.452)', // Updated box-shadow
         'custom-card': '0 8px 32px 0 rgba(68, 92, 102, 0.452)', // Subtle shadow for depth
+        'glassmorphism': '0 8px 32px 0 rgba(31, 38, 135, 0.37)', // New glassmorphism shadow
       },
       backdropBlur: {
         'glass': '3px', // Backdrop blur remains the same
         'custom': '3px',
+        'glassmorphism': '1px', // New glassmorphism blur
+      },
+      borderRadius: {
+        'glass': '10px', // Add custom border radius for glassmorphism
       },
       borderColor: {
         'glass-border': 'rgba(255, 255, 255, 0.05)', // Border color remains the same
+        'glassmorphism': 'rgba(255, 255, 255, 0.18)', // New border color for glassmorphism
       },
       gradientColorStops: {
         'custom-border-start': 'rgba(255, 255, 255, 0.18)',
         'custom-border-end': 'rgba(255, 255, 255, 0.05)',
+      },
+      backgroundColor: {
+        'glassmorphism': 'rgba(255, 255, 255, 0.1)', // New background for glassmorphism
       },
     },
   },

@@ -270,7 +270,10 @@ const ServiceCategories: React.FC = () => {
     ];
 
     return (
-        <section className="py-8 bg-gradient-to-b from-[#0f0f0f] to-[#1a1a1a] text-white">
+        <section 
+            id='categories'
+            className="py-8 bg-gradient-to-b from-[#0f0f0f] to-[#1a1a1a] text-white"
+        >
             {/* Header Section */}
             <div className="text-center mb-12 max-w-4xl mx-auto">
                 <h2 className="text-4xl font-bold mb-4 font-sora leading-tight">

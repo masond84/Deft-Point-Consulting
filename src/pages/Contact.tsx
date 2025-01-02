@@ -1,26 +1,40 @@
 import React from 'react';
+import Hero from '../components/contact/Hero';
+import ContactCTA from '../components/layout/ContactCTA';
+import ContactByEmail from "../components/contact/ContactByEmail";
+import ContactByPhone from "../components/contact/ContactByPhone";
+import InquiryForm from "../components/contact/InquiryForm";
+import AdditionalInfo from "../components/contact/AdditionalInfo";
+import SocialMedia from '../components/contact/SocialMedia'
+import CallToAction from '../components/layout/CallToAction';
 
 const Contact: React.FC = () => {
     return (
-        <div style={{ padding: '20px' }}>
-            <h1>Contact Me</h1>
-            <form>
-                <div style={{ marginBottom: '10px' }}>
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" id="name" name="name" required />
-                </div>
-                <div style={{ marginBottom: '10px' }}>
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" required />
-                </div>
-                <div style={{ marginBottom: '10px' }}>
-                    <label htmlFor="message">Message:</label>
-                    <textarea id="message" name="message" required />
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+      <div className="bg-[#121212] text-white">
+        <Hero />
+
+        {/* Contact CTA */}
+        <ContactCTA />
+
+        {/* Contact By Email */}
+        <ContactByEmail />
+  
+        {/* Contact By Phone */}
+        <ContactByPhone />
+  
+        {/* Inquiry Form */}
+        <InquiryForm />
+  
+        {/* Additional Information */}
+        <AdditionalInfo />
+  
+        {/* Social Media Section */}
+        <SocialMedia />
+
+        {/* Call to Action */}
+        <CallToAction />
+      </div>
     );
-};
+  };
 
 export default Contact;

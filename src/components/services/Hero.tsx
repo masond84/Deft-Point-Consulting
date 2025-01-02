@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-80"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#020202ea] opacity-80"></div>
 
       {/* Hero Content */}
       <div className="relative max-w-5xl text-left text-white px-6 space-y-6 mx-48 mt-14">

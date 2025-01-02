@@ -7,9 +7,13 @@ import {
   Link,
   Button
 } from '@nextui-org/react';
+import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from '@nextui-org/react';
+import { useNavigate } from 'react-router-dom'; // For routing logic
 import LogoIcon from '../../assets/LogoIcon';
 
 const Header: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <Navbar
       isBordered
@@ -53,20 +57,42 @@ const Header: React.FC = () => {
           </Link>        
         </NavbarItem>
         
+        {/* Dropdown for About */}
         <NavbarItem>
-          <Link
-            href="/about"
-            className="px-4 py-2 bg-[#1E1E1E] rounded-full text-white text-sm hover:bg-[#1E1E1E]/90 transition-colors font-clash">
-            About
-          </Link>
+          <Dropdown>
+            <DropdownTrigger>
+              <Button 
+                onPress={() => navigate('/about')} // Navigate to About on click
+                className="px-4 py-2 bg-[#1E1E1E] rounded-full text-white text-sm hover:bg-[#1E1E1E]/90 transition-colors font-clash">
+                Our Mission
+              </Button>
+            </DropdownTrigger>
+            <DropdownMenu
+              aria-label="About Dropdown"
+              variant="light"
+              className="bg-glass-bg-2 border border-glass-bg shadow-glass text-white rounded-lg w-full p-4 font-clash"
+              style={{
+                minWidth: '100%', // Set minimum width to match the trigger button
+              }}
+            >
+              <DropdownItem key="about" className='text-center'  onPress={() => navigate('/about')}>
+                  About
+              </DropdownItem>
+              <DropdownItem key="contact"  className='text-center' onPress={() => navigate('/contact')}>
+                <Link href="/contact" className="text-white">
+                  Contact
+                </Link>
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
         </NavbarItem>
         
         {/* Highlighted "Let's Meet" Button */}
         <NavbarItem>
           <Button
             as={Link}
-            href="/contact"
-            className="px-4 py-2 bg-[#0073e6]/80 text-black text-sm rounded-full hover:bg-[#0073e6]/70 transition-colors font-clash"
+            href="/get-quote"
+            className="px-4 py-2 bg-[#45E97D]/80 text-black text-sm rounded-full hover:bg-[#45E97D]/70 transition-colors font-clash"
           >
             Let's Meet
           </Button>

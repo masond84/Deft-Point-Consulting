@@ -10,7 +10,7 @@
             url('./assets/fonts/ClashDisplay/ClashDisplay-Medium.otf') format('opentype'),
             url('./assets/fonts/ClashDisplay/ClashDisplay-Extralight.otf') format('opentype'),
             url('./assets/fonts/ClashDisplay/ClashDisplay-Semibold.otf') format('opentype');
-    font-weight: 300 700;
+    font-weight: 100 200 300 400 500 600 700;
     font-display: swap;
 }
 
