@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
     <section 
       className="min-h-[75vh] bg-gradient-to-r from-[#0f0f0f] to-[#1a1a1a] relative flex items-center justify-start"
       style={{
-        backgroundImage: `url('/src/assets/Abstract-Design.png')`,
+        backgroundImage: `url('./src/assets/Abstract-Design.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

@@ -15,6 +15,7 @@ import PointerIcon from '../../assets/images/PointerIcon.svg';
 import PhoneIcon from '../../assets/images/PhoneIcon.svg';
 import BoltIcon from '../../assets/images/BoltIcon.svg';
 import AppsIcon from '../../assets/images/AppsIcon.svg';
+import abstractDesignSvg from '@/assets/AbstractDesign.svg';
 
 const ReasonsToChoose: React.FC = () => {
     // List of services offered or ways to help other companies
@@ -93,11 +94,11 @@ const ReasonsToChoose: React.FC = () => {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: `url('/src/assets/AbstractDesign.svg')`,
+              backgroundImage: `url(${abstractDesignSvg})`,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
-              opacity: 0.3, // Adjust opacity for better visibility of the backdrop
+              opacity: 0.6, // Adjust opacity for better visibility of the backdrop
             }}
           ></div>
 

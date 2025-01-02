@@ -8,6 +8,7 @@ import AbstractIcon1 from '../../assets/images/AbstractIcon1.svg';
 import AbstractIcon2 from '../../assets/images/AbstractIcon2.svg';
 import AbstractIcon3 from '../../assets/images/AbstractIcon3.svg';
 import AbstractIcon4 from '../../assets/images/AbstractIcon4.svg';
+import abstractDesignSvg from '@/assets/AbstractDesign.svg';
 
 const OurWork: React.FC = () => {
   const works = [
@@ -85,11 +86,11 @@ const OurWork: React.FC = () => {
                   <div
                       className="absolute inset-0"
                       style={{
-                      backgroundImage: `url('/src/assets/AbstractDesign.svg')`,
-                      backgroundSize: 'cover',
-                      backgroundRepeat: 'no-repeat',
-                      backgroundPosition: 'center',
-                      opacity: 1, // Adjust opacity for better visibility of the backdrop
+                        backgroundImage: `url(${abstractDesignSvg})`,
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: 'center',
+                        opacity: 1, // Adjust opacity for better visibility of the backdrop
                       }}
                   ></div>
 

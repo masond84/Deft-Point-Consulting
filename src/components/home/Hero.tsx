@@ -2,6 +2,8 @@ import React from 'react';
 import { useNavigate } from "react-router-dom";
 import { Button } from "@nextui-org/react";
 
+import abstractDesign from '@/assets/Abstract-Design.png';
+
 const Hero: React.FC = () => {
     const navigate = useNavigate(); // Hook to navigate to routes
 
@@ -13,7 +15,7 @@ const Hero: React.FC = () => {
         <section 
             className="h-screen bg-gradient-to-r from-[#0f0f0f] to-[#252525] relative flex items-center justify-start"
             style={{
-                backgroundImage: `url('/src/assets/Abstract-Design.png')`,
+                backgroundImage: `url(${abstractDesign})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',

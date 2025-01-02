@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { Card, CardHeader, CardBody, CardFooter, Button, Link } from "@nextui-org/react";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-
+import abstractDesignSvg from '@/assets/AbstractDesign.svg';
 import WebIcon from '../../assets/images/WebPIcon.svg';
 import MobileIcon from '../../assets/images/MobilePIcon.svg';
 import BoltIcon from '../../assets/images/BoltPIcon.svg';
@@ -72,11 +72,11 @@ const OurServices: React.FC = () => {
             <div
               className="absolute inset-0"
               style={{
-                backgroundImage: `url('/src/assets/AbstractDesign.svg')`,
+                backgroundImage: `url(${abstractDesignSvg})`,
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
-                opacity: 0.5, // Adjust opacity for better visibility of the backdrop
+                opacity: 0.8, // Adjust opacity for better visibility of the backdrop
               }}
             ></div>
 
