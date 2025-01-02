@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Card, CardHeader, CardBody } from '@nextui-org/react';
 import { Chip } from '@mui/material';
+import abstractDesign from '@/assets/AbstractDesign.svg';
 
 const ContactCTA: React.FC = () => {
   return (
@@ -29,7 +30,7 @@ const ContactCTA: React.FC = () => {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: `url('/src/assets/AbstractDesign.svg')`,
+              backgroundImage: `url(${abstractDesign})`,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',

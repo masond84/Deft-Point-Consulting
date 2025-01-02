@@ -6,6 +6,7 @@ import {
     CardBody,
     Button
 } from '@nextui-org/react';
+import abstractDesignSvg from '@/assets/AbstractDesign.svg';
 
 const CallToAction: React.FC = () => {
   return (
@@ -25,7 +26,7 @@ const CallToAction: React.FC = () => {
             <Card 
             className="shadow-lg rounded-2xl max-w-5xl w-full p-14"
             style={{
-                background: `linear-gradient(100deg, rgba(26, 26, 26, 0.5) 0%, rgba(15, 15, 15, 0.5) 20%), url('/src/assets/AbstractDesign.svg')`,
+                background: `linear-gradient(100deg, rgba(26, 26, 26, 0.5) 0%, rgba(15, 15, 15, 0.5) 20%), url(${abstractDesignSvg})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
@@ -37,11 +38,11 @@ const CallToAction: React.FC = () => {
                 <div
                     className="absolute inset-0"
                     style={{
-                    backgroundImage: `url('/src/assets/AbstractDesign.svg')`,
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center',
-                    opacity: 0.9, // Adjust opacity for better visibility of the backdrop
+                        backgroundImage: `url(${abstractDesignSvg})`,
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: 'center',
+                        opacity: 0.9, // Adjust opacity for better visibility of the backdrop
                     }}
                 ></div>
                 

@@ -1,19 +1,20 @@
 import React from 'react';
 import { Button } from "@nextui-org/react";
+import abstractDesign from '@/assets/Abstract-Design.png';
 
 const Hero: React.FC = () => {
   return (
     <section 
-      className="min-h-[75vh] bg-gradient-to-r from-[#0f0f0f] to-[#1a1a1a] relative flex items-center justify-start"
+      className="min-h-[75vh] bg-gradient-to-r from-[#0f0f0f] to-[#272727] relative flex items-center justify-start"
       style={{
-        backgroundImage: `url('./src/assets/Abstract-Design.png')`,
+        backgroundImage: `url(${abstractDesign})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#131212cc] opacity-80"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#272727c0] to-[#0f0f0f] opacity-80"></div>
 
       {/* Hero Content */}
       <div className="relative max-w-5xl text-left text-white px-6 space-y-6 mx-48 mt-14">

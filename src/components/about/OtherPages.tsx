@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { Card, CardHeader, CardBody, CardFooter, Button, Link } from "@nextui-org/react";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-
+import abstractDesign from '@/assets/AbstractDesign.svg';
 import WorkIcon from '../../assets/images/WorkIcon.svg';
 import PhoneOldIcon from '../../assets/images/PhoneOldIcon.svg';
 
@@ -52,7 +52,7 @@ const OtherPages: React.FC = () => {
             <div
               className="absolute inset-0"
               style={{
-                backgroundImage: `url('/src/assets/AbstractDesign.svg')`,
+                backgroundImage: `url(${abstractDesign})`,
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',

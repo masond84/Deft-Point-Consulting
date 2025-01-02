@@ -10,6 +10,7 @@ import FireIcon from '../../assets/images/FireIcon.svg';
 import PeopleIcon from '../../assets/images/PeopleIcon.svg';
 import BoltIcon from '../../assets/images/BoltIconCircular.svg';
 import ClockIcon from '../../assets/images/ClockIcon.svg';
+import abstractDesignSvg from '@/assets/AbstractDesign.svg';
 
 const KeyFeatures = () => {
     const features = [
@@ -73,11 +74,11 @@ const KeyFeatures = () => {
                             <div
                                 className="absolute inset-0"
                                 style={{
-                                backgroundImage: `url('/src/assets/AbstractDesign.svg')`,
-                                backgroundSize: 'cover',
-                                backgroundRepeat: 'no-repeat',
-                                backgroundPosition: 'center',
-                                opacity: 0.3, // Adjust opacity for better visibility of the backdrop
+                                    backgroundImage: `url(${abstractDesignSvg})`,
+                                    backgroundSize: 'cover',
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundPosition: 'center',
+                                    opacity: 0.6, // Adjust opacity for better visibility of the backdrop
                                 }}
                             ></div>
                             <CardHeader className="flex flex-col items-center pb-2">{feature.icon}</CardHeader>
@@ -106,11 +107,11 @@ const KeyFeatures = () => {
                             <div
                                 className="absolute inset-0"
                                 style={{
-                                backgroundImage: `url('/src/assets/AbstractDesign.svg')`,
-                                backgroundSize: 'cover',
-                                backgroundRepeat: 'no-repeat',
-                                backgroundPosition: 'center',
-                                opacity: 0.3, // Adjust opacity for better visibility of the backdrop
+                                    backgroundImage: `url(${abstractDesignSvg})`,
+                                    backgroundSize: 'cover',
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundPosition: 'center',
+                                    opacity: 0.6, // Adjust opacity for better visibility of the backdrop
                                 }}
                             ></div>
                             <CardHeader className="flex flex-col items-center pb-2">{feature.icon}</CardHeader>
