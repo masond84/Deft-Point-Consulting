@@ -92,7 +92,13 @@ const Header: React.FC = () => {
           <Button
             as={Link}
             href="/get-quote"
-            className="px-4 py-2 bg-[#45E97D]/80 text-black text-sm rounded-full hover:bg-[#45E97D]/70 transition-colors font-clash"
+            className="px-4 py-2 
+            text-gray-950 text-sm rounded-full border border-glass-bg
+            hover:bg-gradient-to-br hover:from-[#4fadff]/95 hover:via-[#6dc1ff]/85 hover:to-[#0e73e6b9]
+            transition-colors font-semibold tracking-wide font-clash"
+            style={{
+              backgroundImage: `linear-gradient(150deg, #4fadff 20%, #6dc1ff 75%, #0e73e6b9 100%)`,
+            }}
           >
             Let's Meet
           </Button>

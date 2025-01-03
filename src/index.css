@@ -39,3 +39,12 @@ body {
     border-radius: 16px;
     box-shadow: 0 8px 32px 0 rgba(68, 92, 102, 0.1);
 }
+
+.glassmorphic-stacked-card {
+    background: rgba(87, 87, 87, 0.15); /* Background color */
+    box-shadow: 0 8px 32px 0 rgba(68, 92, 102, 0.452); /* Shadow */
+    backdrop-filter: blur(3px); /* Backdrop blur */
+    -webkit-backdrop-filter: blur(3px); /* Webkit-specific backdrop blur */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Border */
+    border-radius: 16px; /* Rounded corners */
+}

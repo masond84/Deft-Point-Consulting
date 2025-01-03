@@ -12,7 +12,7 @@ const QuoteForm: React.FC = () => {
         {/* Left Section */}
         <div className="space-y-8">
           <h1 className="text-4xl md:text-5xl font-bold leading-tight font-sora">
-            Let’s <span className="text-[#45E97D] font-clash italic">start</span> a winning project together
+            Let’s <span className="bg-gradient-to-br from-[#4fadff] via-[#6dc1ff] to-[#0e73e6b9] bg-clip-text text-transparent font-clash italic"> start </span> a winning project together
           </h1>
           <address className="not-italic text-gray-400 space-y-2">
             <p className="font-bold">FLUID22</p>
@@ -107,7 +107,7 @@ const QuoteForm: React.FC = () => {
           ></textarea>
           <button
             type="submit"
-            className="w-full py-4 bg-[linear-gradient(180deg,_#45E97D,_#445c66_99%,_#1A1A1A)] text-white font-medium font-sora tracking-widest rounded-lg border border-[#1A1A1A] transition"
+            className="w-full py-4 bg-gradient-to-br from-[#4fadff] via-[#6dc1ff] to-[#0e73e6b9] text-white font-medium font-sora tracking-widest rounded-lg border border-[#1A1A1A] transition"
           >
             Send your Inquiry ➡
           </button>
