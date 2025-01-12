@@ -26,7 +26,7 @@ const CallToAction: React.FC = () => {
                     rotate: 360, // Rotate 360° twice while falling into place
                 }}
                 transition={{
-                    duration: 1, // Smooth transition over 2 seconds
+                    duration: 0.6, // Smooth transition over 2 seconds
                     ease: 'easeOut', // Smoothly ease out into place
                 }}
                 viewport={{

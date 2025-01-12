@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { motion as framerMotion, AnimatePresence } from "framer-motion";
 import {
     Card,
     CardHeader,
@@ -11,6 +12,7 @@ import PeopleIcon from '../../assets/images/PeopleIcon.svg';
 import BoltIcon from '../../assets/images/BoltIconCircular.svg';
 import ClockIcon from '../../assets/images/ClockIcon.svg';
 import abstractDesignSvg from '@/assets/AbstractDesign.svg';
+import { useEffect, useState } from "react";
 
 const KeyFeatures = () => {
     const features = [
@@ -41,16 +43,43 @@ const KeyFeatures = () => {
         },
     ];
 
+    const [cardOrder, setCardOrder] = useState<number[]>([]);
+
+    useEffect(() => {
+        // Initialize card order
+        const initialOrder = Array.from({ length: features.length }, (_, i) => i);
+        setCardOrder(initialOrder);
+    }, [features.length]);
+
+    const shuffleTopCard = () => {
+        setCardOrder((prevOrder) => {
+          const newOrder = [...prevOrder];
+          const firstCard = newOrder.shift();
+          if (firstCard !== undefined) {
+            newOrder.push(firstCard);
+          }
+          return newOrder;
+        });
+    };
+    
+    useEffect(() => {
+        const interval = setInterval(() => {
+          shuffleTopCard();
+        }, 6000); // Shuffle every 6 seconds
+        return () => clearInterval(interval);
+    }, [cardOrder]);
+
     return (
         <section 
-            className="py-16 text-white"
+            className="py-8 sm:py-16 text-white"
             style={{
                 background: 'linear-gradient(135deg, #272727 0%, #0f0f0f 92%)',
+                overflow: "hidden",
             }}
         >
             {/* Header Section */}
-            <div className="text-center mb-12 max-w-3xl mx-auto">
-                <h2 className="text-4xl font-bold mb-4 font-sora leading-tight">
+            <div className="text-center mb-12 max-w-3xl mx-auto px-12 sm:px-16 md:px-0">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 font-sora leading-snug sm:leading-tight">
                     Key Features <span className="text-transparent bg-clip-text bg-gradient-to-l from-[#808080] to-[#b4b4b4]">of Our Projects</span>
                 </h2>
                 <p className="text-gray-300 text-md font-light font-sora leading-loose">
@@ -59,7 +88,8 @@ const KeyFeatures = () => {
             </div>
 
             {/* Cards Section */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 max-w-6xl mx-auto items-stretch">
+            {/* Desktop Layout */}
+            <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8 px-6 max-w-6xl mx-auto items-stretch">
                 {features.slice(0, 3).map((feature, index) => (
                     <motion.div
                         key={index}
@@ -92,7 +122,7 @@ const KeyFeatures = () => {
             </div>
 
             {/* Larger Cards Section */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 max-w-6xl mx-auto mt-12 items-stretch">
+            <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8 px-6 max-w-6xl mx-auto mt-12 items-stretch">
                 {features.slice(3, 5).map((feature, index) => (
                     <motion.div
                         key={index}
@@ -122,6 +152,66 @@ const KeyFeatures = () => {
                         </Card>
                     </motion.div>
                 ))}
+            </div>
+
+            {/* Mobile Layout */}
+            <div className="md:hidden relative w-full h-[600px] flex justify-center items-center -mt-20">
+                <AnimatePresence>
+                {cardOrder.map((index, arrayIndex) => (
+                    <framerMotion.div
+                    key={index}
+                    initial={{
+                        opacity: 0,
+                        scale: 0.95,
+                        y: -30,
+                        rotate: 0,
+                    }}
+                    animate={{
+                        opacity: 1,
+                        scale: arrayIndex === 0 ? 1 : 0.95,
+                        y: arrayIndex * 15,
+                        rotate: arrayIndex * 3,
+                        zIndex: cardOrder.length - arrayIndex,
+                    }}
+                    exit={{
+                        opacity: 0,
+                        scale: 0.95,
+                        y: 50,
+                        rotate: -10,
+                    }}
+                    transition={{
+                        duration: 0.6,
+                        ease: "easeInOut",
+                    }}
+                    className="absolute w-[300px] h-[450px] cursor-pointer"
+                    onClick={() => shuffleTopCard()}
+                    >
+                    {/* Card */}
+                    <Card
+                        isHoverable
+                        className='bg-glass-bg-dark shadow-glass backdrop-blur-glass border border-glass-border rounded-lg text-center flex flex-col items-center space-y-4 h-full relative overflow-hidden'
+                    >
+                        {/* Overlay Image */}
+                        <div
+                        className="absolute inset-0"
+                        style={{
+                            backgroundImage: `url(${abstractDesignSvg})`,
+                            backgroundSize: "cover",
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "center",
+                            opacity: 0.6,
+                            zIndex: -1,
+                        }}
+                        ></div>
+                        <CardHeader className="flex flex-col items-center pb-2">{features[index].icon}</CardHeader>
+                        <CardBody className="flex flex-col items-center text-center mb-4 justify-start h-48 overflow-visible">
+                        <h3 className="text-xl font-medium font-sora mb-2">{features[index].title}</h3>
+                        <p className="text-gray-200 text-sm font-clash leading-loose mt-2">{features[index].description}</p>
+                        </CardBody>
+                    </Card>
+                    </framerMotion.div>
+                ))}
+                </AnimatePresence>
             </div>
         </section>
     );
