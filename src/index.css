@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Clash Display';
+    src:    url('./assets/fonts/ClashDisplay/ClashDisplay-Regular.otf') format('opentype'),
+            url('./assets/fonts/ClashDisplay/ClashDisplay-Bold.otf') format('opentype'),
+            url('./assets/fonts/ClashDisplay/ClashDisplay-Light.otf') format('opentype'),
+            url('./assets/fonts/ClashDisplay/ClashDisplay-Medium.otf') format('opentype'),
+            url('./assets/fonts/ClashDisplay/ClashDisplay-Extralight.otf') format('opentype'),
+            url('./assets/fonts/ClashDisplay/ClashDisplay-Semibold.otf') format('opentype');
+    font-weight: 100 200 300 400 500 600 700;
+    font-display: swap;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.font-clash {
+    font-family: 'Clash Display', sans-serif;
+}
+
+.glassmorphic-card {
+    background: #57575740;
+    box-shadow: 0 8px 32px 0 rgba(68, 92, 102, 0.452);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.card-gradient-border {
+    background: linear-gradient(180deg, rgba(87, 87, 87, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid transparent;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(68, 92, 102, 0.1);
+}
+
+.glassmorphic-stacked-card {
+    background: rgba(87, 87, 87, 0.15); /* Background color */
+    box-shadow: 0 8px 32px 0 rgba(68, 92, 102, 0.452); /* Shadow */
+    backdrop-filter: blur(3px); /* Backdrop blur */
+    -webkit-backdrop-filter: blur(3px); /* Webkit-specific backdrop blur */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Border */
+    border-radius: 16px; /* Rounded corners */
+}
+
+@keyframes fadeInFromTop {
+    from {
+      opacity: 0;
+      transform: translateY(-15px) scale(0.8); /* Start smaller and slightly above */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1.5); /* Final size and position */
+    }
+}
+.fade-in {
+    animation: fadeInFromTop 1.5s ease-out; /* Duration and easing */
+}
