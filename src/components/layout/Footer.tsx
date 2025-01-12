@@ -1,7 +1,7 @@
 import { Footer } from 'flowbite-react';
 import { Button } from '@nextui-org/react';
 import { BsFacebook, BsInstagram, BsTwitter, BsLinkedin } from 'react-icons/bs';
-import Logo from '../../assets/Logo.svg';
+import DeftBirdIcon from "../../assets/logo/DeftBirdIcon";
 
 const CustomFooter: React.FC = () => {
   return (
@@ -10,19 +10,16 @@ const CustomFooter: React.FC = () => {
         {/* First Container */}
         <div className="flex justify-between items-center max-w-7xl w-full mx-auto px-6">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Footer.Brand
-              href="https://yourwebsite.com"
-              src={Logo}
-              alt="Your Company Logo"
-              className="text-white font-semibold text-xl flex-shrink-0"
-            />
+          <div className="h-10 w-10 sm:h-10 sm:w-10 scale-150 relative fade-in">
+              <DeftBirdIcon className="h-full w-full" />
           </div>
 
           {/* Social Media Section */}
           <div className="flex items-center space-x-4">
             {/* Paragraph */}
-            <p className="text-white text-sm font-medium font-clash mr-4">Follow Us On Social Media</p>
+            <p className="hidden sm:block text-white text-sm font-medium font-clash mr-4">
+              Follow Us On Social Media
+            </p>
 
             <div className="flex items-center space-x-4">
               {/* LinkedIn Button */}
