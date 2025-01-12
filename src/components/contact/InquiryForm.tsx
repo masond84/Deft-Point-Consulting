@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@nextui-org/react";
-import { BsFacebook, BsInstagram, BsTwitter, BsLinkedin } from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsTwitter, BsLinkedin, BsFillSendFill } from "react-icons/bs";
 
 const InquiryForm: React.FC = () => {
   return (
@@ -50,7 +50,10 @@ const InquiryForm: React.FC = () => {
             <Button
               className="bg-transparent border border-[#FFFFFF1A] text-white font-normal py-6 px-6 rounded-lg font-sora flex-grow sm:mr-12"
             >
-              Send your Inquiry ➡
+              <span>Send your Inquiry</span>
+              <BsFillSendFill
+                className="text-lg transform rotate-45 text-white" // Rotate the icon slightly
+              />
             </Button>
 
             {/* Social Media Section */}
