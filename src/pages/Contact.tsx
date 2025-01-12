@@ -13,17 +13,17 @@ const Contact: React.FC = () => {
       <div className="bg-[#121212] text-white">
         <Hero />
 
-        {/* Contact CTA */}
-        <ContactCTA />
+        {/* Inquiry Form */}
+        <InquiryForm />
 
         {/* Contact By Email */}
         <ContactByEmail />
   
         {/* Contact By Phone */}
         <ContactByPhone />
-  
-        {/* Inquiry Form */}
-        <InquiryForm />
+
+        {/* Contact CTA */}
+        <ContactCTA />
   
         {/* Additional Information */}
         <AdditionalInfo />
@@ -31,8 +31,6 @@ const Contact: React.FC = () => {
         {/* Social Media Section */}
         <SocialMedia />
 
-        {/* Call to Action */}
-        <CallToAction />
       </div>
     );
   };

@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
                 <p className="text-sm uppercase tracking-widest text-gray-400">About Us</p>
 
                 {/* Main Header */}
-                <h1 className="text-5xl font-bold leading-tight">
+                <h1 className="text-5xl font-bold leading-tight font-sora">
                     Our vision is to make work <br />
                     <span className="text-[#ffffff]">inspiring and fulfilling</span>
                 </h1>
