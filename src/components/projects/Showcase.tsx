@@ -17,11 +17,11 @@ const Showcase: React.FC = () => {
   return (
     <section className="py-12 bg-[#121212] text-white">
       {/* Header Section */}
-      <div className="text-center max-w-4xl mx-auto mb-12">
-        <h2 className="text-4xl font-bold font-sora leading-tight">
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#808080] to-[#b4b4b4]">Projects</span> Showcase
+      <div className="text-center mb-12 max-w-3xl mx-auto px-8 sm:px-12 md:px-0">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 font-sora leading-tight">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#808080] to-[#b4b4b4]">Projects</span> Showcase
         </h2>
-        <p className="text-gray-400 text-lg leading-relaxed font-clash mt-4">
+        <p className="text-sm sm:text-base md:text-md text-gray-400 leading-relaxed font-clash">
           Witness the brilliance of our previous projects. Our portfolio showcases the successful collaborations we've had with diverse clients across various industries. Let our work speak for itself.
         </p>
       </div>
