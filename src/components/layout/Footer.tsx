@@ -1,5 +1,6 @@
+import React from "react";
 import { Footer } from 'flowbite-react';
-import { Button } from '@nextui-org/react';
+import { Button, Accordion, AccordionItem } from '@nextui-org/react';
 import { BsFacebook, BsInstagram, BsTwitter, BsLinkedin } from 'react-icons/bs';
 import DeftBirdIcon from "../../assets/logo/DeftBirdIcon";
 
@@ -42,46 +43,133 @@ const CustomFooter: React.FC = () => {
           </div>
         </div>
 
-        {/* Second Container (Links) */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-7xl w-full mx-auto px-40">
-          {/* About */}
+        {/* Second Container (Links with Accordion for Mobile) */}
+        <div className="sm:hidden px-6">
+          <Accordion
+            variant="shadow"
+            selectionMode="single"
+            className="w-full max-w-7xl"
+          >
+            <AccordionItem title="About Us" className="text-white font-sora">
+              <Footer.LinkGroup col className="mb-2">
+                <Footer.Link href="#" className="font-sora font-normal">
+                  About
+                </Footer.Link>
+                <Footer.Link href="#" className="font-sora font-normal">
+                  Our Team
+                </Footer.Link>
+                <Footer.Link href="#" className="font-sora font-normal">
+                  Careers
+                </Footer.Link>
+              </Footer.LinkGroup>
+            </AccordionItem>
+
+            <AccordionItem title="Services" className="text-white font-sora">
+              <Footer.LinkGroup col className="mb-2">
+                <Footer.Link href="#" className="font-sora font-normal">
+                  Web Design
+                </Footer.Link>
+                <Footer.Link href="#" className="font-sora font-normal">
+                  Website Development
+                </Footer.Link>
+                <Footer.Link href="#" className="font-sora font-normal">
+                  App Development
+                </Footer.Link>
+                <Footer.Link href="#" className="font-sora font-normal">
+                  Digital Marketing
+                </Footer.Link>
+              </Footer.LinkGroup>
+            </AccordionItem>
+
+            <AccordionItem title="Projects" className="text-white font-sora">
+              <Footer.LinkGroup col className="mb-2">
+                <Footer.Link href="#" className="font-sora font-normal">
+                  Project 1
+                </Footer.Link>
+                <Footer.Link href="#" className="font-sora font-normal">
+                  Project 2
+                </Footer.Link>
+                <Footer.Link href="#" className="font-sora font-normal">
+                  Project 3
+                </Footer.Link>
+              </Footer.LinkGroup>
+            </AccordionItem>
+
+            <AccordionItem title="Legal" className="text-white font-sora">
+              <Footer.LinkGroup col className="mb-2">
+                <Footer.Link href="#" className="font-sora font-normal">
+                  Privacy Policy
+                </Footer.Link>
+                <Footer.Link href="#" className="font-sora font-normal">
+                  Terms & Conditions
+                </Footer.Link>
+                <Footer.Link href="#" className="font-sora font-normal">
+                  Cookie Policy
+                </Footer.Link>
+              </Footer.LinkGroup>
+            </AccordionItem>
+          </Accordion>
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden sm:grid sm:grid-cols-4 sm:gap-8 max-w-7xl w-full mx-auto px-40">
           <div>
-            <Footer.Title title="About Us" className='text-white font-sora' />
+            <Footer.Title title="About Us" className="text-white font-sora" />
             <Footer.LinkGroup col>
-              <Footer.Link href="#" className='font-sora font-normal'>About</Footer.Link>
-              <Footer.Link href="#" className='font-sora font-normal'>Our Team</Footer.Link>
-              <Footer.Link href="#" className='font-sora font-normal'>Careers</Footer.Link>
+              <Footer.Link href="#" className="font-sora font-normal">
+                About
+              </Footer.Link>
+              <Footer.Link href="#" className="font-sora font-normal">
+                Our Team
+              </Footer.Link>
+              <Footer.Link href="#" className="font-sora font-normal">
+                Careers
+              </Footer.Link>
             </Footer.LinkGroup>
           </div>
-
-          {/* Services */}
           <div>
-            <Footer.Title title="Services" className='text-white font-sora'/>
+            <Footer.Title title="Services" className="text-white font-sora" />
             <Footer.LinkGroup col>
-              <Footer.Link href="#" className='font-sora font-normal'>Web Design</Footer.Link>
-              <Footer.Link href="#" className='font-sora font-normal'>Website Development</Footer.Link>
-              <Footer.Link href="#" className='font-sora font-normal'>App Development</Footer.Link>
-              <Footer.Link href="#" className='font-sora font-normal'>Digital Marketing</Footer.Link>
+              <Footer.Link href="#" className="font-sora font-normal">
+                Web Design
+              </Footer.Link>
+              <Footer.Link href="#" className="font-sora font-normal">
+                Website Development
+              </Footer.Link>
+              <Footer.Link href="#" className="font-sora font-normal">
+                App Development
+              </Footer.Link>
+              <Footer.Link href="#" className="font-sora font-normal">
+                Digital Marketing
+              </Footer.Link>
             </Footer.LinkGroup>
           </div>
-
-          {/* Projects */}
           <div>
-            <Footer.Title title="Projects" className='text-white font-sora'/>
+            <Footer.Title title="Projects" className="text-white font-sora" />
             <Footer.LinkGroup col>
-              <Footer.Link href="#" className='font-sora font-normal'>Project 1</Footer.Link>
-              <Footer.Link href="#" className='font-sora font-normal'>Project 2</Footer.Link>
-              <Footer.Link href="#" className='font-sora font-normal'>Project 3</Footer.Link>
+              <Footer.Link href="#" className="font-sora font-normal">
+                Project 1
+              </Footer.Link>
+              <Footer.Link href="#" className="font-sora font-normal">
+                Project 2
+              </Footer.Link>
+              <Footer.Link href="#" className="font-sora font-normal">
+                Project 3
+              </Footer.Link>
             </Footer.LinkGroup>
           </div>
-
-          {/* Legal */}
           <div>
-            <Footer.Title title="Legal" className='text-white font-sora'/>
+            <Footer.Title title="Legal" className="text-white font-sora" />
             <Footer.LinkGroup col>
-              <Footer.Link href="#" className='font-sora font-normal'>Privacy Policy</Footer.Link>
-              <Footer.Link href="#" className='font-sora font-normal'>Terms & Conditions</Footer.Link>
-              <Footer.Link href="#" className='font-sora font-normal'>Cookie Policy</Footer.Link>
+              <Footer.Link href="#" className="font-sora font-normal">
+                Privacy Policy
+              </Footer.Link>
+              <Footer.Link href="#" className="font-sora font-normal">
+                Terms & Conditions
+              </Footer.Link>
+              <Footer.Link href="#" className="font-sora font-normal">
+                Cookie Policy
+              </Footer.Link>
             </Footer.LinkGroup>
           </div>
         </div>
