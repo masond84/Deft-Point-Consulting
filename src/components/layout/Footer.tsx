@@ -178,22 +178,28 @@ const CustomFooter: React.FC = () => {
         <Footer.Divider className="my-8 border-gray-600" />
 
         {/* Third Container (Copyright, Version, Legal Links) */}
-        <div className="relative flex items-center max-w-7xl w-full mx-auto px-2">
+        <div className="relative flex flex-col sm:flex-row sm:items-center sm:justify-between max-w-7xl w-full mx-auto px-2">
           {/* Copyright */}
-          <p className="absolute left-0 text-sm text-gray-400">
+          <p className="text-sm text-gray-400 text-center sm:absolute sm:left-0 sm:text-left mb-2 sm:mb-0">
             © {new Date().getFullYear()} Deft Point. All Rights Reserved.
           </p>
 
           {/* Version */}
-          <p className="absolute left-1/2 transform -translate-x-1/2 text-sm text-gray-400 font-sora">
+          <p className="text-sm text-gray-400 font-sora text-center sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2 mb-2 sm:mb-0">
             Deft Point Consulting
           </p>
 
           {/* Legal Links */}
-          <div className="absolute right-0 flex space-x-6">
-            <Footer.Link href="#" className="text-sm text-gray-400 hover:text-white">Privacy Policy</Footer.Link>
-            <Footer.Link href="#" className="text-sm text-gray-400 hover:text-white">Terms & Conditions</Footer.Link>
-            <Footer.Link href="#" className="text-sm text-gray-400 hover:text-white">Cookie Policy</Footer.Link>
+          <div className="flex justify-center space-x-4 sm:space-x-6 sm:absolute sm:right-0">
+            <Footer.Link href="#" className="text-sm text-gray-400 hover:text-white">
+              Privacy Policy
+            </Footer.Link>
+            <Footer.Link href="#" className="text-sm text-gray-400 hover:text-white">
+              Terms & Conditions
+            </Footer.Link>
+            <Footer.Link href="#" className="text-sm text-gray-400 hover:text-white">
+              Cookie Policy
+            </Footer.Link>
           </div>
         </div>
       </div>
