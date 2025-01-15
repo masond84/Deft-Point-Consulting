@@ -3,6 +3,7 @@ import { ScrollToHash } from "./utils/ScrollToHash"; // Import your utility
 // Components
 import  Header from './components/layout/Header';
 import Footer  from './components/layout/Footer';
+import Preloader from "./components/layout/Preloader"; // Import Preloader
 // Pages
 import Home from './pages/Home';
 import Services from './pages/Services';
@@ -23,6 +24,8 @@ const App: React.FC = () => {
     <Router>
       <ScrollToHash />
       <div className='bg-[#6E6E6E]'>
+        {/* Preloader */}
+        {/* <Preloader />*/}
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

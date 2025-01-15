@@ -304,7 +304,7 @@ const ServiceCategories: React.FC = () => {
             <Box className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row">
                 {/* Tabs Container */}
                 <Box 
-                    className="md:pr-6 mb-4 md:mb-0 min-w-xl overflow-x-auto md:overflow-visible flex flex-nowrap snap-x snap-mandatory scroll-smooth"
+                    className="md:pr-6 mb-4 md:mb-0 flex flex-nowrap md:overflow-visible overflow-hidden"       
                 >
                     <Tabs
                         orientation={window.innerWidth < 768 ? 'horizontal' : 'vertical'}
@@ -313,27 +313,25 @@ const ServiceCategories: React.FC = () => {
                         textColor="inherit"
                         indicatorColor="primary"
                         aria-label="service categories tabs"
-                        className='space-y-0 md:space-y-4 space-x-4 md:space-x-0 w-auto'
-                        sx={{
-                            '& .MuiTabs-flexContainer': {
-                                flexWrap: 'nowrap', // Prevent wrapping on mobile
-                                scrollSnapType: 'x mandatory', // Ensure each tab snaps into place
-                                WebkitOverflowScrolling: 'touch', // Smooth scrolling for iOS
-                            },
-                            '& .MuiTabs-indicator': {
-                                backgroundColor: '#0073E6', // Set to your custom color (e.g., orange)
-                                width: '1px', // Optional: Adjust thickness
-                            },
-                        }}
+                        className="w-full flex flex-wrap md:flex-col space-y-0 md:space-y-4"
                     >
                         {/* Tab 1 */}
                         <Tab
                             disableRipple
                             label={
-                                <div className={`flex items-center justify-start p-4 w-72 whitespace-nowrap rounded-lg border border-[#1A1A1A] ${
-                                    tabValue === 0 ? 'bg-[#1A1A1A] text-white' : 'bg-transparent text-gray-400'
-                                } hover:bg-[#1A1A1A] hover:text-white transition`}>
-                                    <img src={PointClickIcon} alt="Web Design Icon" className="w-6 h-6 mr-2" />
+                                <div 
+                                    className={`flex items-center justify-start 
+                                                p-2 sm:p-3 w-24 sm:w-36 whitespace-nowrap 
+                                                rounded-lg border border-[#1A1A1A] 
+                                                ${
+                                                tabValue === 0
+                                                    ? 'bg-[#1A1A1A] text-white'
+                                                    : 'bg-transparent text-gray-400'
+                                                } 
+                                                hover:bg-[#1A1A1A] hover:text-white transition 
+                                                text-xs sm:text-sm`}
+                                >
+                                    <img src={PointClickIcon} alt="Web Design Icon" className="w-4 sm:w-6 h-4 sm:h-6 mr-2" />
                                     Web Design
                                 </div>
                             }

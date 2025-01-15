@@ -12,6 +12,9 @@ export default {
     extend: {
       fontFamily: {
         sora: ['Sora', 'serif'], // Add the Sora font
+        krona: ["Krona One", "sans-serif"],
+        neue: ["Neue Montreal", "sans-serif"],
+        tusker: ["Tusker Grotesk", "sans-serif"],
       },
       colors: {
         'glass-bg': 'rgba(87, 87, 87, 0.15)', // Updated background color
@@ -19,6 +22,8 @@ export default {
         'glass-bg-dark': 'rgba(40, 40, 40, 0.85)', // Darker background color with higher opacity
         'gradient-start': 'rgba(87, 87, 87, 0.25)',
         'gradient-end': 'rgba(255, 255, 255, 0)',
+        "light-gold": "#9e764e",
+        "dark-bg": "#0e0e0e",
       },
       boxShadow: {
         'glass': '0 8px 32px 0 rgba(68, 92, 102, 0.452)', // Updated box-shadow
