@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Box, Tabs, Tab, Typography } from '@mui/material';
 import { Card, CardHeader, CardBody, Button } from '@nextui-org/react';
+import { useLocation } from 'react-router-dom'; // Import useLocation
 
 import PointClickIcon from '../../assets/icons/PointClickIcon.svg';
 import WebIcon from '../../assets/icons/WebIcon.svg';
@@ -225,7 +226,21 @@ const ServiceCardFour = () => (
 );
 
 const ServiceCategories: React.FC = () => {
+    const location = useLocation();
+    const categoriesRef = useRef<HTMLDivElement>(null); // Ref for scrolling to #categories
     const [tabValue, setTabValue] = useState(0);
+
+    // Handle state from RouterLink
+    useEffect(() => {
+        if (location.state && location.state.tabValue !== undefined) {
+            setTabValue(location.state.tabValue);
+
+            // Smooth scroll to the categories section
+            if (categoriesRef.current) {
+                categoriesRef.current.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [location.state]);
 
     const handleChange = (_: React.SyntheticEvent, newValue: number) => {
         setTabValue(newValue);
@@ -271,6 +286,7 @@ const ServiceCategories: React.FC = () => {
 
     return (
         <section 
+            ref={categoriesRef} // Attach ref here
             id='categories'
             className="py-8 bg-gradient-to-b from-[#0f0f0f] to-[#1a1a1a] text-white"
         >

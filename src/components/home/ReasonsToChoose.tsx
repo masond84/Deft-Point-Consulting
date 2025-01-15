@@ -7,6 +7,7 @@ import {
     Button,
     Link
 } from '@nextui-org/react';
+import { useNavigate } from "react-router-dom";
 import { motion as motionReact } from "motion/react";
 import { motion as framerMotion, AnimatePresence } from "framer-motion";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
@@ -19,6 +20,8 @@ import AppsIcon from '../../assets/images/AppsIcon.svg';
 import abstractDesignSvg from '@/assets/AbstractDesign.svg';
 
 const ReasonsToChoose: React.FC = () => {
+  const navigate = useNavigate(); // Programmatic navigation using react-router
+
   const [cardOrder, setCardOrder ] = useState<number[]>([]);
 
   // List of services offered or ways to help other companies
@@ -85,6 +88,16 @@ const ReasonsToChoose: React.FC = () => {
     return () => clearInterval(interval);
   }, [cardOrder]);
 
+  const handleButtonClick = (link: string) => {
+    // Scroll to the top of the page before navigating
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scroll to the top
+    });
+    
+    navigate(link); // Navigate to the associated link
+  };
+
   return (
     <section 
       className="py-8 md:py-16 lg:py-20 relative text-white"
@@ -148,7 +161,10 @@ const ReasonsToChoose: React.FC = () => {
                 <Link href={card.link} className='text-white text-sm font-medium font-sora pr-4'>
                   Learn More
                 </Link>
-                <Button className="w-12 h-2 p-4 bg-black rounded-full flex items-center justify-center">
+                <Button 
+                  onPress={() => handleButtonClick(card.link)} // Navigate programmatically
+                  className="w-12 h-2 p-4 bg-black rounded-full flex items-center justify-center"
+                >
                   <ArrowRightAltIcon />
                 </Button>
               </div>
@@ -229,7 +245,10 @@ const ReasonsToChoose: React.FC = () => {
                   <Link href={cardContent[index].link} className="text-white text-sm font-medium font-sora pr-4">
                     Learn More
                   </Link>
-                  <Button className="w-12 h-2 p-4 bg-black rounded-full flex items-center justify-center">
+                  <Button 
+                    onPress={() => handleButtonClick(cardContent[index].link)}
+                    className="w-12 h-2 p-4 bg-black rounded-full flex items-center justify-center"
+                  >
                     <ArrowRightAltIcon />
                   </Button>
                 </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, Button } from '@nextui-org/react';
+import { Card, CardBody, Button, Link } from '@nextui-org/react';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { motion } from "motion/react";
 
@@ -190,9 +190,14 @@ const OurWork: React.FC = () => {
 
       {/* Bottom Button */}
       <div className="text-center mt-6">
-        <Button className="px-6 py-3 rounded-full border border-[#262626] bg-[#1A1A1A]/20 text-white font-sora hover:bg-[#1A1A1A]/40 text-sm font-light">
-          View All Projects <ArrowRightAltIcon className="ml-2" />
-        </Button>
+        <Link
+          href="/portfolio"
+          className="no-underline" // Prevent underline styling
+        >
+          <Button className="px-6 py-3 rounded-full border border-[#262626] bg-[#1A1A1A]/20 text-white font-sora hover:bg-[#1A1A1A]/40 text-sm font-light">
+            View All Projects <ArrowRightAltIcon className="ml-2" />
+          </Button>
+        </Link>
       </div>
       
     </section>

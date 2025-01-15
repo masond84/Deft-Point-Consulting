@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Card, CardHeader, CardBody, CardFooter, Button, Link } from "@nextui-org/react";
+import { Link as RouterLink } from "react-router-dom"; // Import Router Link
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import abstractDesignSvg from '@/assets/AbstractDesign.svg';
 import WebIcon from '../../assets/images/WebPIcon.svg';
@@ -15,28 +16,32 @@ const OurServices: React.FC = () => {
       title: "Web Development",
       description:
         "Unlock Your Online Potential in today's digital age, a powerful web presence is essential for any business.",
-      link: "#",
+      link: "/services",
+      tabIndex: 1,
     },
     {
       icon: <img src={MobileIcon} alt="Mobile App Development" className="w-20 h-20" />,
       title: "Mobile App Development",
       description:
         "Embrace Mobility with Confidence. Mobile devices have revolutionized the way we interact with the world.",
-      link: "#",
+      link: "/services",
+      tabIndex: 2,
     },
     {
       icon: <img src={PointerIcon} alt="Web Design" className="w-20 h-20" />,
       title: "Web Design",
       description:
         "Elevate Your Brand Aesthetics. Your website’s design is a reflection of your brand’s identity and values.",
-      link: "#",
+      link: "/services",
+      tabIndex: 0, 
     },
     {
       icon: <img src={BoltIcon} alt="Digital Marketing" className="w-20 h-20" />,
       title: "Digital Marketing",
       description:
         "Drive Your Business Forward. Our digital marketing services help you stand out and connect effectively.",
-      link: "#",
+      link: "/services",
+      tabIndex: 3, 
     },
   ];
 
@@ -91,14 +96,18 @@ const OurServices: React.FC = () => {
 
             {/* Card Footer */}
             <CardFooter className="flex justify-center pt-4">
-              <div className="flex items-center bg-[#111111] border border-[#1F1F1F] rounded-full px-5 py-2 space-x-2 hover:bg-[#111111]/80 transition">
-                <Link href={service.link} className="text-white text-sm font-medium font-sora pr-2">
+              <RouterLink 
+                to={service.link}
+                state={{ tabValue: service.tabIndex }}
+                className="flex items-center bg-[#111111] border border-[#1F1F1F] rounded-full px-5 py-2 space-x-2 hover:bg-[#111111]/80 transition"
+              >
+                <span className="text-white text-sm font-medium font-sora pr-2">
                   Learn More
-                </Link>
+                </span>
                 <Button className="w-12 h-2 p-4 bg-black rounded-full flex items-center justify-center">
                   <ArrowRightAltIcon />
                 </Button>
-              </div>
+              </RouterLink>
             </CardFooter>
           </Card>
           </motion.div>

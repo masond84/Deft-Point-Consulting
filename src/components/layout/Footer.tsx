@@ -116,7 +116,7 @@ const CustomFooter: React.FC = () => {
           <div>
             <Footer.Title title="About Us" className="text-white font-sora" />
             <Footer.LinkGroup col>
-              <Footer.Link href="#" className="font-sora font-normal">
+              <Footer.Link href="/about" className="font-sora font-normal">
                 About
               </Footer.Link>
               <Footer.Link href="#" className="font-sora font-normal">
@@ -130,16 +130,17 @@ const CustomFooter: React.FC = () => {
           <div>
             <Footer.Title title="Services" className="text-white font-sora" />
             <Footer.LinkGroup col>
-              <Footer.Link href="#" className="font-sora font-normal">
-                Web Design
-              </Footer.Link>
-              <Footer.Link href="#" className="font-sora font-normal">
+              <Footer.Link href="/services/custom-website-development" className="font-sora font-normal">
                 Website Development
               </Footer.Link>
+              <Footer.Link href="/services/website-redesign" className="font-sora font-normal">
+                Website Redesign
+              </Footer.Link>
+
               <Footer.Link href="#" className="font-sora font-normal">
                 App Development
               </Footer.Link>
-              <Footer.Link href="#" className="font-sora font-normal">
+              <Footer.Link href="/services/marketing" className="font-sora font-normal">
                 Digital Marketing
               </Footer.Link>
             </Footer.LinkGroup>
