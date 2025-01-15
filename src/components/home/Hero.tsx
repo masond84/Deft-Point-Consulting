@@ -37,14 +37,18 @@ const Hero: React.FC = () => {
     }, []);
 
     return (
-        <section className="relative w-full h-screen bg-[#0e0e0e] overflow-hidden"
+        <section className="relative w-full h-screen overflow-hidden"
             style={{
                 backgroundImage: `url(${abstractDesign})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
+                background: 'linear-gradient(215deg, #0F0F0F 72%, #0f0f0f98 92%)',
+                overflow: 'hidden',
             }}
         >
+
+
             {/* Wrapper Image */}
             <div className="wrapper-img">
                 <div className="box z-10"></div>
@@ -87,7 +91,7 @@ const Hero: React.FC = () => {
                             <span>customer</span> <br />
                             panel
                         </a>
-                        <p className="w-1/3 font-clash text-gray-200 text-sm text-center">
+                        <p className="w-1/3 font-clash text-white text-sm text-center">
                             We are a full scale development agency that works with small business and enterprise clients.
                         </p>
                     </div>

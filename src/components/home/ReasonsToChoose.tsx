@@ -102,7 +102,7 @@ const ReasonsToChoose: React.FC = () => {
     <section 
       className="py-8 md:py-16 lg:py-20 relative text-white"
       style={{
-        background: 'linear-gradient(135deg, #272727 0%, #0f0f0f 92%)',
+        background: 'linear-gradient(285deg, #0F0F0F 60%, #0f0f0f98 92%)',
         overflow: 'hidden',
       }}
     >
