@@ -100,6 +100,7 @@ const ReasonsToChoose: React.FC = () => {
 
   return (
     <section 
+      id="reasons-to-choose" 
       className="py-8 md:py-16 lg:py-20 relative text-white"
       style={{
         background: 'linear-gradient(285deg, #0F0F0F 60%, #0f0f0f98 92%)',

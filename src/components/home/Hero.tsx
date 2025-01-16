@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
-import { Canvas } from "@react-three/fiber";
-import Blob from "../Blob";
+import { Button } from "@nextui-org/react";
 import Particles from "../Blob/Particles";
 import "../../assets/styles/landingStyles.css"; // Ensure the CSS file is correctly linked.
 import abstractDesign from '@/assets/Abstract-Design.png';
 import heroImage from '@/assets/images/hero.jpg'
+import CircularTextButton from './CircularTextButton'; // Import the component
 
 const Hero: React.FC = () => {
     useEffect(() => {
@@ -37,10 +37,16 @@ const Hero: React.FC = () => {
             );
     }, []);
 
+    const navigate = useNavigate(); // Hook to navigate to routes
+    
+    const handleClick = () => {
+        navigate("/services#categories");
+    };
+    
+
     return (
         <section className="relative w-full h-screen overflow-hidden"
             style={{
-                backgroundImage: `url(${abstractDesign})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
@@ -48,8 +54,13 @@ const Hero: React.FC = () => {
                 overflow: 'hidden',
             }}
         >
-
-
+            {/* Mobile-specific background */}
+            <div
+                className="absolute inset-0 sm:hidden"
+                style={{
+                background: 'linear-gradient(225deg, #0F0F0F 30%, #0F0F0F58 80%)', // Mobile background
+                }}
+            ></div>
             {/* Wrapper Image */}
             <div className="wrapper-img">
                 <div className="box z-10"></div>
@@ -64,7 +75,7 @@ const Hero: React.FC = () => {
 
             {/* Hero Content */}
             <div className="container relative z-20">
-                <section className="hero">
+                <section className="relative top-[15%] w-full text-white flex flex-col items-end text-right">
                     {/* Blob Animation (Left) */}
                     {/*
                     <div className="blob-container flex-none hidden md:block">
@@ -75,35 +86,56 @@ const Hero: React.FC = () => {
                     </div>                
                     */}
                     <div className="white-space"></div>
-                    <div className="header">
+                    <div className="header relative top-10 mr-8 sm:mr-4 text-[24vw] sm:text-[15vw] font-bold ">
                         Deftly.
-                        {/* Removed invalid </br> */}
-                        <div className="font-clash text-gray-200 text-lg md:text-xl self-end -mt-20 ml-10 leading-snug">
+                        {/* Subheader */}
+                        <div className="font-clash text-gray-200 text-lg md:text-xl -mt-10 md:-mt-20 leading-snug text-left ml-4 md:ml-10">
                             Crafted Websites
+                        </div>
+                    </div>
+                        
+                    {/* Buttons Section */}
+                    <div className="mt-20 sm:mt-14 pr-20 md:pr-36 flex flex-wrap justify-start items-end space-x-4 md:space-x-4">
+                        <div className="flex items-center bg-[#1A1A1A]/20 border border-[#1F1F1F] rounded-full hover:bg-[#1A1A1A]/40 transition">
+                            <Button
+                                onPress={handleClick}
+                                className="px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-white/90 transition font-clash"
+                            >
+                                Get Started
+                            </Button>
+                        </div>
+                        <div className="flex items-center bg-[#1A1A1A]/20 border border-[#1F1F1F] rounded-full hover:bg-[#1A1A1A]/40 transition">
+                            <Button
+                                onPress={() => navigate('/get-quote')} // Navigate to /get-quote on click
+                                className="px-6 py-3 bg-black text-white font-semibold rounded-full hover:bg-black/20 transition font-clash"
+                            >
+                                Free Consultation
+                            </Button>
                         </div>
                     </div>
                 </section>
 
+
+
                 {/* Bottom Navigation */}
-                <section className="bottom-nav">
-                    <div className="about">
-                        <a href="#">
-                            Login to the <br />
-                            <span>customer</span> <br />
-                            panel
-                        </a>
-                        <p className="w-1/3 font-clash text-white text-sm text-center">
+                <section className="absolute -bottom-2 w-full flex justify-between px-6 sm:px-12">
+                    <div className="flex w-full sm:w-1/2 justify-between items-center">
+                        {/* Animated Spinning Circle With Arrow That Takes User To Next Section */}
+                        <div className="mt-20 sm:mt-0">
+                            <CircularTextButton />
+                        </div>
+                        <p className="w-full sm:w-1/3 font-clash text-white text-md sm:text-md text-right sm:text-center">
                             We are a full scale development agency that works with small business and enterprise clients.
                         </p>
                     </div>
                     <div className="location">
                         <div className="country">
-                            <span>Country</span>
-                            <span>New Zealand</span>
+                            <span className="font-clash leading-relaxed tracking-widest">Custom Solutions</span>
+                            <span></span>
                         </div>
                         <div className="year">
-                            <span>Year</span>
-                            <span>2023</span>
+                            <span className="font-clash leading-relaxed tracking-widest">Tailored Results</span>
+                            <span></span>
                         </div>
                     </div>
                 </section>

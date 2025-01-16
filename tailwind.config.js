@@ -53,6 +53,9 @@ export default {
       backgroundImage: {
         'shadow-gradient': 'linear-gradient(to right, #000000 0%, #BFBFBF 42%, #FFFFFF 73%)',
       },
+      animation: {
+        'spin-slow': 'spin 10s linear infinite', // Slow rotation
+      },
     },
   },
   plugins: [
