@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
     
 
     return (
-        <section className="relative w-full sm:h-[calc(100vh-4rem)] h-[calc(100vh-6rem)]  overflow-visible"
+        <section className="relative w-full sm:h-full h-[calc(100vh-2rem)]  overflow-visible"
             style={{
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
@@ -114,7 +114,7 @@ const Hero: React.FC = () => {
 
 
                 {/* Bottom Navigation */}
-                <section className="absolute -bottom-2 w-full flex justify-between px-6 sm:px-12">
+                <section className="absolute bottom-24 sm:-bottom-2 w-full flex justify-between px-6 sm:px-12">
                     <div className="flex w-full sm:w-1/2 justify-between items-center">
                         {/* Animated Spinning Circle With Arrow That Takes User To Next Section */}
                         <div className="mt-20 sm:mt-0">
