@@ -95,7 +95,7 @@ const Hero: React.FC = () => {
                     </div>
 
                     {/* Buttons Section */}
-                    <div className="flex flex-wrap justify-center sm:justify-start space-x-4 sm:space-x-6 mt-28 sm:mt-14 pr-8 md:pr-36">
+                    <div className="flex flex-nowrap justify-center sm:justify-start space-x-4 sm:space-x-6 mt-28 sm:mt-14 pr-8 md:pr-36">
                         <Button
                             onPress={handleClick}
                             className="px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition font-clash"
