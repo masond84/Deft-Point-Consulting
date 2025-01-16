@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
     
 
     return (
-        <section className="relative w-full h-screen overflow-hidden"
+        <section className="relative w-full sm:h-[calc(100vh-4rem)] h-[calc(100vh-6rem)]  overflow-visible"
             style={{
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
@@ -93,25 +93,21 @@ const Hero: React.FC = () => {
                             Crafted Websites
                         </div>
                     </div>
-                        
+
                     {/* Buttons Section */}
-                    <div className="mt-20 sm:mt-14 pr-20 md:pr-36 flex flex-wrap justify-start items-end space-x-4 md:space-x-4">
-                        <div className="flex items-center bg-[#1A1A1A]/20 border border-[#1F1F1F] rounded-full hover:bg-[#1A1A1A]/40 transition">
-                            <Button
-                                onPress={handleClick}
-                                className="px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-white/90 transition font-clash"
-                            >
-                                Get Started
-                            </Button>
-                        </div>
-                        <div className="flex items-center bg-[#1A1A1A]/20 border border-[#1F1F1F] rounded-full hover:bg-[#1A1A1A]/40 transition">
-                            <Button
-                                onPress={() => navigate('/get-quote')} // Navigate to /get-quote on click
-                                className="px-6 py-3 bg-black text-white font-semibold rounded-full hover:bg-black/20 transition font-clash"
-                            >
-                                Free Consultation
-                            </Button>
-                        </div>
+                    <div className="flex flex-wrap justify-center sm:justify-start space-x-4 sm:space-x-6 mt-28 sm:mt-14 pr-8 md:pr-36">
+                        <Button
+                            onPress={handleClick}
+                            className="px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition font-clash"
+                        >
+                            Get Started
+                        </Button>
+                        <Button
+                            onPress={() => navigate('/get-quote')}
+                            className="px-6 py-3 bg-black text-white font-semibold rounded-full hover:bg-gray-700 transition font-clash"
+                        >
+                            Free Consultation
+                        </Button>
                     </div>
                 </section>
 
