@@ -6,6 +6,7 @@ import Blob from "../Blob";
 import Particles from "../Blob/Particles";
 import "../../assets/styles/landingStyles.css"; // Ensure the CSS file is correctly linked.
 import abstractDesign from '@/assets/Abstract-Design.png';
+import heroImage from '@/assets/images/hero.jpg'
 
 const Hero: React.FC = () => {
     useEffect(() => {
@@ -55,7 +56,7 @@ const Hero: React.FC = () => {
                 <div>
                     <img
                         className="image"
-                        src="/src/assets/images/hero.jpg" // Adjust path as needed
+                        src={heroImage}
                         alt="Hero Background"
                     />
                 </div>
