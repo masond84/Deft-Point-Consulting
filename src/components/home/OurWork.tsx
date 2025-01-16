@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardBody, Button, Link } from '@nextui-org/react';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { motion } from "motion/react";
+import { useNavigate } from "react-router-dom";
 
 // Import images for the top containers
 import AbstractIcon1 from '../../assets/images/AbstractIcon1.svg';
@@ -11,41 +12,43 @@ import AbstractIcon4 from '../../assets/images/AbstractIcon4.svg';
 import abstractDesignSvg from '@/assets/AbstractDesign.svg';
 
 const OurWork: React.FC = () => {
+  const navigate = useNavigate();
+
   const works = [
     {
       iconPath: AbstractIcon1,
-      title: 'Innovative E-commerce Platform',
+      title: 'Professional Cleaning Services Website',
       category: 'Category: Web Development',
-      date: 'January 2022',
+      date: 'September 2024',
       description:
-        'Witness our groundbreaking e-commerce platform that seamlessly connects buyers and sellers worldwide.',
-      link: '#',
-    },
-    {
-      iconPath: AbstractIcon2,
-      title: 'Mobile App for Enhanced Fitness',
-      category: 'Category: Mobile App Development',
-      date: 'March 2022',
-      description:
-        'Our fitness app helps users stay fit and motivated with personalized workout plans and progress tracking.',
+        'Developed a professional website to increase the online visibility of Minas Cleaning Services, a cleaning company.',
       link: '#',
     },
     {
       iconPath: AbstractIcon3,
-      title: 'Modern Corporate Website',
-      category: 'Category: Web Design',
-      date: 'April 2022',
+      title: 'Custom CRM Setup With HubSpot',
+      category: 'Category: Marketing Solutions',
+      date: 'June 2024',
       description:
-        'Check out our sleek and modern corporate website that showcases the client’s brand and services.',
+        'Designed a custom CRM using HubSpot and WordPress, automating lead capture and streamlining retail outreach.',
       link: '#',
     },
     {
       iconPath: AbstractIcon4,
-      title: 'Digital Marketing Success Story',
-      category: 'Category: Digital Marketing',
+      title: 'SEO Optimization For EduTech App',
+      category: 'Category: Marketing Solutions',
       date: 'May 2022',
       description:
-        'Discover how our data-driven digital marketing strategies boosted a client’s online presence effectively.',
+        'Improved search engine rankings and online visibility for a speech language therapy application.',
+      link: '#',
+    },
+    {
+      iconPath: AbstractIcon2,
+      title: 'Professional Car Detailing Website Template',
+      category: 'Category: Web Development',
+      date: 'Dec 2024',
+      description:
+        'Implemented a modern car detailing website template, with figma and modern UI components - building online brand presence.',
       link: '#',
     },
   ];
@@ -194,7 +197,10 @@ const OurWork: React.FC = () => {
           href="/portfolio"
           className="no-underline" // Prevent underline styling
         >
-          <Button className="px-6 py-3 rounded-full border border-[#262626] bg-[#1A1A1A]/20 text-white font-sora hover:bg-[#1A1A1A]/40 text-sm font-light">
+          <Button 
+            onPress={() => navigate('/portfolio')}
+            className="px-6 py-3 rounded-full border border-[#262626] bg-[#1A1A1A]/20 text-white font-sora hover:bg-[#1A1A1A]/40 text-sm font-light"
+          >
             View All Projects <ArrowRightAltIcon className="ml-2" />
           </Button>
         </Link>

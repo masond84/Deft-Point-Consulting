@@ -160,8 +160,8 @@ const ReasonsToChoose: React.FC = () => {
           <CardFooter className="flex justify-center pt-4">
               <div className='flex items-center bg-[#1A1A1A]/20 border border-[#1F1F1F] rounded-full px-5 py-2 space-x-2 hover:bg-[#1A1A1A]/40 transition'>
                 <Link 
-                onPress={() => handleButtonClick(card.link)}
-                href={card.link} className='text-white text-sm font-medium font-sora pr-4'>
+                   className='text-white text-sm font-medium font-sora pr-4 cursor-default'
+                >
                   Learn More
                 </Link>
                 <Button 
@@ -245,7 +245,7 @@ const ReasonsToChoose: React.FC = () => {
               {/* Card Footer */}
               <CardFooter className="flex justify-center pt-4">
                 <div className="flex items-center bg-[#1A1A1A]/20 border border-[#1F1F1F] rounded-full px-5 py-2 space-x-2 hover:bg-[#1A1A1A]/40 transition">
-                  <Link href={cardContent[index].link} className="text-white text-sm font-medium font-sora pr-4">
+                  <Link className="text-white text-sm font-medium font-sora pr-4">
                     Learn More
                   </Link>
                   <Button 

@@ -15,7 +15,7 @@ const Showcase: React.FC = () => {
   };
 
   return (
-    <section className="py-12 bg-[#121212] text-white">
+    <section id="showcase" className="py-12 bg-[#121212] text-white">
       {/* Header Section */}
       <div className="text-center mb-12 max-w-3xl mx-auto px-8 sm:px-12 md:px-0">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 font-sora leading-tight">
