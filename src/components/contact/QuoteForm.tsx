@@ -15,11 +15,11 @@ const QuoteForm: React.FC = () => {
             Let’s <span className="bg-gradient-to-br from-[#4fadff] via-[#6dc1ff] to-[#0e73e6b9] bg-clip-text text-transparent font-clash italic"> start </span> a winning project together
           </h1>
           <address className="not-italic text-gray-400 space-y-2">
-            <p className="font-bold">FLUID22</p>
-            <p>801-206-9678</p>
-            <p>2118 East 3900 South</p>
-            <p>Suite 200</p>
-            <p>Holladay, UT 84124</p>
+            <p className="font-bold">Deft Point Consulting</p>
+            <p>Experience Excellence In</p>
+            <p><span className="mr-4 font-tusker">•</span> Development</p>
+            <p><span className="mr-4">•</span> Deployment</p>
+            <p><span className="mr-4">•</span> Execution</p>
           </address>
           <div className="flex space-x-4">
             <a href="#" className="text-gray-400 hover:text-white">

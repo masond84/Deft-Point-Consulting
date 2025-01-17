@@ -197,12 +197,12 @@ const OurWork: React.FC = () => {
           href="/portfolio"
           className="no-underline" // Prevent underline styling
         >
-          <Button 
-            onPress={() => navigate('/portfolio')}
+            <Button 
+            onPress={() => navigate('/portfolio#showcase')}
             className="px-6 py-3 rounded-full border border-[#262626] bg-[#1A1A1A]/20 text-white font-sora hover:bg-[#1A1A1A]/40 text-sm font-light"
-          >
-            View All Projects <ArrowRightAltIcon className="ml-2" />
-          </Button>
+            >
+              View All Projects <ArrowRightAltIcon className="ml-2" />
+            </Button>
         </Link>
       </div>
       

@@ -28,6 +28,10 @@ body {
     font-family: 'Clash Display', sans-serif;
 }
 
+.font-tusker {
+    font-family: "Tusker Grotesk 2700 Bold";
+}
+  
 .glassmorphic-card {
     background: #57575740;
     box-shadow: 0 8px 32px 0 rgba(68, 92, 102, 0.452);
