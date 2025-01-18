@@ -16,40 +16,44 @@ const OurWork: React.FC = () => {
 
   const works = [
     {
+      id: 'cleaning-services',
       iconPath: AbstractIcon1,
       title: 'Professional Cleaning Services Website',
       category: 'Category: Web Development',
       date: 'September 2024',
       description:
         'Developed a professional website to increase the online visibility of Minas Cleaning Services, a cleaning company.',
-      link: '#',
+      link: '/projects/cleaning-services',
     },
     {
+      id: 'custom-crm-setup',
       iconPath: AbstractIcon3,
       title: 'Custom CRM Setup With HubSpot',
       category: 'Category: Marketing Solutions',
       date: 'June 2024',
       description:
         'Designed a custom CRM using HubSpot and WordPress, automating lead capture and streamlining retail outreach.',
-      link: '#',
+      link: '/projects/custom-crm-setup',
     },
     {
+      id: 'edutech-seo-optimization',
       iconPath: AbstractIcon4,
       title: 'SEO Optimization For EduTech App',
       category: 'Category: Marketing Solutions',
       date: 'May 2022',
       description:
         'Improved search engine rankings and online visibility for a speech language therapy application.',
-      link: '#',
+      link: '/projects/edutech-seo-optimization',
     },
     {
+      id: 'mobile-detailing-template',
       iconPath: AbstractIcon2,
       title: 'Professional Car Detailing Website Template',
       category: 'Category: Web Development',
       date: 'Dec 2024',
       description:
         'Implemented a modern car detailing website template, with figma and modern UI components - building online brand presence.',
-      link: '#',
+      link: '/projects/mobile-detailing-template',
     },
   ];
 
@@ -105,10 +109,11 @@ const OurWork: React.FC = () => {
                   />
                   
                   <Button
+                      onPress={() => navigate(work.link)}
                       className="absolute bottom-[-15px] left-1/2 transform -translate-x-1/2 bg-[#1A1A1A]/80 text-white rounded-full px-5 py-2  border border-[#262626] font-sora hover:bg-[#1A1A1A]/40 text-sm font-light"
                   >
-                  View Projects Details
-                  <ArrowRightAltIcon className="ml-1" />
+                    View Projects Details
+                    <ArrowRightAltIcon className="ml-1" />
                   </Button>
                 </div>
 

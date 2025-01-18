@@ -4,8 +4,8 @@ import { motion } from "motion/react";
 
 import { FaIndustry, FaLaptopCode, FaPalette } from 'react-icons/fa';
 import { TfiAngleDown, TfiAngleDoubleUp } from 'react-icons/tfi';
-import CardImage1 from '../../assets/images/DropdownCardImage1.jpg';
-import CardImage2 from '../../assets/images/DropdownCardImage2.jpg';
+import CardImage1 from '../../assets/images/DropdownCardImage1.png';
+import CardImage2 from '../../assets/images/DropdownCardImage2.png';
 
 const Showcase: React.FC = () => {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
@@ -32,7 +32,7 @@ const Showcase: React.FC = () => {
         <Card className="bg-[#1A1A1A] shadow-lg rounded-lg border border-[#1F1F1F]">
           {/* Card Header */}
           <CardHeader className="p-4">
-            <div className='bg-[#222222] rounded-lg overflow-hidden flex justify-center items-center h-72'>
+            <div className='bg-[#222222] shadow-glass rounded-lg overflow-hidden flex justify-center items-center h-fit'>
               <img
                 src={CardImage1} // Replace with actual image
                 alt="Project Thumbnail"
@@ -213,7 +213,7 @@ const Showcase: React.FC = () => {
         <Card className="bg-glass-bg backdrop-blur-glass border  border-glass-border rounded-lg">
           {/* Card Header */}
           <CardHeader className="p-4">
-            <div className="bg-[#222222] rounded-lg overflow-hidden flex justify-center items-center h-72">
+            <div className="bg-[#222222] rounded-lg overflow-hidden flex justify-center items-center h-fit">
               <img
                 src={CardImage2} // Replace with actual image
                 alt="Project Thumbnail"
