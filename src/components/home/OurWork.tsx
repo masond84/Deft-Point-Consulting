@@ -170,7 +170,9 @@ const OurWork: React.FC = () => {
                     className="relative z-10 h-24 w-24"
                   />
 
-                  <Button className="absolute bottom-[-15px] left-1/2 transform -translate-x-1/2 bg-[#1A1A1A]/80 text-white rounded-full px-5 py-2 border border-[#262626] font-sora hover:bg-[#1A1A1A]/40 text-sm font-light">
+                  <Button 
+                    onPress={() => navigate(work.link)}
+                    className="absolute bottom-[-15px] left-1/2 transform -translate-x-1/2 bg-[#1A1A1A]/80 text-white rounded-full px-5 py-2 border border-[#262626] font-sora hover:bg-[#1A1A1A]/40 text-sm font-light">
                     View Project Details
                     <ArrowRightAltIcon className="ml-1" />
                   </Button>
