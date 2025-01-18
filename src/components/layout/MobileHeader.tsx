@@ -26,46 +26,46 @@ const MobileNav: React.FC = () => {
         </DropdownTrigger>
         <DropdownMenu
           aria-label="Mobile navigation"
-          className="w-72 bg-[#1E1E1E] text-white p-4 rounded-2xl"
+          className="w-72 bg-glass-bg-2 text-white p-4 rounded-2xl shadow-glassmorphism backdrop-blur-glass border border-glassmorphism transition-all duration-500"
         >
           <DropdownItem
             key="home"
-            className="py-3 hover:bg-white/10 rounded-lg transition-colors"
+            className="py-3 hover:bg-white/10 rounded-lg text-bold font-clash tracking-widest transition-colors"
             onPress={() => navigate('/')}
           >
             Home
           </DropdownItem>
           <DropdownItem
             key="services"
-            className="py-3 hover:bg-white/10 rounded-lg transition-colors"
+            className="py-3 hover:bg-white/10 rounded-lg text-bold font-clash tracking-widest transition-colors"
             onPress={() => navigate('/services')}
           >
             Services
           </DropdownItem>
           <DropdownItem
             key="portfolio"
-            className="py-3 hover:bg-white/10 rounded-lg transition-colors"
+            className="py-3 hover:bg-white/10 rounded-lg text-bold font-clash tracking-widest transition-colors"
             onPress={() => navigate('/portfolio')}
           >
             Portfolio
           </DropdownItem>
           <DropdownItem
             key="about"
-            className="py-3 hover:bg-white/10 rounded-lg transition-colors"
+            className="py-3 hover:bg-white/10 rounded-lg text-bold font-clash tracking-widest transition-colors"
             onPress={() => navigate('/about')}
           >
             About
           </DropdownItem>
           <DropdownItem
             key="contact"
-            className="py-3 hover:bg-white/10 rounded-lg transition-colors"
+            className="py-3 hover:bg-white/10 rounded-lg text-bold font-clash tracking-widest transition-colors"
             onPress={() => navigate('/contact')}
           >
             Contact
           </DropdownItem>
           <DropdownItem
             key="get-quote"
-            className="mt-2 py-3 bg-gradient-to-br from-[#4fadff] via-[#6dc1ff] to-[#0e73e6] rounded-lg text-center font-semibold"
+            className="mt-2 py-3 bg-gradient-to-br font-bold font-clash tracking-widest from-[#4fadff] via-[#6dc1ff] to-[#0e73e6] rounded-lg text-center"
             onPress={() => navigate('/get-quote')}
           >
             Let's Meet
