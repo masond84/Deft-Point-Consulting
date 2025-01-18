@@ -12,34 +12,33 @@ import PointerIcon from '../../assets/images/PointerPIcon.svg';
 const OurServices: React.FC = () => {
   const services = [
     {
-      icon: <img src={WebIcon} alt="Web Development" className="w-20 h-20" />,
-      title: "Web Development",
+      icon: <img src={WebIcon} alt="Website and Application Development" className="w-20 h-20" />,
+      title: "Website and Application Development",
       description:
-        "Unlock Your Online Potential in today's digital age, a powerful web presence is essential for any business.",
+        "Unlock Your Online Potential in today's digital age with custom websites, applications, and landing pages tailored to your needs",
       link: "/services",
       tabIndex: 1,
     },
     {
-      icon: <img src={MobileIcon} alt="Mobile App Development" className="w-20 h-20" />,
-      title: "Mobile App Development",
+      icon: <img src={MobileIcon} alt="Consulting Services" className="w-20 h-20" />,
+      title: "Consulting Services",
       description:
-        "Embrace Mobility with Confidence. Mobile devices have revolutionized the way we interact with the world.",
+        "Embrace Mobility with Confidence with our guidance on application development, UI/UX design, and digital strategies.",
       link: "/services",
       tabIndex: 2,
     },
     {
-      icon: <img src={PointerIcon} alt="Web Design" className="w-20 h-20" />,
-      title: "Web Design",
+      icon: <img src={PointerIcon} alt="Design and Branding (UI/UX)" className="w-20 h-20" />,
+      title: "Design & Branding",
       description:
-        "Elevate Your Brand Aesthetics. Your website’s design is a reflection of your brand’s identity and values.",
+        "Custom UI/UX designs, branding packages, and design systems to elevate Your Brand Aesthetics.",
       link: "/services",
       tabIndex: 0, 
     },
     {
-      icon: <img src={BoltIcon} alt="Digital Marketing" className="w-20 h-20" />,
-      title: "Digital Marketing",
-      description:
-        "Drive Your Business Forward. Our digital marketing services help you stand out and connect effectively.",
+      icon: <img src={BoltIcon} alt="Marketing and Data Solutions" className="w-20 h-20" />,
+      title: "Marketing & Data Solutions",
+      description: "SEO, analytics, lead generation, PPC campaigns, web automation, marketing solutions and so much more.",      
       link: "/services",
       tabIndex: 3, 
     },
@@ -91,7 +90,7 @@ const OurServices: React.FC = () => {
             {/* Card Content */}
             <CardBody className="flex flex-col items-center text-center flex-grow mb-4">
               <h3 className="text-lg sm:text-xl font-medium mb-4 font-sora">{service.title}</h3>
-              <p className="text-gray-400 text-sm sm:text-base font-clash leading-loose">{service.description}</p>
+              <p className="capitalize  text-gray-400 text-sm sm:text-base font-clash leading-loose">{service.description}</p>
             </CardBody>
 
             {/* Card Footer */}
