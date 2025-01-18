@@ -249,7 +249,7 @@ const ServiceCategories: React.FC = () => {
     // Content for each tab
     const tabContent = [
         {
-            title: "Web Design",
+            title: "Web Application Development",
             description: "Our web design services focus on creating visually appealing, user-friendly websites tailored to your brand's identity and business goals. With a mobile-first approach and seamless UX/UI designs, we ensure your online presence leaves a lasting impression.",
             cards: [
                 <ServiceCardOne key="card1" />, 
@@ -259,7 +259,7 @@ const ServiceCategories: React.FC = () => {
             ]
         },
         {
-            title: "Web Development",
+            title: "Consulting",
             description: "We develop high-performing, secure, and scalable web solutions tailored to meet your business requirements. From front-end development to back-end integration, we deliver seamless functionality.",
             cards: [
                 <ServiceCardOne key="card1" />, 
@@ -267,7 +267,7 @@ const ServiceCategories: React.FC = () => {
             ]
         },
         {
-            title: "Mobile App Development",
+            title: "Design & Branding",
             description: "Our mobile app development services ensure your business is accessible anytime, anywhere. We specialize in creating intuitive, responsive apps for iOS and Android platforms.",
             cards: [
                 <ServiceCardOne key="card1" />, 
@@ -275,7 +275,7 @@ const ServiceCategories: React.FC = () => {
             ]
         },
         {
-            title: "Digital Marketing",
+            title: "Marketing & Data Solutions",
             description: "Boost your brand visibility and engagement with our data-driven digital marketing strategies. We specialize in SEO, PPC, content marketing, and social media campaigns tailored to your business.",
             cards: [
                 <ServiceCardOne key="card1" />, 
@@ -319,20 +319,11 @@ const ServiceCategories: React.FC = () => {
                         <Tab
                             disableRipple
                             label={
-                                <div 
-                                    className={`flex items-center justify-start 
-                                                p-2 sm:p-3 w-24 sm:w-36 whitespace-nowrap 
-                                                rounded-lg border border-[#1A1A1A] 
-                                                ${
-                                                tabValue === 0
-                                                    ? 'bg-[#1A1A1A] text-white'
-                                                    : 'bg-transparent text-gray-400'
-                                                } 
-                                                hover:bg-[#1A1A1A] hover:text-white transition 
-                                                text-xs sm:text-sm`}
-                                >
-                                    <img src={PointClickIcon} alt="Web Design Icon" className="w-4 sm:w-6 h-4 sm:h-6 mr-2" />
-                                    Web Design
+                                <div className={`flex items-center p-4 justify-start w-72 whitespace-nowrap rounded-lg border border-[#1A1A1A] ${
+                                    tabValue === 0 ? 'bg-[#1A1A1A] text-white' : 'bg-transparent text-gray-400'
+                                } hover:bg-[#1A1A1A] hover:text-white transition`}>
+                                    <img src={WebIcon} alt="Web Development Icon" className="w-6 h-6 mr-2" />
+                                    Web App Development
                                 </div>
                             }
                         />
@@ -344,7 +335,7 @@ const ServiceCategories: React.FC = () => {
                                     tabValue === 1 ? 'bg-[#1A1A1A] text-white' : 'bg-transparent text-gray-400'
                                 } hover:bg-[#1A1A1A] hover:text-white transition`}>
                                     <img src={WebIcon} alt="Web Development Icon" className="w-6 h-6 mr-2" />
-                                    Web Development
+                                    Digital Consulting
                                 </div>
                             }
                         />
@@ -356,7 +347,7 @@ const ServiceCategories: React.FC = () => {
                                     tabValue === 2 ? 'bg-[#1A1A1A] text-white' : 'bg-transparent text-gray-400'
                                 } hover:bg-[#1A1A1A] hover:text-white transition`}>
                                     <img src={PointClickIcon} alt="Mobile App Development Icon" className="w-6 h-6 mr-2" />
-                                    Mobile App Development
+                                    Design Branding
                                 </div>
                             }
                         />
@@ -368,7 +359,7 @@ const ServiceCategories: React.FC = () => {
                                     tabValue === 3 ? 'bg-[#1A1A1A] text-white' : 'bg-transparent text-gray-400'
                                 } hover:bg-[#1A1A1A] hover:text-white transition`}>
                                     <img src={GraphIcon} alt="Digital Marketing Icon" className="w-6 h-6 mr-2" />
-                                    Digital Marketing
+                                    Marketing & Data Solutions
                                 </div>
                             }
                         />

@@ -96,18 +96,20 @@ const OurServices: React.FC = () => {
 
             {/* Card Footer */}
             <CardFooter className="flex justify-center pt-4">
-              <RouterLink 
-                to={service.link}
-                state={{ tabValue: service.tabIndex }}
+              <div 
                 className="flex items-center bg-[#111111] border border-[#1F1F1F] rounded-full px-5 py-2 space-x-2 hover:bg-[#111111]/80 transition"
               >
                 <span className="text-white text-sm font-medium font-sora pr-2">
                   Learn More
                 </span>
-                <Button className="w-12 h-2 p-4 bg-black rounded-full flex items-center justify-center">
+                <Button 
+                  onPress={() => {
+                    window.location.href = '/services#categories';
+                  }}
+                  className="w-12 h-2 p-4 bg-black rounded-full flex items-center justify-center">
                   <ArrowRightAltIcon />
                 </Button>
-              </RouterLink>
+              </div>
             </CardFooter>
           </Card>
           </motion.div>
