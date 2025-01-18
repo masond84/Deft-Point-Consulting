@@ -7,9 +7,23 @@ import {
     Button
 } from '@nextui-org/react';
 import abstractDesignSvg from '@/assets/AbstractDesign.svg';
+import { useNavigate } from "react-router-dom";
+
 
 const CallToAction: React.FC = () => {
     const isMobile = window.matchMedia('(max-width: 768px').matches;
+
+    const navigate = useNavigate(); // Hook to navigate to routes
+    
+    const handleClick = () => {
+        navigate("/services#categories");
+        window.scrollTo(0, 0); // Scroll to the top after navigating
+    };
+    
+    const handleConsultationClick = () => {
+        navigate('/get-quote');
+        window.scrollTo(0, 0); // Scroll to the top after navigating
+    };
 
     return (
         <section className="py-12 flex justify-center bg-gradient-to-b from-[#0f0f0f] to-[#1a1a1a]">
@@ -91,11 +105,15 @@ const CallToAction: React.FC = () => {
                                         </p>
                                         <div className="flex justify-center space-x-4">
                                             <Button
+                                                onPress={handleClick}
                                                 className="px-3 py-3 sm:px-6 sm:py-6 text-sm sm:text-base bg-white text-black font-semibold rounded-full hover:bg-white/90 transition font-clash" 
                                             >
                                                 Get Started
                                             </Button>
-                                            <Button className="px-3 py-3 sm:px-6 sm:py-6 text-sm sm:text-base bg-[#1A1A1A] border border-[#262626] text-white font-semibold rounded-full hover:bg-[#1A1A1A]/70 transition font-clash">
+                                            <Button 
+                                                onPress={handleConsultationClick}
+                                                className="px-3 py-3 sm:px-6 sm:py-6 text-sm sm:text-base bg-[#1A1A1A] border border-[#262626] text-white font-semibold rounded-full hover:bg-[#1A1A1A]/70 transition font-clash"
+                                            >
                                                 Free Consultation
                                             </Button>
                                         </div>

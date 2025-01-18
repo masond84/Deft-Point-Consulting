@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import { FaIndustry, FaLaptopCode, FaPalette } from 'react-icons/fa';
 import { TfiAngleDown, TfiAngleDoubleUp } from 'react-icons/tfi';
 import CardImage1 from '../../assets/images/DropdownCardImage1.png';
-import CardImage2 from '../../assets/images/DropdownCardImage2.png';
+import CardImage2 from '../../assets/images/DropdownCardImage2.jpg';
 
 const Showcase: React.FC = () => {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
