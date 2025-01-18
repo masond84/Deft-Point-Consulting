@@ -22,7 +22,7 @@ const Showcase: React.FC = () => {
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#808080] to-[#b4b4b4]">Projects</span> Showcase
         </h2>
         <p className="text-sm sm:text-base md:text-md text-gray-400 leading-relaxed font-clash">
-          Witness the brilliance of our previous projects. Our portfolio showcases the successful collaborations we've had with diverse clients across various industries. Let our work speak for itself.
+          Witness the brilliance of our works. We showcase the successful collaborations we've embarked with diverse clients across diverse industries.
         </p>
       </div>
 
