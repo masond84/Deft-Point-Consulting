@@ -27,7 +27,7 @@ const Showcase: React.FC = () => {
       </div>
 
       {/* Projects Section */}
-      <div className="flex flex-col gap-8 max-w-4xl mx-auto">
+      <div className="flex flex-col gap-8 max-w-4xl mx-auto px-6 sm:px-2">
         {/* Card 1 */}
         <Card className="bg-[#1A1A1A] shadow-lg rounded-lg border border-[#1F1F1F]">
           {/* Card Header */}
@@ -42,54 +42,47 @@ const Showcase: React.FC = () => {
           </CardHeader>
 
           {/* Card Body */}
-          <CardBody className="p-6">
+          <CardBody className="p-8 sm:p-6">
             {/*  */}
-            <div className="flex justify-between items-center pl-4 pr-4 mb-4">
-              <h3 className="text-xl font-medium font-sora">E-Commerce Revolution</h3>
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center pl-4 pr-4 mb-4 space-y-4 sm:space-y-0">
+              
+              <h3 className="text-lg sm:text-xl font-medium font-sora whitespace-nowrap">
+                Modern Cleaning Service Site 
+              </h3>
               
               <div className="flex items-center gap-2">
-                <span className="text-[#666666] font-xs font-sora">{expandedCard === 1 ? 'Show Less' : 'Show More'}</span>
+                <span className="text-[#666666] font-xs font-sora mr-2 sm:mr-0">{expandedCard === 1 ? 'Show Less' : 'Show More'}</span>
                 <div className="p-[2px] rounded-full bg-gradient-to-b from-[#1A1A1A] to-[#1A1A1A]/0">
-                <Button
-                  onPress={() => toggleCard(1)}
-                  className="p-3 bg-gradient-to-r from-[#222222] to-[#333333] text-white hover:text-white/80 border border-[#262626] rounded-full"
-                  variant="ghost"
-                >
-                  {expandedCard === 1 ? (
-                    <TfiAngleDoubleUp className="text-lg" />
-                  ) : (
-                    <TfiAngleDown className="text-lg" />
-                  )}
-                </Button>
+                  <Button
+                    onPress={() => toggleCard(1)}
+                    className="p-3 bg-gradient-to-r from-[#222222] to-[#333333] text-white hover:text-white/80 border border-[#262626] rounded-full"
+                    variant="ghost"
+                  >
+                    {expandedCard === 1 ? (
+                      <TfiAngleDoubleUp className="text-sm sm:text-lg" />
+                    ) : (
+                      <TfiAngleDown className="text-sm sm:text-lg" />
+                    )}
+                  </Button>
                 </div>
               </div>
             </div>
             
             {/* Card Tags */}
-            <div className="flex flex-wrap gap-3 pl-4 pr-4 mb-4">
-              {/* E-commerce Chip */}
-              <Chip
-                className="bg-transparent text-[#A6A6A6] border border-[#1F1F1F] rounded-full flex items-center p-4 text-sm font-clash"
-                startContent={<FaIndustry className="text-[#A6A6A6] text-sm" />} // Icon on the left
-                size="lg"
-                variant="bordered"
-              >
-                E-commerce
-              </Chip>
-
+            <div className="flex gap-2 sm:gap-3 mb-4 overflow-x-auto whitespace-nowrap">
               {/* Web Design Chip */}
               <Chip
-                className="bg-transparent text-[#A6A6A6] border border-[#1F1F1F] rounded-full flex items-center p-4 text-sm font-clash"
+                className="bg-transparent text-[#A6A6A6] border border-[#1F1F1F] rounded-full flex items-center px-3 py-1 sm:p-4 text-xs sm:text-sm font-clash"
                 startContent={<FaPalette className="text-[#A6A6A6] text-sm" />} // Icon on the left
                 size="lg"
                 variant="bordered"
               >
-                Web Design
+                Design & Branding
               </Chip>
 
               {/* Development Chip */}
               <Chip
-                className="bg-transparent text-[#A6A6A6] border border-[#1F1F1F] rounded-full flex items-center p-4 text-sm font-clash"
+                className="bg-transparent text-[#A6A6A6] border border-[#1F1F1F] rounded-full flex items-center px-3 py-1 sm:p-4 text-xs sm:text-sm font-clash"
                 startContent={<FaLaptopCode className="text-[#A6A6A6] text-sm" />} // Icon on the left
                 size="lg"
                 variant="bordered"
