@@ -7,6 +7,10 @@ import { TfiAngleDown, TfiAngleDoubleUp } from 'react-icons/tfi';
 import CardImage1 from '../../assets/images/DropdownCardImage1.png';
 import CardImage2 from '../../assets/images/DropdownCardImage2.jpg';
 
+// Card Icons
+import FigmaIcon from '../../assets/images/FigmaIcon.svg';
+
+
 const Showcase: React.FC = () => {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
 
@@ -142,7 +146,7 @@ const Showcase: React.FC = () => {
                         }}
                       >
                         <img
-                          src="src/assets/images/FigmaIcon.svg" // Replace with actual icon path
+                          src={FigmaIcon} // Replace with actual icon path
                           alt={`Technology ${index + 1}`}
                           className="w-10 h-10 sm:w-12 sm:h-12"
                         />
@@ -266,7 +270,7 @@ const Showcase: React.FC = () => {
 
             {/* Dropdown Section */}
             {expandedCard === 2 && (
-              <div className="space-y-6 p-4 sm:p-8 bg-[#0f0f0f] border border-[#1F1F1F] rounded-lg">
+              <div className="space-y-6 p-4 sm:p-8 bg-[#0f0f0f] border border-[#1F1F1F] rounded-lg mx-4">
                 {/* Project Details */}
                 <div className="flex flex-col sm:flex-row font-clash items-center sm:items-start justify-center sm:justify-between border border-[#1F1F1F] rounded-lg p-4 space-y-4 sm:space-y-0">
                   <div className='flex-1 text-center'>
@@ -307,7 +311,7 @@ const Showcase: React.FC = () => {
                         }}
                       >
                         <img
-                          src="src/assets/images/FigmaIcon.svg" // Replace with actual icon path
+                          src={FigmaIcon} // Replace with actual icon path
                           alt={`Technology ${index + 1}`}
                           className="w-10 h-10 sm:w-12 sm:h-12"
                         />
