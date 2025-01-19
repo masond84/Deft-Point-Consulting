@@ -69,7 +69,7 @@ const Showcase: React.FC = () => {
             </div>
             
             {/* Card Tags */}
-            <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:pl-4 sm:pr-4 justify-center sm:justify-start overflow-x-auto">
+            <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:-mt-4 sm:pl-4 sm:pr-4 justify-center sm:justify-start overflow-x-auto">
               {/* Web Design Chip */}
               <Chip
                 className="bg-transparent text-[#A6A6A6] border border-[#1F1F1F] rounded-full flex items-center px-3 py-1 sm:p-4 text-xs sm:text-sm font-clash"
@@ -101,34 +101,34 @@ const Showcase: React.FC = () => {
 
             {/* Dropdown Section */}
             {expandedCard === 1 && (
-              <div className="space-y-6 p-8 bg-[#0f0f0f] border border-[#1F1F1F] rounded-lg">
+              <div className="space-y-6 p-4 sm:p-8 bg-[#0f0f0f] border border-[#1F1F1F] rounded-lg">
                 {/* Project Details */}
-                <div className="flex font-clash items-center justify-between border border-[#1F1F1F] rounded-lg p-4">
+                <div className="flex flex-col sm:flex-row font-clash items-center sm:items-start justify-center sm:justify-between border border-[#1F1F1F] rounded-lg p-4 space-y-4 sm:space-y-0">
                   <div className='flex-1 text-center'>
                     <h4 className="font-light text-white font-sora">Category</h4>
                     <p className="text-[#666666]">Technology</p>
                   </div>
-                  <div className="w-px bg-[#1f1f1f] h-12 mx-4"></div>
+                  <div className="hidden sm:block w-px bg-[#1f1f1f] h-12 mx-4"></div>
                   <div className='flex-1 text-center'>
                     <h4 className="font-light text-white font-sora">Time Taken</h4>
                     <p className="text-[#666666]">6 Months</p>
                   </div>
-                  <div className="w-px bg-[#1f1f1f] h-12 mx-4"></div>
-                  <div className='flex-1 text-center'>
+                  <div className="hidden sm:block w-px bg-[#1f1f1f] h-12 mx-4"></div>
+                  <div className='hidden sm:block flex-1 text-center'>
                     <h4 className="font-light text-white font-sora">Start Date</h4>
                     <p className="text-[#666666]">Feb 1, 2023</p>
                   </div>
-                  <div className="w-px bg-[#1f1f1f] h-12 mx-4"></div>
-                  <div className='flex-1 text-center'>
+                  <div className="hidden sm:block w-px bg-[#1f1f1f] h-12 mx-4"></div>
+                  <div className='hidden sm:block flex-1 text-center'>
                     <h4 className="font-light text-white font-sora">End Date</h4>
                     <p className="text-[#666666]">Aug 1, 2023</p>
                   </div>
                 </div>
             
                 {/* Technologies Used */}
-                <div className="flex font-clash items-center justify-start border border-[#1F1F1F] rounded-lg p-4 pl-12">
-                  <h4 className="text-lg font-light text-white font-sora">Technologies Used</h4>
-                  <div className="flex ml-8 items-center gap-8">
+                <div className="flex flex-col sm:flex-row font-clash items-center sm:items-start justify-center sm:justify-start border border-[#1F1F1F] rounded-lg p-4 sm:pl-12">
+                  <h4 className="text-md sm:text-lg font-light text-white font-sora text-center sm:text-left mb-2 sm:mb-0">Technologies Used</h4>
+                  <div className="flex flex-wrap justify-center sm:justify-start ml-0 sm:ml-8 items-center gap-4 sm:gap-8">
                     {/* Example Technology Icons */}
                     {[1, 2, 3, 4].map((_, index) => (
                       <motion.div
@@ -144,7 +144,7 @@ const Showcase: React.FC = () => {
                         <img
                           src="src/assets/images/FigmaIcon.svg" // Replace with actual icon path
                           alt={`Technology ${index + 1}`}
-                          className="w-12 h-12"
+                          className="w-10 h-10 sm:w-12 sm:h-12"
                         />
                       </motion.div>
                     ))}
@@ -152,6 +152,7 @@ const Showcase: React.FC = () => {
                 </div>
             
                 {/* Team Members */}
+                {/*
                 <div className="flex font-clash items-center justify-start border border-[#1F1F1F] rounded-lg p-4 pl-12 pr-12">
                   <h4 className="text-lg font-light text-white font-sora text-nowrap">Team Members</h4>
                   <div className="grid grid-cols-3 gap-4 ml-8">
@@ -169,27 +170,28 @@ const Showcase: React.FC = () => {
                     </div>
                   </div>
                 </div>
+                */}
             
                 {/* Methods Used */}
-                <div className="flex font-clash items-center justify-start border border-[#1F1F1F] rounded-lg p-4 pl-12 space-x-10 cursor-default">
-                  <h4 className="font-bold text-white">Methods Used</h4>
-                  <div className="flex flex-wrap gap-4">
+                <div className="flex flex-col sm:flex-row font-clash items-center justify-center sm:justify-start border border-[#1F1F1F] rounded-lg p-4 sm:pl-12 sm:space-x-10 space-y-4 sm:space-y-0 cursor-default">
+                  <h4 className="text-md sm:text-lg font-light text-white font-sora text-center sm:text-left mb-2 sm:mb-0">Methods Used</h4>
+                  <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
                     <Chip
-                      className="bg-transparent text-[#A6A6A6] border border-[#272727] rounded-full flex items-center p-4 text-sm font-clash"
+                      className="bg-transparent text-[#A6A6A6] border border-[#272727] rounded-full flex items-center px-3 py-1 sm:p-4 text-xs sm:text-sm font-clash"
                       size="lg"
                       variant="bordered"
                     >
                       Development
                     </Chip>
                     <Chip
-                      className="bg-transparent text-[#A6A6A6] border border-[#272727] rounded-full flex items-center p-4 text-sm font-clash"
+                      className="bg-transparent text-[#A6A6A6] border border-[#272727] rounded-full flex items-center px-3 py-1 sm:p-4 text-xs sm:text-sm font-clash"
                       size="lg"
                       variant="bordered"
                     >
                       Development
                     </Chip>
                     <Chip
-                      className="bg-transparent text-[#A6A6A6] border border-[#272727] rounded-full flex items-center p-4 text-sm font-clash"
+                      className="bg-transparent text-[#A6A6A6] border border-[#272727] rounded-full flex items-center px-3 py-1 sm:p-4 text-xs sm:text-sm font-clash"
                       size="lg"
                       variant="bordered"
                     >
@@ -216,13 +218,15 @@ const Showcase: React.FC = () => {
           </CardHeader>
 
           {/* Card Body */}
-          <CardBody className="p-6">
+          <CardBody className="p-8 sm:p-6">
             {/* */}
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl font-medium font-sora">TechGuru Platform</h3>
+            <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center sm:items-start text-center sm:text-left sm:pl-4 sm:pr-4 mb-4 space-y-4 sm:space-y-0">
+              <h3 className="text-lg sm:text-xl font-medium font-sora whitespace-nowrap">
+                TechGuru Platform
+              </h3>
               
               <div className="flex items-center gap-2">
-                <span className="text-[#666666] font-xs font-sora">{expandedCard === 1 ? 'Show Less' : 'Show More'}</span>
+                <span className="text-[#666666] font-xs font-sora mr-2 sm:mr-0">{expandedCard === 1 ? 'Show Less' : 'Show More'}</span>
                 <div className="p-[2px] rounded-full bg-gradient-to-b from-[#1A1A1A] to-[#1A1A1A]/0">
                 <Button
                   onPress={() => toggleCard(2)}
@@ -230,9 +234,9 @@ const Showcase: React.FC = () => {
                   variant="ghost"
                 >
                   {expandedCard === 2 ? (
-                    <TfiAngleDoubleUp className="text-lg" />
+                    <TfiAngleDoubleUp className="text-sm sm:text-lg" />
                   ) : (
-                    <TfiAngleDown className="text-lg" />
+                    <TfiAngleDown className="text-sm sm:text-lg" />
                   )}
                 </Button>
                 </div>
@@ -240,40 +244,20 @@ const Showcase: React.FC = () => {
             </div>
 
             {/* Card Tags */}
-            <div className="flex flex-wrap gap-2 mb-4">
-                            {/* E-commerce Chip */}
-                            <Chip
-                className="bg-transparent text-[#A6A6A6] border border-[#272727] rounded-full flex items-center p-4 text-sm font-clash"
-                startContent={<FaIndustry className="text-[#A6A6A6] text-sm" />} // Icon on the left
-                size="lg"
-                variant="bordered"
-              >
-                Technology
-              </Chip>
-
+            <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:-mt-4 sm:pl-4 sm:pr-4 justify-center sm:justify-start overflow-x-auto">
               {/* Web Design Chip */}
               <Chip
-                className="bg-transparent text-[#A6A6A6] border border-[#272727] rounded-full flex items-center p-4 text-sm font-clash"
+                className="bg-transparent text-[#A6A6A6] border border-[#1F1F1F] rounded-full flex items-center px-3 py-1 sm:p-4 text-xs sm:text-sm font-clash"
                 startContent={<FaPalette className="text-[#A6A6A6] text-sm" />} // Icon on the left
                 size="lg"
                 variant="bordered"
               >
-                Platform
-              </Chip>
-
-              {/* Development Chip */}
-              <Chip
-                className="bg-transparent text-[#A6A6A6] border border-[#272727] rounded-full flex items-center p-4 text-sm font-clash"
-                startContent={<FaLaptopCode className="text-[#A6A6A6] text-sm" />} // Icon on the left
-                size="lg"
-                variant="bordered"
-              >
-                Development
+                Design & Branding
               </Chip>
             </div>
 
             {/* Default Description */}
-            <div className="bg-[#0F0F0F] border border-[#1F1F1F] p-8 rounded-lg mb-4">
+            <div className="bg-[#0F0F0F] border border-[#1F1F1F] rounded-lg sm:ml-4 sm:mr-4 -mb-4 sm:mb-4 p-4 sm:p-8 text-center sm:text-left">
               <h4 className="text-lg font-light text-white font-sora mb-4">Project Description</h4>
                 <p className="text-xs text-gray-400 font-sora">
                   A cutting-edge platform for technology enthusiasts, designed to streamline workflows and enhance collaboration among teams.
@@ -282,34 +266,34 @@ const Showcase: React.FC = () => {
 
             {/* Dropdown Section */}
             {expandedCard === 2 && (
-              <div className="space-y-6 p-8 bg-[#0f0f0f] border border-[#1F1F1F] rounded-lg">
+              <div className="space-y-6 p-4 sm:p-8 bg-[#0f0f0f] border border-[#1F1F1F] rounded-lg">
                 {/* Project Details */}
-                <div className="flex font-clash items-center justify-between border border-[#1F1F1F] rounded-lg p-4">
+                <div className="flex flex-col sm:flex-row font-clash items-center sm:items-start justify-center sm:justify-between border border-[#1F1F1F] rounded-lg p-4 space-y-4 sm:space-y-0">
                   <div className='flex-1 text-center'>
                     <h4 className="font-light text-white font-sora">Category</h4>
                     <p className="text-[#666666]">Technology</p>
                   </div>
-                  <div className="w-px bg-[#1f1f1f] h-12 mx-4"></div>
+                  <div className="hidden sm:block w-px bg-[#1f1f1f] h-12 mx-4"></div>
                   <div className='flex-1 text-center'>
                     <h4 className="font-light text-white font-sora">Time Taken</h4>
                     <p className="text-[#666666]">6 Months</p>
                   </div>
-                  <div className="w-px bg-[#1f1f1f] h-12 mx-4"></div>
-                  <div className='flex-1 text-center'>
+                  <div className="hidden sm:block w-px bg-[#1f1f1f] h-12 mx-4"></div>
+                  <div className='hidden sm:block flex-1 text-center'>
                     <h4 className="font-light text-white font-sora">Start Date</h4>
                     <p className="text-[#666666]">Feb 1, 2023</p>
                   </div>
-                  <div className="w-px bg-[#1f1f1f] h-12 mx-4"></div>
-                  <div className='flex-1 text-center'>
+                  <div className="hidden sm:block w-px bg-[#1f1f1f] h-12 mx-4"></div>
+                  <div className='hidden sm:block flex-1 text-center'>
                     <h4 className="font-light text-white font-sora">End Date</h4>
                     <p className="text-[#666666]">Aug 1, 2023</p>
                   </div>
                 </div>
             
                 {/* Technologies Used */}
-                <div className="flex font-clash items-center justify-start border border-[#1F1F1F] rounded-lg p-4 pl-12">
-                  <h4 className="text-lg font-light text-white font-sora">Technologies Used</h4>
-                  <div className="flex ml-8 items-center gap-8">
+                <div className="flex flex-col sm:flex-row font-clash items-center sm:items-start justify-center sm:justify-start border border-[#1F1F1F] rounded-lg p-4 sm:pl-12">
+                  <h4 className="text-md sm:text-lg font-light text-white font-sora text-center sm:text-left mb-2 sm:mb-0">Technologies Used</h4>
+                  <div className="flex flex-wrap justify-center sm:justify-start ml-0 sm:ml-8 items-center gap-4 sm:gap-8">
                     {/* Example Technology Icons */}
                     {[1, 2, 3, 4].map((_, index) => (
                       <motion.div
@@ -325,7 +309,7 @@ const Showcase: React.FC = () => {
                         <img
                           src="src/assets/images/FigmaIcon.svg" // Replace with actual icon path
                           alt={`Technology ${index + 1}`}
-                          className="w-12 h-12"
+                          className="w-10 h-10 sm:w-12 sm:h-12"
                         />
                       </motion.div>
                     ))}
@@ -333,6 +317,7 @@ const Showcase: React.FC = () => {
                 </div>
             
                 {/* Team Members */}
+                {/*
                 <div className="flex font-clash items-center justify-start border border-[#1F1F1F] rounded-lg p-4 pl-12 pr-12">
                   <h4 className="text-lg font-light text-white font-sora text-nowrap">Team Members</h4>
                   <div className="grid grid-cols-3 gap-4 ml-8">
@@ -350,27 +335,28 @@ const Showcase: React.FC = () => {
                     </div>
                   </div>
                 </div>
+                */}
             
                 {/* Methods Used */}
-                <div className="flex font-clash items-center justify-start border border-[#1F1F1F] rounded-lg p-4 pl-12 space-x-10 cursor-default">
-                  <h4 className="font-bold text-white">Methods Used</h4>
-                  <div className="flex flex-wrap gap-4">
+                <div className="flex flex-col sm:flex-row font-clash items-center justify-center sm:justify-start border border-[#1F1F1F] rounded-lg p-4 sm:pl-12 sm:space-x-10 space-y-4 sm:space-y-0 cursor-default">
+                  <h4 className="text-md sm:text-lg font-light text-white font-sora text-center sm:text-left mb-2 sm:mb-0">Methods Used</h4>
+                  <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
                     <Chip
-                      className="bg-transparent text-[#A6A6A6] border border-[#272727] rounded-full flex items-center p-4 text-sm font-clash"
+                      className="bg-transparent text-[#A6A6A6] border border-[#272727] rounded-full flex items-center px-3 py-1 sm:p-4 text-xs sm:text-sm font-clash"
                       size="lg"
                       variant="bordered"
                     >
                       Development
                     </Chip>
                     <Chip
-                      className="bg-transparent text-[#A6A6A6] border border-[#272727] rounded-full flex items-center p-4 text-sm font-clash"
+                      className="bg-transparent text-[#A6A6A6] border border-[#272727] rounded-full flex items-center px-3 py-1 sm:p-4 text-xs sm:text-sm font-clash"
                       size="lg"
                       variant="bordered"
                     >
                       Development
                     </Chip>
                     <Chip
-                      className="bg-transparent text-[#A6A6A6] border border-[#272727] rounded-full flex items-center p-4 text-sm font-clash"
+                      className="bg-transparent text-[#A6A6A6] border border-[#272727] rounded-full flex items-center px-3 py-1 sm:p-4 text-xs sm:text-sm font-clash"
                       size="lg"
                       variant="bordered"
                     >
