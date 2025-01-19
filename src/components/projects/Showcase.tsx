@@ -44,7 +44,7 @@ const Showcase: React.FC = () => {
           {/* Card Body */}
           <CardBody className="p-8 sm:p-6">
             {/*  */}
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center pl-4 pr-4 mb-4 space-y-4 sm:space-y-0">
+            <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center sm:items-start text-center sm:text-left sm:pl-4 sm:pr-4 mb-4 space-y-4 sm:space-y-0">
               
               <h3 className="text-lg sm:text-xl font-medium font-sora whitespace-nowrap">
                 Modern Cleaning Service Site 
@@ -69,7 +69,7 @@ const Showcase: React.FC = () => {
             </div>
             
             {/* Card Tags */}
-            <div className="flex gap-2 sm:gap-3 mb-4 sm:pl-4 sm:pr-4 overflow-x-auto whitespace-nowrap">
+            <div className="flex gap-2 sm:gap-3 mb-4 sm:pl-4 sm:pr-4 justify-center sm:justify-start overflow-x-auto whitespace-nowrap">
               {/* Web Design Chip */}
               <Chip
                 className="bg-transparent text-[#A6A6A6] border border-[#1F1F1F] rounded-full flex items-center px-3 py-1 sm:p-4 text-xs sm:text-sm font-clash"
@@ -92,7 +92,7 @@ const Showcase: React.FC = () => {
             </div>
             
             {/* Default Description */}
-            <div className="bg-[#0F0F0F] border border-[#1F1F1F] rounded-lg ml-4 mr-4 mb-4 p-8">
+            <div className="bg-[#0F0F0F] border border-[#1F1F1F] rounded-lg sm:ml-4 sm:mr-4 -mb-4 sm:mb-4 p-4 sm:p-8 text-center sm:text-left">
               <h4 className="text-lg font-light text-white font-sora mb-4">Project Description</h4>
               <p className='text-xs text-gray-400 font-sora'>
                 A dynamic e-commerce platform that revolutionized online shopping for fashion enthusiasts. The website showcases the latest trends, offers personalized recommendations, and seamless checkout options.
