@@ -16,12 +16,12 @@ const Hero: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#121212] opacity-80"></div>
 
             {/* Content Wrapper */}
-            <div className="relative max-w-5xl text-center text-white px-6 space-y-6">                
+            <div className="relative max-w-4xl text-center text-white px-6 space-y-6">                
                 {/* Subheader */}
                 <p className="text-sm uppercase tracking-widest text-gray-400">About Us</p>
 
                 {/* Main Header */}
-                <h1 className="text-5xl font-bold leading-tight font-sora">
+                <h1 className="text-4xl sm:text-5xl font-bold leading-tight font-sora">
                     Our vision is to make work <br />
                     <span className="text-[#ffffff]">inspiring and fulfilling</span>
                 </h1>

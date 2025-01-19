@@ -1,8 +1,11 @@
 import React from 'react';
 import { Button } from "@nextui-org/react";
 import abstractDesign from '@/assets/Abstract-Design.png';
+import { useNavigate } from "react-router-dom";
 
 const Hero: React.FC = () => {
+  const navigate = useNavigate(); // Hook to navigate to routes
+
   return (
     <section 
       className="min-h-[75vh] bg-gradient-to-r from-[#0f0f0f] to-[#1a1a1a] relative flex items-center justify-center sm:justify-start"
@@ -31,7 +34,8 @@ const Hero: React.FC = () => {
         {/* Hero Buttons */}
         <div className="flex justify-center sm:justify-start space-x-4 mt-6 sm:mt-8">
             <Button 
-                className="px-6 py-6 bg-white text-black font-semibold rounded-full hover:bg-white/90 transition font-clash " 
+              onPress={() => navigate('/get-quote')}
+              className="px-6 py-6 bg-white text-black font-semibold rounded-full hover:bg-white/90 transition font-clash " 
             >
                 Get a Quote
             </Button>
