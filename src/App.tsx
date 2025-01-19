@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ScrollToHash } from "./utils/ScrollToHash"; // Import your utility
+import ScrollToTop from "./components/layout/ScrollToTop"; // Adjust path as needed
 // Components
 import  Header from './components/layout/Header';
 import Footer  from './components/layout/Footer';
@@ -23,7 +24,7 @@ import DataServices from './pages/subpages/DataServices';
 const App: React.FC = () => {
   return (
     <Router>
-      <ScrollToHash />
+      <ScrollToTop /> {/* Automatically scrolls to the top on route change */}
       <div className='bg-[#6E6E6E]'>
         {/* Preloader */}
         {/* <Preloader />*/}

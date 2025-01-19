@@ -66,7 +66,7 @@ const OurServices: React.FC = () => {
           >
           <Card
             isHoverable
-            className="p-4 sm:p-6 rounded-lg text-center flex flex-col items-center space-y-4 transition h-full w-[90%] sm:w-full max-w-sm sm:max-w-lg mx-auto card-gradient-border"
+            className="p-4 sm:p-6 rounded-lg text-center flex flex-col items-center space-y-2 transition h-full w-[90%] sm:w-full max-w-sm sm:max-w-lg mx-auto card-gradient-border"
           >
             {/* Overlay Image */}
             <div
@@ -88,18 +88,6 @@ const OurServices: React.FC = () => {
               <h3 className="text-lg sm:text-xl font-medium mb-4 font-sora">{service.title}</h3>
               <p className="text-gray-400 text-sm sm:text-base font-clash leading-loose">{service.description}</p>
             </CardBody>
-
-            {/* Card Footer */}
-            <CardFooter className="flex justify-center pt-4">
-              <div className="flex items-center bg-[#111111] border border-[#1F1F1F] rounded-full px-5 py-2 space-x-2 hover:bg-[#111111]/80 transition">
-                <Link href={service.link} className="text-white text-sm font-medium font-sora pr-2">
-                  Learn More
-                </Link>
-                <Button className="w-12 h-2 p-4 bg-black rounded-full flex items-center justify-center">
-                  <ArrowRightAltIcon />
-                </Button>
-              </div>
-            </CardFooter>
           </Card>
           </motion.div>
         ))}

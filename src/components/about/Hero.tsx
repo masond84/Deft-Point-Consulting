@@ -1,5 +1,6 @@
 import React from 'react';
 import abstractDesign from '@/assets/Abstract-Design.png';
+import CircularTextButton from "../../components/home/CircularTextButton";
 
 const Hero: React.FC = () => {
     return (
@@ -27,10 +28,15 @@ const Hero: React.FC = () => {
                 </h1>
 
                 {/* Description */}
-                <p className="text-lg text-gray-400 leading-relaxed max-w-2xl">
+                <p className="text-base sm:text-lg text-gray-300 leading-relaxed font-clash max-w-2xl">
                     At Deft Point, we provide exceptional digital solutions to simplify and streamline
                     processes. Our tailored services empower SMB businesses to grow and succeed with ease.
                 </p>
+            </div>
+
+            {/* CircularTextButton */}
+            <div className="absolute -bottom-8 flex justify-center">
+                <CircularTextButton />
             </div>
         </section>
     );

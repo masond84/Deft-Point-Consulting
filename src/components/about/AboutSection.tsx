@@ -3,7 +3,10 @@ import { motion } from "motion/react";
 
 const AboutSection: React.FC = () => {
     return (
-        <section className="py-16 px-8 bg-gradient-to-b from-[#121212]/95 to-[#121212] text-white relative">
+        <section 
+            id='about-section'
+            className="py-16 px-8 bg-gradient-to-b from-[#121212]/95 to-[#121212] text-white relative"
+        >
             {/* Overlay Image */}
             <div
                 className="absolute inset-0"
@@ -66,10 +69,10 @@ const AboutSection: React.FC = () => {
                         viewport={{ once: true }} // Ensure animation happens only once
                         className="border border-[#1F1F1F] rounded-glass p-4 bg-[linear-gradient(220deg,_#121212,_#181818_60%,_#1F1F1F)] cursor-default"
                     >
-                        <h3 className="text-lg font-semibold text-white mb-4 font-clash">
+                        <h3 className="text-lg font-semibold text-white mb-4 font-clash text-center md:text-left">
                         {item.title}
                         </h3>
-                        <p className="text-gray-300 font-sora">{item.content}</p>
+                        <p className="text-gray-300 font-sora text-center md:text-left">{item.content}</p>
                     </motion.div>
                     ))}
             </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
 import { Card, CardHeader, CardBody, CardFooter, Button, Link } from "@nextui-org/react";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
@@ -7,6 +8,8 @@ import WorkIcon from '../../assets/images/WorkIcon.svg';
 import PhoneOldIcon from '../../assets/images/PhoneOldIcon.svg';
 
 const OtherPages: React.FC = () => {
+  const navigate = useNavigate(); // Initialize the navigate function
+
   const pages = [
     {
       icon: <img src={WorkIcon} alt="Work With Us" className="w-20 h-20" />,
@@ -71,11 +74,14 @@ const OtherPages: React.FC = () => {
 
             {/* Card Footer */}
             <CardFooter className="flex justify-center pt-4">
-              <div className="flex items-center bg-[#111111] border border-[#1F1F1F] rounded-full px-5 py-2 space-x-2 hover:bg-[#111111]/80 transition">
-                <Link href={service.link} className="text-white text-sm font-medium font-sora pr-2">
+              <div className="flex items-center bg-[#111111] border border-[#1F1F1F] rounded-full px-5 py-2 space-x-2 hover:bg-[#111111]/80 transition cursor-default">
+                <Link className="text-white text-sm font-medium font-sora pr-2">
                   Learn More
                 </Link>
-                <Button className="w-10 sm:w-12 h-2 p-3 sm:p-4 bg-black rounded-full flex items-center justify-center">
+                <Button 
+                  onPress={() => navigate(service.link)} // Navigate to the correct page
+                  className="w-10 sm:w-12 h-2 p-3 sm:p-4 bg-black rounded-full flex items-center justify-center"
+                >
                   <ArrowRightAltIcon />
                 </Button>
               </div>

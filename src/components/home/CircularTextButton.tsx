@@ -1,11 +1,23 @@
-import React from "react";
+import { useLocation } from "react-router-dom"; // For detecting the current path
 import { FaArrowDown } from "react-icons/fa"; // Use React Icons for the arrow-down icon
 
 const CircularTextButton = () => {
+    const location = useLocation();
+
     const handleScroll = () => {
-        const target = document.getElementById("reasons-to-choose");
+        let targetId = "";
+
+        // Determine the target section based on the current route
+        if (location.pathname === "/") {
+        targetId = "reasons-to-choose"; // ID of the section on the landing page
+        } else if (location.pathname === "/about") {
+        targetId = "about-section"; // ID of the section on the about page
+        }
+
+        // Scroll to the determined section if it exists
+        const target = document.getElementById(targetId);
         if (target) {
-          target.scrollIntoView({ behavior: "smooth" });
+        target.scrollIntoView({ behavior: "smooth" });
         }
     };
 
