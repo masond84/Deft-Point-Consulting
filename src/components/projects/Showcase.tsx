@@ -69,7 +69,7 @@ const Showcase: React.FC = () => {
             </div>
             
             {/* Card Tags */}
-            <div className="flex gap-2 sm:gap-3 mb-4 overflow-x-auto whitespace-nowrap">
+            <div className="flex gap-2 sm:gap-3 mb-4 sm:pl-4 sm:pr-4 overflow-x-auto whitespace-nowrap">
               {/* Web Design Chip */}
               <Chip
                 className="bg-transparent text-[#A6A6A6] border border-[#1F1F1F] rounded-full flex items-center px-3 py-1 sm:p-4 text-xs sm:text-sm font-clash"
