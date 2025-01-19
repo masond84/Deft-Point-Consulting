@@ -34,7 +34,7 @@ const OtherPages: React.FC = () => {
       </div>
 
       {/* Cards Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 max-w-4xl mx-auto items-stretch">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 px-8 sm:px-4 max-w-4xl mx-auto items-stretch">
         {pages.map((service, index) => (
           <motion.div
             key={index}
@@ -46,7 +46,7 @@ const OtherPages: React.FC = () => {
           >
           <Card
             isHoverable
-            className="p-4 rounded-lg text-center flex flex-col items-center space-y-2 transition h-full w-full max-w-lg mx-auto card-gradient-border"
+            className="p-2 sm:p-4 rounded-lg text-center flex flex-col items-center -space-y-2 sm:space-y-2 transition h-full w-full max-w-sm sm:max-w-lg mx-auto card-gradient-border"
           >
             {/* Overlay Image */}
             <div
@@ -66,7 +66,7 @@ const OtherPages: React.FC = () => {
             {/* Card Content */}
             <CardBody className="flex flex-col items-center text-center flex-grow mb-4">
               <h3 className="text-xl font-medium mb-4 font-sora">{service.title}</h3>
-              <p className="text-gray-400 text-sm font-clash leading-loose">{service.description}</p>
+              <p className="text-gray-400 text-sm font-clash leading-snug sm:leading-loose">{service.description}</p>
             </CardBody>
 
             {/* Card Footer */}
@@ -75,7 +75,7 @@ const OtherPages: React.FC = () => {
                 <Link href={service.link} className="text-white text-sm font-medium font-sora pr-2">
                   Learn More
                 </Link>
-                <Button className="w-12 h-2 p-4 bg-black rounded-full flex items-center justify-center">
+                <Button className="w-10 sm:w-12 h-2 p-3 sm:p-4 bg-black rounded-full flex items-center justify-center">
                   <ArrowRightAltIcon />
                 </Button>
               </div>
