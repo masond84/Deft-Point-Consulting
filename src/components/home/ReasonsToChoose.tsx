@@ -41,7 +41,7 @@ const ReasonsToChoose: React.FC = () => {
     {
       icon: <img src={PointerIcon} alt="Sparkle Icon" className="w-20 h-20" />,
       title: 'Unique Website Redesign',
-      description: 'We transform outdates websites into modern, responsive designs that drive traffic and increase conversions.',
+      description: 'We transform outdated websites into modern, responsive designs that drive traffic and increase conversions.',
       link: '/services/website-redesign',
     },
     {
@@ -101,7 +101,7 @@ const ReasonsToChoose: React.FC = () => {
   return (
     <section 
       id="reasons-to-choose" 
-      className="py-8 md:py-16 lg:py-20 relative text-white"
+      className="py-8 md:py-10 relative text-white"
       style={{
         background: 'linear-gradient(285deg, #0F0F0F 60%, #0f0f0f98 92%)',
         overflow: 'hidden',
@@ -115,8 +115,7 @@ const ReasonsToChoose: React.FC = () => {
         </h2>
         <p className="text-sm sm:text-base md:text-md text-white font-light font-sora leading-normal sm:leading-loose">
           Partnering with Deft Point offers a multitude of advantages. Experience increased brand visibility, 
-          improved customer engagement, and higher ROI. Our tailored solutions are designed to meet your 
-          unique business needs, ensuring lasting success.
+          improved customer engagement, and higher ROI.
         </p>
       </div>
       

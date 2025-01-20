@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
 
         {/* Hero Description */}
         <p className="text-base sm:text-lg max-w-3xl text-gray-300 leading-relaxed font-clash">
-          At Deft Point, we offer a comprehensive suite of digital solutions designed to propel your business to new heights in the digital realm. From captivating web design to seamless development, we ensure optimal functionality and lasting impressions.
+          We deliver expert web design, seamless development, and tailored digital solutions to drive growth to your business.        
         </p>
 
         {/* Hero Buttons */}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from '@nextui-org/react';
 import { BsFacebook, BsInstagram, BsTwitter, BsLinkedin } from 'react-icons/bs';
-
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 const QuoteForm: React.FC = () => {
   const [budget, setBudget] = useState(0);
@@ -17,9 +17,9 @@ const QuoteForm: React.FC = () => {
           <address className="not-italic text-gray-400 space-y-2">
             <p className="font-bold">Deft Point Consulting</p>
             <p>Experience Excellence In</p>
-            <p><span className="mr-4 font-tusker">•</span> Development</p>
-            <p><span className="mr-4">•</span> Deployment</p>
-            <p><span className="mr-4">•</span> Execution</p>
+            <p className="font-tusker"><span className="mr-4">•</span> Development</p>
+            <p className="font-tusker"><span className="mr-4">•</span> Deployment</p>
+            <p className="font-tusker"><span className="mr-4">•</span> Execution</p>
           </address>
           <div className="flex space-x-4">
             <a href="#" className="text-gray-400 hover:text-white">
@@ -105,12 +105,13 @@ const QuoteForm: React.FC = () => {
             placeholder="Describe your vision"
             className="p-4 bg-glass-bg border-glass-bg shadow-glass font-clash rounded-lg border border-[#1F1F1F] text-white placeholder-gray-400 w-full h-32"
           ></textarea>
-          <button
+          <Button
             type="submit"
-            className="w-full py-4 bg-gradient-to-br from-[#4fadff] via-[#6dc1ff] to-[#0e73e6b9] text-white font-medium font-sora tracking-widest rounded-lg border border-[#1A1A1A] transition"
+            className="w-full py-5 bg-gradient-to-br from-[#4fadff] via-[#6dc1ff] to-[#0e73e6b9] text-white font-medium font-sora tracking-widest rounded-lg border border-[#1A1A1A] transition"
           >
-            Send your Inquiry ➡
-          </button>
+            <span className="">Send your Inquiry</span>
+            <ArrowRightAltIcon /> 
+          </Button>
         </form>
       </div>
     </section>

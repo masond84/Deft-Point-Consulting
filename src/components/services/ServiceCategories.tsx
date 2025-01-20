@@ -10,6 +10,66 @@ import GraphIcon from '../../assets/icons/GraphIcon.svg';
 import ServiceCardImage1 from '../../assets/images/ServiceCardImage1.jpg';
 import ServiceCardImage2 from '../../assets/images/ServiceCardImage2.jpg';
 
+// Dynamic content for cards based on the selected tab
+const cardContentByTab = [
+  {
+    title: "Web Application Development",
+    cards: [
+      {
+        header: "Key Features",
+        features: [
+          { title: "Customized Design", description: "Bespoke designs tailored to your brand and industry." },
+          { title: "Responsive Design", description: "Optimized for all devices and screen sizes." },
+          { title: "User-Centric Approach", description: "Seamless navigation and intuitive UX/UI." },
+          { title: "Scalable Solutions", description: "Built to grow with your business needs." },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Consulting",
+    cards: [
+      {
+        header: "Consulting Process",
+        features: [
+          { title: "Business Strategy", description: "Analyze goals to define a digital strategy roadmap." },
+          { title: "UX/UI Audits", description: "Enhance user experience and interface design." },
+          { title: "Technical Guidance", description: "Identify tech stacks and best practices for success." },
+          { title: "Scalability Analysis", description: "Ensure solutions align with future growth." },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Design & Branding",
+    cards: [
+      {
+        header: "Creative Solutions",
+        features: [
+          { title: "Custom UI/UX Design", description: "Elevate brand presence with intuitive designs." },
+          { title: "Branding Packages", description: "Logos, typography, and cohesive visual identity." },
+          { title: "Prototype Development", description: "Clickable prototypes for user testing and feedback." },
+          { title: "Design Systems", description: "Standardized components for consistent design." },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Marketing & Data Solutions",
+    cards: [
+      {
+        header: "Marketing Features",
+        features: [
+          { title: "SEO Optimization", description: "Boost visibility with keyword and content strategies." },
+          { title: "Analytics", description: "Track performance and user behavior insights." },
+          { title: "Lead Generation", description: "Strategies to grow and engage your audience." },
+          { title: "PPC Campaigns", description: "Effective paid ads for maximum ROI." },
+        ],
+      },
+    ],
+  },
+];
+
 // Individual card components
 const ServiceCardOne = () => (
     <Card className="bg-[#121212] shadow-lg border border-[#1F1F1F] rounded-lg p-6 flex flex-col items-center text-center md:text-left md:items-stretch">
@@ -250,7 +310,7 @@ const ServiceCategories: React.FC = () => {
     const tabContent = [
         {
             title: "Web Application Development",
-            description: "Our web design services focus on creating visually appealing, user-friendly websites tailored to your brand's identity and business goals. With a mobile-first approach and seamless UX/UI designs, we ensure your online presence leaves a lasting impression.",
+            description:"We create responsive, user-focused web applications tailored to your business goals, ensuring seamless performance and exceptional design.",
             cards: [
                 <ServiceCardOne key="card1" />, 
                 <ServiceCardTwo key="card2" />,
@@ -260,7 +320,7 @@ const ServiceCategories: React.FC = () => {
         },
         {
             title: "Consulting",
-            description: "We develop high-performing, secure, and scalable web solutions tailored to meet your business requirements. From front-end development to back-end integration, we deliver seamless functionality.",
+            description: "Expert consulting services to guide your digital strategy, streamline development processes, and ensure scalable, secure solutions.",
             cards: [
                 <ServiceCardOne key="card1" />, 
                 <ServiceCardTwo key="card2" />,
@@ -268,7 +328,7 @@ const ServiceCategories: React.FC = () => {
         },
         {
             title: "Design & Branding",
-            description: "Our mobile app development services ensure your business is accessible anytime, anywhere. We specialize in creating intuitive, responsive apps for iOS and Android platforms.",
+            description: "Build your presence with custom UI/UX designs, cohesive branding, and visually stunning assets that captivate your audience.",
             cards: [
                 <ServiceCardOne key="card1" />, 
                 <ServiceCardTwo key="card2" />,
@@ -276,7 +336,7 @@ const ServiceCategories: React.FC = () => {
         },
         {
             title: "Marketing & Data Solutions",
-            description: "Boost your brand visibility and engagement with our data-driven digital marketing strategies. We specialize in SEO, PPC, content marketing, and social media campaigns tailored to your business.",
+            description: "Boost your online presence with data-driven marketing, including SEO, PPC, and analytics tailored to maximize engagement and conversions.",
             cards: [
                 <ServiceCardOne key="card1" />, 
                 <ServiceCardTwo key="card2" />,
@@ -296,7 +356,7 @@ const ServiceCategories: React.FC = () => {
                     Categories of <span className="text-[#ffffff]">Services</span>
                 </h2>
                 <p className="text-sm sm:text-base md:text-mdtext-gray-400 leading-relaxed font-clash">
-                    At Deft Point, we are committed to providing exceptional digital solutions tailored to suit your unique business needs. Our comprehensive service offerings cover a wide spectrum of digital disciplines, including web design, app development, web development, and marketing.
+                    At Deft Point, we are committed to providing exceptional digital solutions tailored to suit your unique business needs.
                 </p>
             </div>
 

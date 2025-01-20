@@ -11,32 +11,32 @@ import PointerIcon from '../../assets/images/PointerPIcon.svg';
 const OurServices: React.FC = () => {
   const services = [
     {
-      icon: <img src={WebIcon} alt="Web Development" className="w-20 h-20" />,
-      title: "Web Development",
-      description:
-        "Unlock Your Online Potential in today's digital age, a powerful web presence is essential for any business.",
-      link: "#",
+      icon: <img src={WebIcon} alt="Website and Application Development" className="w-20 h-20" />,
+      title: "Website and Application Development",
+      description: "Custom websites, apps, and landing pages designed to grow your business online.",
+      link: "/services",
+      tabIndex: 1,
     },
     {
-      icon: <img src={MobileIcon} alt="Mobile App Development" className="w-20 h-20" />,
-      title: "Mobile App Development",
-      description:
-        "Embrace Mobility with Confidence. Mobile devices have revolutionized the way we interact with the world.",
-      link: "#",
+      icon: <img src={MobileIcon} alt="Consulting Services" className="w-20 h-20" />,
+      title: "Consulting Services",
+      description: "Expert guidance on development, design, and digital strategy for scalable success.",
+      link: "/services",
+      tabIndex: 2,
     },
     {
-      icon: <img src={PointerIcon} alt="Web Design" className="w-20 h-20" />,
-      title: "Web Design",
-      description:
-        "Elevate Your Brand Aesthetics. Your website’s design is a reflection of your brand’s identity and values.",
-      link: "#",
+      icon: <img src={PointerIcon} alt="Design and Branding (UI/UX)" className="w-20 h-20" />,
+      title: "Design & Branding",
+      description: "UI/UX designs and branding solutions that make your business stand out.",
+      link: "/services",
+      tabIndex: 0, 
     },
     {
-      icon: <img src={BoltIcon} alt="Digital Marketing" className="w-20 h-20" />,
-      title: "Digital Marketing",
-      description:
-        "Drive Your Business Forward. Our digital marketing services help you stand out and connect effectively.",
-      link: "#",
+      icon: <img src={BoltIcon} alt="Marketing and Data Solutions" className="w-20 h-20" />,
+      title: "Marketing & Data Solutions",
+      description: "SEO, lead generation, and analytics to boost visibility and conversions.",
+      link: "/services",
+      tabIndex: 3, 
     },
   ];
 

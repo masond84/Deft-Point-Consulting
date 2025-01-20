@@ -15,7 +15,7 @@ const OurServices: React.FC = () => {
       icon: <img src={WebIcon} alt="Website and Application Development" className="w-20 h-20" />,
       title: "Website and Application Development",
       description:
-        "Unlock Your Online Potential in today's digital age with custom websites, applications, and landing pages tailored to your needs",
+        "Unlock Your Online Potential in today's digital age with custom websites, applications, and landing pages tailored to your needs.",
       link: "/services",
       tabIndex: 1,
     },
@@ -52,8 +52,7 @@ const OurServices: React.FC = () => {
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#808080] to-[#b4b4b4]">Our</span> Services
         </h2>
         <p className="text-sm sm:text-base md:text-md text-white text-md font-light font-soraleading-normal sm:leading-loose">
-          Our comprehensive range of services includes web design, mobile app development, SEO, social
-          media marketing, and more.
+          Our comprehensive range of services include web design, mobile app development, SEO, online marketing, and more.
         </p>
       </div>
 
