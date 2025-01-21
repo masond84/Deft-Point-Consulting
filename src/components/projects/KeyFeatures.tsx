@@ -19,22 +19,22 @@ const KeyFeatures = () => {
         {
             icon: <img src={NotesIcon} alt="Strategic Planning" className="w-14 h-14" />,
             title: "Strategic Planning",
-            description: "Every project begins with thorough research and strategic planning to ensure a holistic understanding of our clients' objectives and target audience.",
+            description: "We begin each project with a hollistic understanding of our clients' objectives and approachable strategies.",
         },
         {
             icon: <img src={FireIcon} alt="Customized Solutions" className="w-14 h-14" />,
             title: "Customized Solutions",
-            description: "We tailor our services to suit each project's unique requirements, resulting in solutions that align perfectly with our clients' brand identities.",
+            description: "We tailor our services to suit each project's unique requirements, avoiding cookie cutter solutions and software.",
         },
         {
             icon: <img src={PeopleIcon} alt="User-Centric Approach" className="w-14 h-14" />,
             title: "User-Centric Approach",
-            description: "Our projects are designed with the end-user in mind, prioritizing seamless user experiences and intuitive interfaces.",
+            description: "We prioritize seamless user experiences and intuitive designs to provide engaging interactions for all users.",
         },
         {
             icon: <img src={BoltIcon} alt="Cutting-Edge Technologies" className="w-14 h-14" />,
             title: "Cutting-Edge Technologies",
-            description: "We leverage the latest technologies and industry best practices to deliver high-performance and future-proof solutions.",
+            description: "Leveraging the latest tools and practices to deliver innovative, scalable, and efficient solutions.",
         },
         {
             icon: <img src={ClockIcon} alt="Timely Delivery" className="w-14 h-14" />,
@@ -82,8 +82,8 @@ const KeyFeatures = () => {
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 font-sora leading-snug sm:leading-tight">
                     Key Features <span className="text-transparent bg-clip-text bg-gradient-to-l from-[#808080] to-[#b4b4b4]">of Our Projects</span>
                 </h2>
-                <p className="text-gray-300 text-md font-light font-sora leading-loose">
-                    Partnering with Deft Point offers a multitude of advantages. Experience increased brand visibility, improved customer engagement, and higher ROI. Our tailored solutions are designed to meet your unique business needs, ensuring lasting success.
+                <p className="text-gray-300 text-md font-light max-w-lg mx-auto font-sora leading-loose">
+                    Discover how our tailored solutions are designed to meet your unique business needs, ensuring lasting success.
                 </p>
             </div>
 
@@ -155,7 +155,7 @@ const KeyFeatures = () => {
             </div>
 
             {/* Mobile Layout */}
-            <div className="md:hidden relative w-full h-[600px] flex justify-center items-center -mt-20">
+            <div className="md:hidden relative w-full min-h-96 flex flex-col justify-center items-center space-y-6 py-8">
                 <AnimatePresence>
                 {cardOrder.map((index, arrayIndex) => (
                     <framerMotion.div
@@ -189,7 +189,7 @@ const KeyFeatures = () => {
                     {/* Card */}
                     <Card
                         isHoverable
-                        className='bg-glass-bg-dark shadow-glass backdrop-blur-glass border border-glass-border rounded-lg text-center flex flex-col items-center space-y-4 h-full relative overflow-hidden'
+                        className='bg-glass-bg-dark shadow-glass backdrop-blur-glass border border-glass-border rounded-lg text-center flex flex-col items-center space-y-4 h-fit relative overflow-hidden'
                     >
                         {/* Overlay Image */}
                         <div

@@ -95,7 +95,9 @@ const CallToAction: React.FC = () => {
                             <CardBody>
                                 <div className='max-w-2xl mx-auto text-center space-y-2 sm:space-6'>
                                     <p className="text-gray-400 text-md sm:text-lg font-light font-clash mb-6">
-                                        These success stories are a testament to the dedication and expertise of our team at DigitX. We are driven by a commitment to delivering outstanding results and helping businesses flourish in the digital landscape.
+                                        Maximize effeciency, drive growth, and allow us to set the stage for sustainable growth.
+                                        <br />
+                                        We build Intelligent Software - Websites, and Digital Pipelines to help you scale.
                                     </p>
 
                                     {/* Button Section */}
