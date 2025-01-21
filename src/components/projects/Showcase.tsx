@@ -96,7 +96,7 @@ const Showcase: React.FC = () => {
             </div>
             
             {/* Default Description */}
-            <div className="bg-[#0F0F0F] border border-[#1F1F1F] rounded-lg sm:ml-4 sm:mr-4 -mb-4 sm:mb-4 p-4 sm:p-8 text-center sm:text-left">
+            <div className="bg-[#0F0F0F] border border-[#1F1F1F] rounded-lg sm:ml-4 sm:mr-4 mb-4 p-4 sm:p-8 text-center sm:text-left">
               <h4 className="text-lg font-light text-white font-sora mb-4">Project Description</h4>
               <p className='text-xs text-gray-400 font-sora'>
                 A dynamic e-commerce platform that revolutionized online shopping for fashion enthusiasts. The website showcases the latest trends, offers personalized recommendations, and seamless checkout options.
@@ -105,7 +105,7 @@ const Showcase: React.FC = () => {
 
             {/* Dropdown Section */}
             {expandedCard === 1 && (
-              <div className="space-y-6 p-4 sm:p-8 bg-[#0f0f0f] border border-[#1F1F1F] rounded-lg">
+              <div className="space-y-6 p-4 sm:p-8 bg-[#0f0f0f] border border-[#1F1F1F] rounded-lg sm:mx-4">
                 {/* Project Details */}
                 <div className="flex flex-col sm:flex-row font-clash items-center sm:items-start justify-center sm:justify-between border border-[#1F1F1F] rounded-lg p-4 space-y-4 sm:space-y-0">
                   <div className='flex-1 text-center'>
@@ -261,7 +261,7 @@ const Showcase: React.FC = () => {
             </div>
 
             {/* Default Description */}
-            <div className="bg-[#0F0F0F] border border-[#1F1F1F] rounded-lg sm:ml-4 sm:mr-4 -mb-4 sm:mb-4 p-4 sm:p-8 text-center sm:text-left">
+            <div className="bg-[#0F0F0F] border border-[#1F1F1F] rounded-lg sm:ml-4 sm:mr-4 mb-4 p-4 sm:p-8 text-center sm:text-left">
               <h4 className="text-lg font-light text-white font-sora mb-4">Project Description</h4>
                 <p className="text-xs text-gray-400 font-sora">
                   A cutting-edge platform for technology enthusiasts, designed to streamline workflows and enhance collaboration among teams.
@@ -270,7 +270,7 @@ const Showcase: React.FC = () => {
 
             {/* Dropdown Section */}
             {expandedCard === 2 && (
-              <div className="space-y-6 p-4 sm:p-8 bg-[#0f0f0f] border border-[#1F1F1F] rounded-lg mx-4">
+              <div className="space-y-6 p-4 sm:p-8 bg-[#0f0f0f] border border-[#1F1F1F] rounded-lg sm:mx-4">
                 {/* Project Details */}
                 <div className="flex flex-col sm:flex-row font-clash items-center sm:items-start justify-center sm:justify-between border border-[#1F1F1F] rounded-lg p-4 space-y-4 sm:space-y-0">
                   <div className='flex-1 text-center'>
