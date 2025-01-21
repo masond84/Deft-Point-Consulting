@@ -15,14 +15,14 @@ const OtherPages: React.FC = () => {
       icon: <img src={WorkIcon} alt="Work With Us" className="w-20 h-20" />,
       title: "Work With Us",
       description:
-        "At DigitX, we believe in fostering a dynamic and collaborative work environment that empowers our team members to excel in their respective fields. We are committed to nurturing talent, encouraging professional growth, and creating a workplace where creativity thrives.",
+        "Discover a collaborative and growth-oriented work culture where innovation and creativity thrive. Become part of a dedicated team today!",
       link: "#",
     },
     {
       icon: <img src={PhoneOldIcon} alt="Contact Us" className="w-20 h-20" />,
       title: "Contact Us",
       description:
-        "At DigitX, we value your inquiries, feedback, and collaborations. Connect with us through any of the channels below, and we'll be delighted to assist you on your digital journey.",
+        "Have questions or need assistance? Reach out to us today, and let’s explore how we take your vision and tranform it into reality.",
       link: "/contact",
     },
   ];

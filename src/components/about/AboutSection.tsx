@@ -21,11 +21,11 @@ const AboutSection: React.FC = () => {
             
             {/* Header Section */}
             <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold mb-4 font-sora leading-tight mx-auto max-w-3xl">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4 font-sora leading-tight mx-auto max-w-3xl">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#808080] to-[#b4b4b4]">
                         In a sea full of sameness,
                     </span>{" "}
-                    how do you know who to partner with on your most important initiatives?
+                    how can you make your business stand out from the crowd?
                 </h2>
             </div>
 
@@ -39,19 +39,19 @@ const AboutSection: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mx-auto max-w-7xl pl-8 pr-8 font-clash">
                 {[
                     {
-                        title: "We're Different",
+                        title: "Our Passion",
                         content:
-                        "We bring deep technical expertise mixed with mind-blowing creativity. We’re agency and consulting—with a bias for action. Boutique, flexible, and experienced, we’re big enough to deliver great global work, but agile enough to be easy for you to do business with.",
+                        "Development isn't just work for us; it's a craft we hold close to our hearts. Every project we deliver reflects the passion and care we pour into what we do.",
                     },
                     {
-                        title: "Data-Driven",
+                        title: "Collaboration at our Core",
                         content:
-                        "We don’t trust our gut. We use data to create insights that drive our solutions and your outcomes.",
+                        "We believe the best work comes from partnerships. We collaborate closely with our clients to achieve thier vision.",
                     },
                     {
-                        title: "Value-Focused",
+                        title: "Your Future is our Future",
                         content:
-                        "This is so important that we’ll say it again. Our mission is to be the leading digital agency that is providing transformative digital experiences—driving growth with measurable value for all.",
+                        "We're not just creating for today -  but always thinking ahead to meet the needs of tomorrow when crafting scalable applications or intuitive designs.",
                     },
                     ].map((item, index) => (
                     <motion.div

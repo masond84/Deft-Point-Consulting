@@ -6,7 +6,7 @@ const ServicesOverview: React.FC = () => {
         <section className="w-full py-16 bg-[linear-gradient(180deg,_#121212,_#181818_60%,_#1F1F1F)] text-white">
             <div className="max-w-6xl mx-auto px-6 text-center space-y-8">
                 {/* Header */}
-                <h1 className="text-4xl md:text-5xl font-bold font-sora leading-tight max-w-3xl mx-auto bg-clip-text text-transparent bg-gradient-to-r from-[#f3f3f3] to-[#d3d3d3]">
+                <h1 className="text-2xl sm:text-3xl font-bold font-sora leading-tight max-w-3xl mx-auto bg-clip-text text-transparent bg-gradient-to-r from-[#f3f3f3] to-[#d3d3d3]">
                     A Partner In Innovation That Drives Curiosity
                 </h1>
 
