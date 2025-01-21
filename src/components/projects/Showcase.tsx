@@ -103,7 +103,7 @@ const Showcase: React.FC = () => {
             </div>
             
             {/* Default Description */}
-            <div className="bg-[#0F0F0F] border border-[#1F1F1F] rounded-lg sm:ml-4 sm:mr-4 -mb-4 sm:mb-4 p-4 sm:p-8 text-center sm:text-left">
+            <div className="bg-[#0F0F0F] border border-[#1F1F1F] rounded-lg sm:ml-4 sm:mr-4 mb-4 p-4 sm:p-8 text-center sm:text-left">
               <h4 className="text-lg font-light text-white font-sora mb-4">Project Description</h4>
               <p className='text-xs text-gray-400 font-sora'>
                 A fully responsive website using React.js and Material UI. Designed for Minas Cleaning Service to display their service offerings and allow for online bookings.              
