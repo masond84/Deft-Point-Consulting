@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Button } from "@nextui-org/react";
+import { Modal, Box, Typography } from "@mui/material";
 import emailjs from 'emailjs-com'
 import { BsFacebook, BsInstagram, BsTwitter, BsLinkedin, BsFillSendFill } from "react-icons/bs";
 
 const InquiryForm: React.FC = () => {
   const [status, setStatus] = useState<string | null>(null);
+  const [modalOpen, setModalOpen] = useState(false); // Modal visibility state
   const [email, setEmail] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
   const [errors, setErrors] = useState<{ email: string; phone: string }>({
@@ -50,18 +52,84 @@ const InquiryForm: React.FC = () => {
         (result) => {
           console.log("Email sent successfully:", result.text);
           setStatus("success");
+          setModalOpen(true); // Open the modal
         },
         (error) => {
           console.error("Error sending email:", error.text);
           setStatus("error");
+          setModalOpen(true); // Open the modal
         }
       );
     // Reset the form fields after submission
     e.currentTarget.reset();
   };
 
+  // Modal styles
+  const modalStyle = {
+    position: "absolute" as "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 400,
+    bgcolor: "background.paper",
+    border: "2px solid #000",
+    boxShadow: 24,
+    p: 4,
+    borderRadius: "8px",
+    textAlign: "center",
+  };
+  
   return (
     <section id="inquiryForm" className="py-8">
+      <Modal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        aria-labelledby="modal-title"
+        aria-describedby="modal-description"
+      >
+        <Box 
+          className="absolute bg-glass-bg border border-glass-border shadow-xl backdrop-blur-glass p-6 rounded-lg text-center flex flex-col items-center justify-center w-[90%] max-w-md mx-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 space-y-4"
+        >
+          {status === "success" ? (
+            <div>
+              <Typography 
+                id="modal-title"
+                className="text-2xl font-bold text-white font-sora"
+              >
+                Success!
+              </Typography>
+              <Typography 
+                id="modal-description" 
+                className="text-sm text-gray-300 font-clash leading-relaxed"
+              >
+                Your inquiry has been sent successfully. We'll get back to you shortly.
+              </Typography>
+            </div>
+          ) : (
+            <div>
+              <Typography 
+                id="modal-title"
+                className="text-2xl font-bold text-white font-sora"
+              >
+                Oops!
+              </Typography>
+              <Typography 
+                id="modal-description" 
+                className="text-sm text-gray-300 font-clash leading-relaxed"
+              >
+                Something went wrong. Please try again later.
+              </Typography>
+            </div>
+          )}
+          <Button
+            onPress={() => setModalOpen(false)}
+            className="px-6 py-2 bg-black text-white font-sora text-sm font-medium rounded-full hover:bg-black/40 transition"
+          >
+            Close
+          </Button>
+        </Box>
+      </Modal>
+
       <div className="text-center mb-8 max-w-3xl mx-auto px-8 sm:px-12 md:px-0">
         <h2 className="text-center text-2xl md:text-3xl  font-semibold mb-4 text-white font-sora">Feel Free To Contact Us</h2>
         <p className="text-center text-gray-300 mb-8 font-sora text-sm">
@@ -195,18 +263,6 @@ const InquiryForm: React.FC = () => {
             </div>
           </div>
         </form>
-
-        {/* Confirmation Message */}
-        {status === "success" && (
-          <p className="text-center text-green-500 mt-4">
-            Form submitted successfully!
-          </p>
-        )}
-        {status === "error" && (
-          <p className="text-center text-red-500 mt-4">
-            Failed to send your inquiry. Please try again.
-          </p>
-        )}
       </div>
     </section>
   );
