@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Box, Tabs, Tab, Typography } from '@mui/material';
 import { Card, CardHeader, CardBody, Button } from '@nextui-org/react';
 import { useLocation } from 'react-router-dom'; // Import useLocation
+import { useSwipeable } from 'react-swipeable';
 
 import PointClickIcon from '../../assets/icons/PointClickIcon.svg';
 import WebIcon from '../../assets/icons/WebIcon.svg';
@@ -289,6 +290,7 @@ const ServiceCategories: React.FC = () => {
     const location = useLocation();
     const categoriesRef = useRef<HTMLDivElement>(null); // Ref for scrolling to #categories
     const [tabValue, setTabValue] = useState(0);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
     // Handle state from RouterLink
     useEffect(() => {
@@ -305,6 +307,30 @@ const ServiceCategories: React.FC = () => {
     const handleChange = (_: React.SyntheticEvent, newValue: number) => {
         setTabValue(newValue);
     };
+
+    // Adjust layout based on screen size
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const swipeHandlers = useSwipeable({
+        onSwipedLeft: () => {
+          if (isMobile && tabValue < tabContent.length - 1) {
+            setTabValue((prev) => prev + 1);
+          }
+        },
+        onSwipedRight: () => {
+          if (isMobile && tabValue > 0) {
+            setTabValue((prev) => prev - 1);
+          }
+        },
+        preventScrollOnSwipe: true, // Prevent scrolling during swipe
+        trackTouch: true,          // Enable touch tracking
+        trackMouse: false,         // Disable mouse tracking
+    });
+
 
     // Content for each tab
     const tabContent = [
@@ -364,15 +390,20 @@ const ServiceCategories: React.FC = () => {
             <Box className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row">
                 {/* Tabs Container */}
                 <Box 
-                    className="md:pr-6 mb-4 md:mb-0 flex flex-nowrap md:overflow-visible overflow-hidden"       
+                    className={`md:pr-6 mb-4 md:mb-0 flex flex-nowrap md:overflow-visible overflow-hidden${
+                        isMobile ? 'overflow-x-auto' : ''    
+                    }`}    
                 >
                     <Tabs
-                        orientation={window.innerWidth < 768 ? 'horizontal' : 'vertical'}
+                        {...swipeHandlers} // Attach swipe handlers here
+                        orientation={isMobile ? 'horizontal' : 'vertical'}
                         value={tabValue}
                         onChange={handleChange}
+                        variant={isMobile ? 'scrollable' : 'standard'}
+                        scrollButtons="auto"
                         textColor="inherit"
                         indicatorColor="primary"
-                        aria-label="service categories tabs"
+                        aria-label="service categories"
                         className="w-full flex flex-wrap md:flex-col space-y-0 md:space-y-4"
                     >
                         {/* Tab 1 */}
