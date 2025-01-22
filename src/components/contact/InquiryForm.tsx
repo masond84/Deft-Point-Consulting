@@ -1,12 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@nextui-org/react";
+import emailjs from 'emailjs-com'
 import { BsFacebook, BsInstagram, BsTwitter, BsLinkedin, BsFillSendFill } from "react-icons/bs";
 
 const InquiryForm: React.FC = () => {
+  const [status, setStatus] = useState<string | null>(null);
+  const [email, setEmail] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [errors, setErrors] = useState<{ email: string; phone: string }>({
+    email: "",
+    phone: "",
+  });
+
+  // Validate email
+  const validateEmail = (value: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(value)) {
+      setErrors((prev) => ({ ...prev, email: "Invalid email address" }));
+    } else {
+      setErrors((prev) => ({ ...prev, email: "" }));
+    }
+  };
+
+  // Format phone number
+  const formatPhoneNumber = (value: string) => {
+    // Remove all non-numeric characters
+    const numericValue = value.replace(/\D/g, "");
+
+    // Add dashes based on the phone number format
+    if (numericValue.length <= 3) return numericValue;
+    if (numericValue.length <= 6) {
+      return `${numericValue.slice(0, 3)}-${numericValue.slice(3)}`;
+    }
+    return `${numericValue.slice(0, 3)}-${numericValue.slice(3, 6)}-${numericValue.slice(6, 10)}`;
+  };
+
+  // Function to handle form submission
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); // Prevent default form submission
+
+    emailjs
+      .sendForm(
+        "service_kh5mxgh", // Replace with your EmailJS service ID
+        "template_timmk3n", // Replace with your EmailJS template ID
+        e.currentTarget, // Form reference
+        "cs25hwXJDJ76049Jp" // Replace with your EmailJS user ID
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully:", result.text);
+          setStatus("success");
+        },
+        (error) => {
+          console.error("Error sending email:", error.text);
+          setStatus("error");
+        }
+      );
+    // Reset the form fields after submission
+    e.currentTarget.reset();
+  };
+
   return (
     <section id="inquiryForm" className="py-8">
-      <div className="text-center mb-12 max-w-3xl mx-auto px-8 sm:px-12 md:px-0">
-        <h2 className="text-center text-2xl md:text-3xl  font-semibold mb-4 text-white font-sora">Online Inquiry Form</h2>
+      <div className="text-center mb-8 max-w-3xl mx-auto px-8 sm:px-12 md:px-0">
+        <h2 className="text-center text-2xl md:text-3xl  font-semibold mb-4 text-white font-sora">Feel Free To Contact Us</h2>
         <p className="text-center text-gray-300 mb-8 font-sora text-sm">
           Please fill in the following details, and we'll get back to you within 24 hours.
         </p>
@@ -20,34 +77,91 @@ const InquiryForm: React.FC = () => {
           boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.8)", // Optional: subtle shadow for depth
         }}
       >
-        <form className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-          {["Name", "Email", "Phone Number", "Company / Organization Name"].map(
-            (placeholder, index) => (
-              <input
-                key={index}
-                type="text"
-                placeholder={placeholder}
-                className="p-4 bg-glass-bg-2 rounded-lg border border-glass-bg text-white placeholder-[#666666] font-clash"
-              />
-            )
-          )}
-          {["Select Service", "Subject"].map((placeholder, index) => (
-            <select
-              key={index}
-              className="p-4 bg-glass-bg-2 rounded-lg border border-glass-bg text-white placeholder-[#666666] font-clash"
-            >
-              <option>{placeholder}</option>
-            </select>
-          ))}
+        <form 
+          className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6"
+          onSubmit={handleSubmit}  
+        >
+          {/* Input Fields */}
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+            className="p-4 bg-glass-bg-2 rounded-lg border border-glass-bg text-white placeholder-[#666666] font-clash"
+          />
+          {/* Email Field */}
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              validateEmail(e.target.value);
+            }}
+            className={`p-4 bg-glass-bg-2 rounded-lg border ${ errors.email ? "border-red-300" : "border-glass-bg" } text-white placeholder-[#666666] font-clash`}
+          />
+          
+          {/* Phone Field */}
+          <input
+            type="text"
+            name="phone"
+            placeholder="Phone Number"
+            required
+            value={phone}
+            onChange={(e) => {
+              const formattedPhone = formatPhoneNumber(e.target.value);
+              setPhone(formattedPhone);
+  
+              // Check for invalid phone number length
+              if (formattedPhone.replace(/\D/g, "").length < 10) {
+                setErrors((prev) => ({
+                  ...prev,
+                  phone: "Phone number must be 10 digits",
+                }));
+              } else {
+                setErrors((prev) => ({ ...prev, phone: "" }));
+              }
+            }}
+            className="p-4 bg-glass-bg-2 rounded-lg border border-glass-bg text-white placeholder-[#666666] font-clash"
+          />
+          <input
+            type="text"
+            name="company"
+            placeholder="Company / Organization Name"
+            required
+            className="p-4 bg-glass-bg-2 rounded-lg border border-glass-bg text-white placeholder-[#666666] font-clash"
+          />
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            required
+            className="p-4 bg-glass-bg-2 rounded-lg border border-glass-bg text-white placeholder-[#666666] font-clash"
+          />
+          <select
+            name="service"
+            className="p-4 bg-glass-bg-2 rounded-lg border border-glass-bg text-white placeholder-[#666666] font-clash"
+          >
+            <option value="">Select Service</option>
+            <option value="Website & Application Development">Website & Application Development</option>
+            <option value="Consulting Services">Consulting Services</option>
+            <option value="Design & Branding">Design & Branding</option>
+            <option value="Marketing & Data Solutions">Marketing & Data Solutions</option>
+          </select>
           <textarea
+            name="message"
             placeholder="Enter your Message"
+            required
             className="col-span-1 md:col-span-2 p-4 bg-glass-bg-2 rounded-lg border border-glass-bg text-white placeholder-[#666666] font-clash"
           ></textarea>
-
+          
           {/* Button and Social Media Section */}
           <div className="col-span-1 md:col-span-2 flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-4 sm:space-y-0">
             {/* Inquiry Button */}
             <Button
+              type="submit"
               className="bg-transparent border border-[#FFFFFF1A] text-white font-normal py-6 px-6 rounded-lg font-sora flex-grow sm:mr-12"
             >
               <span>Send your Inquiry</span>
@@ -81,6 +195,18 @@ const InquiryForm: React.FC = () => {
             </div>
           </div>
         </form>
+
+        {/* Confirmation Message */}
+        {status === "success" && (
+          <p className="text-center text-green-500 mt-4">
+            Form submitted successfully!
+          </p>
+        )}
+        {status === "error" && (
+          <p className="text-center text-red-500 mt-4">
+            Failed to send your inquiry. Please try again.
+          </p>
+        )}
       </div>
     </section>
   );
