@@ -51,33 +51,33 @@ const ContactCTA: React.FC = () => {
           {/* Card Body */}
           <CardBody className="text-center relative z-10 space-y-2 mr-20">
             <p className="text-sm sm:text-base text-white font-light font-sora mb-4 max-w-2xl mx-auto">
-              At DigitX, we value your inquiries, feedback, and collaborations. Whether you are interested in our digital services, have questions about our projects, or want to explore potential partnerships, we encourage you to reach out to our dedicated team.
+              Let our team work hand and hand with you to help your business scale online. Whether your looking for a new website, to streamline your current software processes or just have questions, we are here to help.   
             </p>
             <p className="text-white text-sm sm:text-base font-light font-sora max-w-2xl mx-auto">
               Connect with us through any of the channels below, and we’ll be delighted to assist you on your digital journey.
             </p>
           </CardBody>
 
-            {/* Centered Chip */}
-            <div
-                className="absolute bottom-1 left-1/2 transform -translate-x-1/2 z-20"
-                style={{
-                    marginBottom: '-20px', // Adjust positioning
-                }}
-            >
-                <Chip
-                    label="Feel free to contact us through any of the following channels"
-                    className=" text-sm font-clash"
-                    style={{
-                        backgroundColor: 'rgba(26, 26, 26, 0.5)', // Slightly transparent background
-                        color: '#FFFFFF', // Text color
-                        border: '1px solid #1F1F1F', // Border color
-                        borderRadius: '999px', // Fully rounded chip
-                        maxWidth: 'fit-content',
-                        fontFamily: 'Clash Display, sans-serif',
-                    }}
-                />
-            </div>
+          {/* Centered Chip */}
+          <div
+              className="absolute bottom-1 left-1/2 transform -translate-x-1/2 z-20"
+              style={{
+                  marginBottom: '-20px', // Adjust positioning
+              }}
+          >
+              <Chip
+                  label="Feel free to contact us through any of the following channels"
+                  className=" text-sm font-clash"
+                  style={{
+                      backgroundColor: 'rgba(26, 26, 26, 0.5)', // Slightly transparent background
+                      color: '#FFFFFF', // Text color
+                      border: '1px solid #1F1F1F', // Border color
+                      borderRadius: '999px', // Fully rounded chip
+                      maxWidth: 'fit-content',
+                      fontFamily: 'Clash Display, sans-serif',
+                  }}
+              />
+          </div>
         </Card>
       </motion.div>
     </section>

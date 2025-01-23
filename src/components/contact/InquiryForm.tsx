@@ -244,19 +244,31 @@ const InquiryForm: React.FC = () => {
               <p className="text-white text-sm font-medium font-clash mr-4">Follow Us On Social Media</p>
               <div className="flex items-center space-x-4">
                 {/* LinkedIn Button */}
-                <Button className="flex items-center justify-center p-2 rounded-full bg-gradient-to-b from-[#0e0e0e] to-[#4d4d4d]/40">
+                <Button 
+                  className="flex items-center justify-center p-2 rounded-full bg-gradient-to-b from-[#0e0e0e] to-[#4d4d4d]/40"
+                  onPress={() => window.open("https://www.linkedin.com/company/deft-point-consulting", "_blank")}
+                >
                   <BsLinkedin className="text-white text-xl" />
                 </Button>
                 {/* Twitter Button */}
-                <Button className="flex items-center justify-center p-2 rounded-full bg-gradient-to-b from-[#0e0e0e] to-[#4d4d4d]/40">
+                <Button 
+                  className="flex items-center justify-center p-2 rounded-full bg-gradient-to-b from-[#0e0e0e] to-[#4d4d4d]/40"
+                  onPress={() => window.open("https://x.com/deftpoint", "_blank")}
+                >
                   <BsTwitter className="text-white text-xl" />
                 </Button>
                 {/* Facebook Button */}
-                <Button className="flex items-center justify-center p-2 rounded-full bg-gradient-to-b from-[#0e0e0e] to-[#4d4d4d]/40">
+                <Button 
+                  className="flex items-center justify-center p-2 rounded-full bg-gradient-to-b from-[#0e0e0e] to-[#4d4d4d]/40"
+                  onPress={() => window.open("", "_blank")}
+                >
                   <BsFacebook className="text-white text-xl" />
                 </Button>
                 {/* Instagram Button */}
-                <Button className="flex items-center justify-center p-2 rounded-full bg-gradient-to-b from-[#0e0e0e] to-[#4d4d4d]/40">
+                <Button 
+                  className="flex items-center justify-center p-2 rounded-full bg-gradient-to-b from-[#0e0e0e] to-[#4d4d4d]/40"
+                  onPress={() => window.open("https://www.instagram.com/deftpointconsulting/", "_blank")}
+                >
                   <BsInstagram className="text-white text-xl" />
                 </Button>
               </div>

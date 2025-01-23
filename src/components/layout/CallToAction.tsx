@@ -27,27 +27,6 @@ const CallToAction: React.FC = () => {
 
     return (
         <section className="py-12 flex justify-center bg-gradient-to-b from-[#0f0f0f] to-[#1a1a1a]">
-            <motion.div
-                // Scroll-in animation when the component enters the viewport
-                initial={{
-                    y: '-50%', // Start off-screen at the top
-                    scale: 0.4, // Start larger
-                    rotate: 0, // No initial rotation
-                }}
-                whileInView={{
-                    y: 0, // Move into place
-                    scale: 1, // Return to normal size
-                    rotate: 360, // Rotate 360° twice while falling into place
-                }}
-                transition={{
-                    duration: 0.6, // Smooth transition over 2 seconds
-                    ease: 'easeOut', // Smoothly ease out into place
-                }}
-                viewport={{
-                    once: true, // Trigger animation only once when entering the viewport
-                    amount: 0.2, // Trigger when 50% of the card is in view
-                }}
-            >
                 <motion.div
                     animate={{
                         x: isMobile ? 0 : [0, 10, 0, -10, 0], // Only animate horizontally for larger screens
@@ -125,7 +104,6 @@ const CallToAction: React.FC = () => {
                         </Card>
                     </div>
                 </motion.div>
-            </motion.div>
         </section>
     );
 };

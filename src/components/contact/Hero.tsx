@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-[#64646434] to-[#1414149d] opacity-80"></div>
 
       {/* Content */}
-      <div className='relative z-10 max-w-4xl text-center text-white px-6 sm:px-6 md:px-12 lg:px-16 space-y-6 mx-auto sm:mx-48 mt-14 sm:mt-16'>
+      <div className='relative z-10 max-w-4xl text-center text-white px-6 sm:px-6 md:px-12 lg:px-16 space-y-6 mx-auto sm:mx-48 mt-8 sm:mt-0'>
         {/* Title */}
         <h1 className='text-2xl md:text-3xl font-bold leading-tight font-sora mb-6'>
           Ready to take your business to the next level?
