@@ -133,9 +133,6 @@ const CustomFooter: React.FC = () => {
               <Footer.Link href="/services" className="font-sora font-normal">
                 Services
               </Footer.Link>
-              <Footer.Link href="/portfolio" className="font-sora font-normal">
-                Portfolio
-              </Footer.Link>
               <Footer.Link href="/about" className="font-sora font-normal">
                 About
               </Footer.Link>
@@ -169,14 +166,17 @@ const CustomFooter: React.FC = () => {
           <div>
             <Footer.Title title="Projects" className="text-white font-sora" />
             <Footer.LinkGroup col>
-              <Footer.Link href="#" className="font-sora font-normal">
-                Project 1
+              {/* Create and take user to portfolio page */}
+              <Footer.Link href="/portfolio" className="font-sora font-normal">
+                Our Portfolio
               </Footer.Link>
+              {/* Create and take users to all pages section */}
               <Footer.Link href="#" className="font-sora font-normal">
-                Project 2
+                All Projects
               </Footer.Link>
-              <Footer.Link href="#" className="font-sora font-normal">
-                Project 3
+              {/* Take user to portfolio page and showcase section */}
+              <Footer.Link href="/#" className="font-sora font-normal">
+                Recent Projects
               </Footer.Link>
             </Footer.LinkGroup>
           </div>
