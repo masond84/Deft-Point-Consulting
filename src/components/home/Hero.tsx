@@ -76,17 +76,9 @@ const Hero: React.FC = () => {
             {/* Hero Content */}
             <div className="container relative z-20">
                 <section className="relative top-[15%] w-full text-white flex flex-col items-end text-right">
-                    {/* Blob Animation (Left) */}
-                    {/*
-                    <div className="blob-container flex-none hidden md:block">
-                        <Canvas camera={{ position: [0.0, 0.0, 8.0] }}>
-                            <Blob />
-                            <Particles />
-                        </Canvas>
-                    </div>                
-                    */}
+                   
                     <div className="white-space"></div>
-                    <div className="header relative top-10 mr-8 sm:mr-4 text-[24vw] sm:text-[15vw] font-bold ">
+                    <div className="header relative top-10 mr-8 sm:mr-4 lg:mr-2 xl:-mr-72 text-[24vw] sm:text-[15vw] font-bold ">
                         Deftly.
                         {/* Subheader */}
                         <div className="font-clash text-gray-200 text-lg md:text-xl -mt-10 md:-mt-20 leading-snug text-left ml-4 md:ml-10">
