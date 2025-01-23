@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardHeader, CardBody, Button, Chip, Link } from '@nextui-org/react';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { motion } from "motion/react";
@@ -25,6 +25,14 @@ const Showcase: React.FC = () => {
     setExpandedCard(expandedCard === cardId ? null : cardId); // Expand only the clicked card
   };
 
+  useEffect(() => {
+    if (location.hash === "#showcase") {
+      const showcaseSection = document.getElementById("showcase");
+      if (showcaseSection) {
+        showcaseSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   return (
     <section id="showcase" className="py-12 bg-[#121212] text-white">
       {/* Header Section */}

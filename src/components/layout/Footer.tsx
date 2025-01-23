@@ -1,10 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Footer } from 'flowbite-react';
 import { Button, Accordion, AccordionItem } from '@nextui-org/react';
 import { BsFacebook, BsInstagram, BsTwitter, BsLinkedin } from 'react-icons/bs';
 import DeftBirdIcon from "../../assets/logo/DeftBirdIcon";
 
 const CustomFooter: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <Footer container className='!rounded-none !w-full bg-[#1F1F1F] text-white py-12'>
       <div className="flex flex-col space-y-8 w-full ">
@@ -64,32 +67,36 @@ const CustomFooter: React.FC = () => {
             selectionMode="single"
             className="w-full max-w-7xl"
           >
-            <AccordionItem title="About Us" className="text-white font-sora">
+            <AccordionItem title="Our Pages" className="text-white font-sora">
               <Footer.LinkGroup col className="mb-2">
-                <Footer.Link href="#" className="font-sora font-normal">
+                <Footer.Link href="/services" className="font-sora font-normal">
+                  Services
+                </Footer.Link>
+                <Footer.Link href="/about" className="font-sora font-normal">
                   About
                 </Footer.Link>
-                <Footer.Link href="#" className="font-sora font-normal">
-                  Our Team
+                <Footer.Link href="/get-quote" className="font-sora font-normal">
+                  Quote
                 </Footer.Link>
-                <Footer.Link href="#" className="font-sora font-normal">
-                  Careers
+                <Footer.Link href="/contact" className="font-sora font-normal">
+                  Contact
                 </Footer.Link>
               </Footer.LinkGroup>
             </AccordionItem>
 
             <AccordionItem title="Services" className="text-white font-sora">
               <Footer.LinkGroup col className="mb-2">
-                <Footer.Link href="#" className="font-sora font-normal">
-                  Web Design
+                <Footer.Link href="/services/custom-website-development" className="font-sora font-normal">
+                  Website & Application Development
                 </Footer.Link>
-                <Footer.Link href="#" className="font-sora font-normal">
-                  Website Development
+                <Footer.Link href="/services/website-redesign" className="font-sora font-normal">
+                  Website Redesign
                 </Footer.Link>
+
                 <Footer.Link href="#" className="font-sora font-normal">
                   App Development
                 </Footer.Link>
-                <Footer.Link href="#" className="font-sora font-normal">
+                <Footer.Link href="/services/marketing" className="font-sora font-normal">
                   Digital Marketing
                 </Footer.Link>
               </Footer.LinkGroup>
@@ -148,7 +155,7 @@ const CustomFooter: React.FC = () => {
             <Footer.Title title="Services" className="text-white font-sora" />
             <Footer.LinkGroup col>
               <Footer.Link href="/services/custom-website-development" className="font-sora font-normal">
-                Website Development
+                Website & Application Development
               </Footer.Link>
               <Footer.Link href="/services/website-redesign" className="font-sora font-normal">
                 Website Redesign
@@ -175,7 +182,10 @@ const CustomFooter: React.FC = () => {
                 All Projects
               </Footer.Link>
               {/* Take user to portfolio page and showcase section */}
-              <Footer.Link href="/#" className="font-sora font-normal">
+              <Footer.Link 
+                href="/portfolio#showcase"
+                className="font-sora font-normal"
+              >
                 Recent Projects
               </Footer.Link>
             </Footer.LinkGroup>
