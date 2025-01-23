@@ -6,22 +6,22 @@ const FAQSection: React.FC = () => {
     {
       question: "What services does Deft Point provide?",
       answer:
-        "We offer web development, consulting services, SEO, mobile-first designs, and marketing strategies to help businesses grow.",
+        "We offer no-code to full-code development including website and application development,  website redesigns, branding and digital marketing, CRM and data management, API integrations, and more tailored  for small businesses, startups, and enterprises.",
     },
     {
       question: "How do you ensure timely project delivery?",
       answer:
-        "Our team adheres to strict timelines and milestones while maintaining a transparent communication process.",
+        "We adhere to strict timelines and milestones while maintaining a transparent communication process. Let us know the scope of your project and we will develop a cohesive timeline that works for you.",
     },
     {
       question: "Can your solutions be customized for specific business needs?",
       answer:
-        "Yes, all our solutions are tailored to suit the unique requirements of each client.",
+        "Yes, all our solutions are tailored to suit the unique requirements of each client. Whether you need help talking through your system, or developing low code to full code solutions we are here to help.",
     },
     {
       question: "Do you provide support after project completion?",
       answer:
-        "Absolutely. We offer ongoing support and maintenance to ensure the continued success of your projects.",
+        "Absolutely. We offer continued development, hosting, data and marketing strategies to ensure the continued success of your projects.",
     },
   ];
 

@@ -12,7 +12,9 @@ const CustomFooter: React.FC = () => {
         <div className="flex justify-between items-center max-w-7xl w-full mx-auto px-6">
           {/* Logo */}
           <div className="h-10 w-10 sm:h-10 sm:w-10 scale-150 relative fade-in">
-              <DeftBirdIcon className="h-full w-full" />
+              <a href="/">
+                <DeftBirdIcon className="h-full w-full" />
+              </a>
           </div>
 
           {/* Social Media Section */}
@@ -126,16 +128,22 @@ const CustomFooter: React.FC = () => {
         {/* Desktop Layout */}
         <div className="hidden sm:grid sm:grid-cols-4 sm:gap-8 max-w-7xl w-full mx-auto px-40">
           <div>
-            <Footer.Title title="About Us" className="text-white font-sora" />
+            <Footer.Title title="Our Pages" className="text-white font-sora" />
             <Footer.LinkGroup col>
+              <Footer.Link href="/services" className="font-sora font-normal">
+                Services
+              </Footer.Link>
+              <Footer.Link href="/portfolio" className="font-sora font-normal">
+                Portfolio
+              </Footer.Link>
               <Footer.Link href="/about" className="font-sora font-normal">
                 About
               </Footer.Link>
-              <Footer.Link href="#" className="font-sora font-normal">
-                Our Team
+              <Footer.Link href="/get-quote" className="font-sora font-normal">
+                Quote
               </Footer.Link>
-              <Footer.Link href="#" className="font-sora font-normal">
-                Careers
+              <Footer.Link href="/contact" className="font-sora font-normal">
+                Contact
               </Footer.Link>
             </Footer.LinkGroup>
           </div>
@@ -155,6 +163,7 @@ const CustomFooter: React.FC = () => {
               <Footer.Link href="/services/marketing" className="font-sora font-normal">
                 Digital Marketing
               </Footer.Link>
+              
             </Footer.LinkGroup>
           </div>
           <div>

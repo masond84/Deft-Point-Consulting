@@ -8,13 +8,13 @@ const AdditionalInfo: React.FC = () => {
     {
       title: "Our Response",
       content:
-        "We understand the importance of timely responses, and our team is committed to addressing your inquiries promptly. Whether you have a specific project in mind, need advice on digital strategies, or want to explore partnership opportunities, we are here to assist you at every step.",
+        "We prioritize timely responses, and are committed to addressing your project needs promptly. We hope to build a partnership and trust with each client, and thank you again for working with us.",
       icon: ClockIcon,
     },
     {
       title: "Privacy Assurance",
       content:
-        "At DigitX, we prioritize your privacy and protect your personal information in compliance with data protection regulations. Rest assured that your details will only be used for the purpose of addressing your inquiries and will not be shared with third parties without your consent.",
+        "Your privacy is our priority. We keep your data secure, and it is solely used for your inquries, and never shared with third-parties without consent.",
       icon: SecurityIcon,
     },
   ];

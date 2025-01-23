@@ -10,8 +10,8 @@ const ContactByEmail: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-8 sm:px-0">
         {[
           { title: "For General Inquiries", email: "deftpointdigital@outlook.com" },
-          { title: "For Business Collaborations", email: "partnerships@digitx.com" },
-          { title: "For Job Opportunities", email: "careers@digitx.com" },
+          { title: "For Business Collaborations", email: "deftpointdigital@business.com" },
+          { title: "For Job Opportunities", email: "deftpointdigital@carrers.com" },
         ].map((item, index) => (
           <div
             key={index}
@@ -22,6 +22,8 @@ const ContactByEmail: React.FC = () => {
               <p className="text-white font-clash mt-1">{item.email}</p>
             </div>
             <Button
+              as="a"
+              href={`mailto:${item.email}`}
               className="flex items-center justify-center p-2 rounded-full bg-gradient-to-b from-[#0e0e0e] to-[#4d4d4d]/40"
             >
               <TiArrowForwardOutline className="text-white text-xl" /> {/* Replace the arrow with an icon */}

@@ -22,6 +22,8 @@ const ContactByPhone: React.FC = () => {
               <p className="text-white font-clash mt-1">{item.phone}</p>
             </div>
             <Button
+              as="a"
+              href={`tel:${item.phone}`} 
               className="flex items-center justify-center p-2 rounded-full bg-gradient-to-b from-[#0e0e0e] to-[#4d4d4d]/40"
             >
               <TiArrowForwardOutline className="text-white text-xl" /> {/* Replace the arrow with an icon */}
