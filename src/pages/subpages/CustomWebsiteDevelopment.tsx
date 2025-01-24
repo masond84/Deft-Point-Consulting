@@ -1,44 +1,173 @@
 import React from 'react';
+import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react";
+import CardImage from '../../assets/images/DropdownCardImage2.jpg';
+import abstractDesignSvg from '@/assets/AbstractDesign.svg';
 
 const CustomWebsiteDevelopment: React.FC = () => {
   return (
-    <section className="text-white py-12 px-6 bg-gradient-to-b from-[#0f0f0f] to-[#252525] min-h-screen">
+    <section className="py-12 px-6 bg-gradient-to-b from-[#0f0f0f] to-[#252525] min-h-screen">
       {/* Title Section */}
-      <div className="max-w-4xl mx-auto text-center mb-12">
-        <h1 className="text-5xl font-bold mb-4 font-sora">Custom Website Development</h1>
-        <p className="text-lg font-light text-gray-300">
-          Full-service custom website development solutions to help your business stand out and grow.
+      <div className="mt-16 max-w-7xl mx-auto mb-12 px-6 flex flex-col md:flex-row items-start">
+        <h1 className="text-3xl font-semibold text-left mb-4 font-sora md:mb-0 md:mr-12 w-full md:w-1/3 text-white">
+          Website Design & Application Development
+        </h1>
+        <p className="text-base sm:text-lg font-light font-clash w-full md:w-2/4 text-left text-gray-200">
+          Full-service custom website development solutions to help your
+          business stand out and grow.
         </p>
       </div>
 
-      {/* Overview Section */}
-      <div className="max-w-4xl mx-auto mb-12">
-        <h2 className="text-3xl font-semibold mb-4">Overview</h2>
-        <p className="text-lg text-gray-300 leading-relaxed">
-          Our custom website development service covers everything from initial design to deployment. We use cutting-edge frameworks like React.js, Django, and Laravel to ensure your site is modern, fast, and scalable. Whether you're starting from scratch or upgrading an existing website, our team ensures every detail is tailored to your business needs.
-        </p>
-      </div>
+      {/* Cards Section */}
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 gap-8">
+        {/* Row 1: Image on left, Text on right */}
+        <div className="flex flex-col md:flex-row items-center md:items-start w-full">
+          {/* Image Card */}
+          <Card className="md:w-12/12 w-full">
+            <CardBody>
+              <img
+                src={CardImage}
+                alt="Strategy"
+                className="rounded-lg object-cover w-full h-64 md:h-auto"
+              />
+            </CardBody>
+          </Card>
 
-      {/* Key Features Section */}
-      <div className="max-w-4xl mx-auto mb-12">
-        <h2 className="text-3xl font-semibold mb-4">Key Features</h2>
-        <ul className="list-disc pl-6 text-gray-300 space-y-3">
-          <li>Responsive and mobile-first design to ensure cross-device compatibility.</li>
-          <li>Custom-built features to align with your business goals.</li>
-          <li>Integration with third-party tools like CRMs, analytics, or e-commerce platforms.</li>
-          <li>SEO-friendly development to maximize visibility.</li>
-        </ul>
-      </div>
+          {/* Text Card */}
+          <Card className="md:w-5/12 w-full h-full bg-glass-bg shadow-glass backdrop-blur-glass border border-glass-border p-6 rounded-lg flex flex-col justify-end">
+            {/* Overlay Image */}
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `url(${abstractDesignSvg})`,
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+                opacity: 0.6, // Adjust opacity for better visibility of the backdrop
+              }}
+            ></div>
+            <CardHeader>
+              <h2 className="text-xl font-semibold text-white font-sora">Strategy</h2>
+            </CardHeader>
+            <CardBody>
+              <p className="text-gray-200 font-clash">
+                Analytics and Research, Brand Strategy, Content Strategy, Digital
+                Strategy, Conversion Rate Optimization, Technical SEO support.
+              </p>
+            </CardBody>
+          </Card>
+        </div>
 
-      {/* Pricing Section */}
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-semibold mb-4">Pricing</h2>
-        <p className="text-lg text-gray-300 leading-relaxed">
-          Starting at <span className="font-bold text-white">$400</span>. Pricing may vary depending on project complexity and specific requirements.
-        </p>
-        <p className="text-lg text-gray-300 mt-4">
-          For a detailed quote, feel free to <a href="/contact" className="text-blue-400 underline">contact us</a>.
-        </p>
+        {/* Row 2: Text on left, Image on right */}
+        <div className="flex flex-col md:flex-row items-center md:items-start">
+          {/* Text Card */}
+          <Card className="md:w-5/12 w-full h-full bg-glass-bg shadow-glass backdrop-blur-glass border border-glass-border p-6 rounded-lg flex flex-col justify-end">
+            {/* Overlay Image */}
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `url(${abstractDesignSvg})`,
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+                opacity: 0.6, // Adjust opacity for better visibility of the backdrop
+              }}
+            ></div>
+            <CardHeader>
+              <h2 className="text-xl font-semibold text-white font-sora">Design</h2>
+            </CardHeader>
+            <CardBody>
+              <p className="text-gray-200 font-clash">
+                UI/UX Design, Creative Direction, Brand Guides, Prototypes, Visual
+                Asset Creation, Motion Design.
+              </p>
+            </CardBody>
+          </Card>
+
+          {/* Image Card */}
+          <Card className="md:w-12/12 w-full md:order-1">
+            <CardBody>
+              <img
+                src={CardImage}
+                alt="Design"
+                className="rounded-lg object-cover w-full h-64 md:h-auto"
+              />
+            </CardBody>
+          </Card>
+        </div>
+        
+        {/* Row 3: Image on left, Text on right */}
+        <div className="flex flex-col md:flex-row items-center md:items-start">
+          {/* Image Card */}
+          <Card className="md:w-12/12 w-full">
+            <CardBody>
+              <img
+                src={CardImage}
+                alt="Development"
+                className="rounded-lg object-cover w-full h-64 md:h-auto"
+              />
+            </CardBody>
+          </Card>
+
+          {/* Text Card */}
+          <Card className="md:w-5/12 w-full h-full bg-glass-bg shadow-glass backdrop-blur-glass border border-glass-border p-6 rounded-lg flex flex-col justify-end">
+            {/* Overlay Image */}
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `url(${abstractDesignSvg})`,
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+                opacity: 0.6, // Adjust opacity for better visibility of the backdrop
+              }}
+            ></div>
+            <CardHeader>
+              <h2 className="text-xl font-semibold text-white font-sora">Development</h2>
+            </CardHeader>
+            <CardBody>
+              <p className="text-gray-200 font-clash">
+                Front-end Development, Back-end Development, CMS Integration, E-commerce Solutions, Web Applications.
+              </p>
+            </CardBody>
+          </Card>
+        </div>
+
+        {/* Row 4: Text on left, Image on right */}
+        <div className="flex flex-col md:flex-row items-center md:items-start">
+          {/* Text Card */}
+          <Card className="md:w-5/12 w-full h-full bg-glass-bg shadow-glass backdrop-blur-glass border border-glass-border p-6 rounded-lg flex flex-col justify-end">
+            {/* Overlay Image */}
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `url(${abstractDesignSvg})`,
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+                opacity: 0.6, // Adjust opacity for better visibility of the backdrop
+              }}
+            ></div>
+            <CardHeader>
+              <h2 className="text-xl font-semibold text-white font-sora">Marketing</h2>
+            </CardHeader>
+            <CardBody>
+              <p className="text-gray-200 font-clash">
+                Digital Marketing, Social Media Management, Email Marketing, PPC Campaigns, Content Marketing.
+              </p>
+            </CardBody>
+          </Card>
+
+          {/* Image Card */}
+          <Card className="md:w-12/12 w-full md:order-1">
+            <CardBody>
+              <img
+                src={CardImage}
+                alt="Marketing"
+                className="rounded-lg object-cover w-full h-64 md:h-auto"
+              />
+            </CardBody>
+          </Card>
+        </div>
       </div>
     </section>
   );
