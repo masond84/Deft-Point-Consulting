@@ -11,7 +11,7 @@ import { BsLinkedin, BsInstagram, BsTwitter, BsFacebook } from "react-icons/bs";
 
 const CustomWebsiteDevelopment: React.FC = () => {
   return (
-    <section className="py-12 px-6 bg-gradient-to-b from-[#0f0f0f] to-[#252525] min-h-screen">
+    <section className="py-12 px-6 bg-gradient-to-b from-[#0f0f0f] to-[#252525] min-h-screen overflow-x-hidden">
       {/* Title Section */}
       <div className="mt-20 max-w-7xl mx-auto mb-8 px-6 flex flex-col md:flex-row items-start">
         <h1 className="text-3xl font-semibold text-left mb-4 font-sora md:mb-0 md:mr-12 w-full md:w-2/5 text-white">
@@ -27,7 +27,13 @@ const CustomWebsiteDevelopment: React.FC = () => {
       {/* Cards Section */}
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 gap-8">
         {/* Row 1: Image on left, Text on right */}
-        <div className="flex flex-col md:flex-row items-center md:items-start w-full">
+        <motion.div 
+          initial={{ x: "-100%", opacity: 0 }}
+          whileInView={{ x: "0%", opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="flex flex-col md:flex-row items-center md:items-start w-full"
+        >
           {/* Image Card */}
           <Card className="md:w-12/12 w-full">
             <CardBody>
@@ -62,10 +68,16 @@ const CustomWebsiteDevelopment: React.FC = () => {
               </p>
             </CardBody>
           </Card>
-        </div>
+        </motion.div>
 
         {/* Row 2: Text on left, Image on right */}
-        <div className="flex flex-col md:flex-row items-center md:items-start">
+        <motion.div 
+          initial={{ x: "100%", opacity: 0 }}
+          whileInView={{ x: "0%", opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.1 }}
+          className="flex flex-col md:flex-row items-center md:items-start"
+        >
           {/* Text Card */}
           <Card className="md:w-5/12 w-full h-full bg-glass-bg shadow-glass backdrop-blur-glass border border-glass-border p-6 rounded-lg flex flex-col justify-end">
             {/* Overlay Image */}
@@ -100,10 +112,16 @@ const CustomWebsiteDevelopment: React.FC = () => {
               />
             </CardBody>
           </Card>
-        </div>
+        </motion.div>
         
         {/* Row 3: Image on left, Text on right */}
-        <div className="flex flex-col md:flex-row items-center md:items-start">
+        <motion.div 
+          initial={{ x: "-100%", opacity: 0 }}
+          whileInView={{ x: "0%", opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.1 }}
+          className="flex flex-col md:flex-row items-center md:items-start"
+        >
           {/* Image Card */}
           <Card className="md:w-12/12 w-full">
             <CardBody>
@@ -138,10 +156,16 @@ const CustomWebsiteDevelopment: React.FC = () => {
               </p>
             </CardBody>
           </Card>
-        </div>
+        </motion.div>
 
         {/* Row 4: Text on left, Image on right */}
-        <div className="flex flex-col md:flex-row items-center md:items-start">
+        <motion.div 
+          initial={{ x: "100%", opacity: 0 }}
+          whileInView={{ x: "0%", opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.1 }}
+          className="flex flex-col md:flex-row items-center md:items-start"
+        >
           {/* Text Card */}
           <Card className="md:w-5/12 w-full h-full bg-glass-bg shadow-glass backdrop-blur-glass border border-glass-border p-6 rounded-lg flex flex-col justify-end">
             {/* Overlay Image */}
@@ -176,7 +200,7 @@ const CustomWebsiteDevelopment: React.FC = () => {
               />
             </CardBody>
           </Card>
-        </div>
+        </motion.div>
       </div>
 
       {/* Section 2 */}
