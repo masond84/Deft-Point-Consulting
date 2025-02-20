@@ -28,32 +28,32 @@ const ReasonsToChoose: React.FC = () => {
   const cardContent = [
     {
       icon: <img src={SparkleIcon} alt="Sparkle Icon" className="w-20 h-20" />,
-      title: 'Custom Website Development',
-      description: 'Our team offers full-service designs packed with custom development solutions to grow your business and captivate your audience.',
+      title: 'Custom Software Development',
+      description: 'We develop businesses with custom applications and software tailored to their specific needs.',
       link: '/services/custom-website-development',
     },
     {
       icon: <img src={LightBulbIcon} alt="Sparkle Icon" className="w-20 h-20" />,
-      title: 'Mobile-First Designs',
-      description: 'Mobile-optimized websites and high converting landing pages for balanced designs that generate leads.',
+      title: 'Consulting & Transformation',
+      description: 'Unlock the full potential of your business with our strategic consulting and digital transformation services.',
       link: '/services/mobile-first-designs',
     },
     {
       icon: <img src={PointerIcon} alt="Sparkle Icon" className="w-20 h-20" />,
-      title: 'Unique Website Redesign',
-      description: 'We transform outdated websites into modern, responsive designs that drive traffic and increase conversions.',
+      title: 'Full-Scale Website Design',
+      description: "We craft visually stunning, responsive websites that elevate your brand's digital presence.",
       link: '/services/website-redesign',
     },
     {
       icon: <img src={PhoneIcon} alt="Sparkle Icon" className="w-20 h-20" />,
-      title: 'Website Maintenance Plans',
-      description: 'Keep your website running smoothly with regular updates, performance checks, and hosting management.',
+      title: 'Ongoing Maintenance Plans',
+      description: 'Keep your systems running smoothly with regular updates, performance checks, and hosting management.',
       link: '/services/website-maintenance-plans',
     },
     {
       icon: <img src={BoltIcon} alt="Sparkle Icon" className="w-20 h-20" />,
       title: 'Marketing Strategies',
-      description: 'Reach your ideal audience with precision with personalized strategies to boost visibiliaty and maximize ROI.',
+      description: 'Reach your ideal audience with precision offering personalized strategies to boost visibiliaty and maximize ROI.',
       link: '/services/marketing',
     },
     {
@@ -157,9 +157,10 @@ const ReasonsToChoose: React.FC = () => {
 
           {/* Card Footer */}
           <CardFooter className="flex justify-center pt-4">
+            {index < 3 && ( // Only show the button for the first three cards
               <div className='flex items-center bg-[#1A1A1A]/20 border border-[#1F1F1F] rounded-full px-5 py-2 space-x-2 hover:bg-[#1A1A1A]/40 transition'>
                 <Link 
-                   className='text-white text-sm font-medium font-sora pr-4 cursor-default'
+                  className='text-white text-sm font-medium font-sora pr-4 cursor-default'
                 >
                   Learn More
                 </Link>
@@ -170,6 +171,7 @@ const ReasonsToChoose: React.FC = () => {
                   <ArrowRightAltIcon />
                 </Button>
               </div>
+            )}
           </CardFooter>
         </Card>
         </motionReact.div>

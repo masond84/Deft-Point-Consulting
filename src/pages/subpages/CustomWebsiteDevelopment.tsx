@@ -63,8 +63,7 @@ const CustomWebsiteDevelopment: React.FC = () => {
             </CardHeader>
             <CardBody>
               <p className="text-gray-200 font-clash">
-                Our first intiative involves understanding our clients goals, business needs and project scope.
-                From client consultation to competitor analysis, we ensure that we develop a clear roadmap to achieve your desired results.
+                Our process begins by understanding our clients goals, peforming competitor analysis to develop a roadmap to follow through the software lifecycle.
               </p>
             </CardBody>
           </Card>
@@ -345,7 +344,7 @@ const CustomWebsiteDevelopment: React.FC = () => {
                   <h3 className="text-lg sm:text-xl font-medium mb-4 font-sora text-white">
                     {service.title}
                   </h3>
-                  <p className="text-gray-400 text-sm sm:text-base font-clash leading-loose">
+                  <p className="text-gray-200 text-sm sm:text-base font-clash leading-loose">
                     {service.description}
                   </p>
                 </CardBody>
@@ -359,7 +358,7 @@ const CustomWebsiteDevelopment: React.FC = () => {
           {/* Header Section */}
           <div className="mb-8">
             <h3 className="text-2xl font-bold font-sora mb-4">Let Us Bring Your Project To Life</h3>
-            <p className="max-w-xl mx-auto text-gray-400 text-md font-clash">
+            <p className="max-w-xl mx-auto text-gray-200 text-md font-clash">
               Let our team bring your vision to fruition. Connect with us and let's explore how we can make your project a reality. 
             </p>
           </div>
