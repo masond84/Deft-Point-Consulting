@@ -244,19 +244,21 @@ const ReasonsToChoose: React.FC = () => {
               </CardBody>
 
               {/* Card Footer */}
-              <CardFooter className="flex justify-center pt-4">
-                <div className="flex items-center bg-[#1A1A1A]/20 border border-[#1F1F1F] rounded-full px-5 py-2 space-x-2 hover:bg-[#1A1A1A]/40 transition">
-                  <Link className="text-white text-sm font-medium font-sora pr-4">
-                    Learn More
-                  </Link>
-                  <Button 
-                    onPress={() => handleButtonClick(cardContent[index].link)}
-                    className="w-12 h-2 p-4 bg-black rounded-full flex items-center justify-center"
-                  >
-                    <ArrowRightAltIcon />
-                  </Button>
-                </div>
-              </CardFooter>
+              {index < 3 && (
+                <CardFooter className="flex justify-center pt-4">
+                  <div className="flex items-center bg-[#1A1A1A]/20 border border-[#1F1F1F] rounded-full px-5 py-2 space-x-2 hover:bg-[#1A1A1A]/40 transition">
+                    <Link className="text-white text-sm font-medium font-sora pr-4">
+                      Learn More
+                    </Link>
+                    <Button 
+                      onPress={() => handleButtonClick(cardContent[index].link)}
+                      className="w-12 h-2 p-4 bg-black rounded-full flex items-center justify-center"
+                    >
+                      <ArrowRightAltIcon />
+                    </Button>
+                  </div>
+                </CardFooter>
+              )}
             </Card>
           </framerMotion.div> 
         ))}
