@@ -5,6 +5,12 @@ import { motion } from "motion/react";
 import PartnersSection from './components/Partners';
 
 import CardImage from '../../assets/images/DropdownCardImage2.jpg';
+import CardImage2 from '../../assets/images/why-deft-mobile-first-image-1.jpg';
+import CardImage3 from '../../assets/images/why-deft-mobile-first-image-2.jpg';
+import CardImage4 from '../../assets/images/why-deft-mobile-first-image-3.jpg';
+import CardImage5 from '../../assets/images/why-deft-mobile-first-image-4.jpg';
+import CardImage6 from '../../assets/images/why-deft-mobile-first-image-5.jpg';
+
 import abstractDesignSvg from '@/assets/AbstractDesign.svg';
 import { BsLinkedin, BsInstagram, BsTwitter, BsFacebook } from "react-icons/bs";
 import LockIcon from '../../assets/images/LockIcon.svg';
@@ -27,9 +33,9 @@ const MobileFirstDesign: React.FC = () => {
         <Card className='mt-8 w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg bg-[#0F0F0F]'>
           <CardBody className='p-0'>
             <img
-              src={CardImage}
+              src={CardImage2}
               alt='Why Deft Point?'
-              className='w-full rounded-xl object-cover'
+              className='w-full aspect-[2/1] rounded-xl object-cover'
             />
           </CardBody>
         </Card>
@@ -49,14 +55,14 @@ const MobileFirstDesign: React.FC = () => {
       {/* Cards Section */}
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 gap-8">
         {/* Row 1: Image on left, Text on right */}
-        <div className="flex flex-col md:flex-row items-center md:items-start w-full">
+        <div className="flex flex-col-reverse md:flex-row items-center md:items-start w-full">
           {/* Image Card */}
           <Card className="md:w-12/12 w-full">
             <CardBody>
               <img
-                src={CardImage}
+                src={CardImage3}
                 alt="Strategy"
-                className="rounded-lg object-cover w-full h-64 md:h-auto"
+                className="rounded-lg object-cover w-full h-64 aspect-[2/1] md:h-auto"
               />
             </CardBody>
           </Card>
@@ -86,7 +92,7 @@ const MobileFirstDesign: React.FC = () => {
         </div>
 
         {/* Row 2: Text on left, Image on right */}
-        <div className="flex flex-col md:flex-row items-center md:items-start">
+        <div className="flex flex-col-reverse md:flex-row items-center md:items-start">
           {/* Text Card */}
           <Card className="md:w-5/12 w-full h-full bg-glass-bg shadow-glass backdrop-blur-glass border border-glass-border p-6 rounded-lg flex flex-col justify-end">
             {/* Overlay Image */}
@@ -114,23 +120,23 @@ const MobileFirstDesign: React.FC = () => {
           <Card className="md:w-12/12 w-full md:order-1">
             <CardBody>
               <img
-                src={CardImage}
+                src={CardImage4}
                 alt="Design"
-                className="rounded-lg object-cover w-full h-64 md:h-auto"
+                className="rounded-lg object-cover w-full aspect-[2/1] h-64 md:h-auto"
               />
             </CardBody>
           </Card>
         </div>
         
         {/* Row 3: Image on left, Text on right */}
-        <div className="flex flex-col md:flex-row items-center md:items-start">
+        <div className="flex flex-col-reverse md:flex-row items-center md:items-start">
           {/* Image Card */}
           <Card className="md:w-12/12 w-full">
             <CardBody>
               <img
-                src={CardImage}
+                src={CardImage5}
                 alt="Development"
-                className="rounded-lg object-cover w-full h-64 md:h-auto"
+                className="rounded-lg object-cover w-full aspect-[2/1] h-64 md:h-auto"
               />
             </CardBody>
           </Card>
@@ -160,7 +166,7 @@ const MobileFirstDesign: React.FC = () => {
         </div>
 
         {/* Row 4: Text on left, Image on right */}
-        <div className="flex flex-col md:flex-row items-center md:items-start">
+        <div className="flex flex-col-reverse md:flex-row items-center md:items-start">
           {/* Text Card */}
           <Card className="md:w-5/12 w-full h-full bg-glass-bg shadow-glass backdrop-blur-glass border border-glass-border p-6 rounded-lg flex flex-col justify-end">
             {/* Overlay Image */}
@@ -188,9 +194,9 @@ const MobileFirstDesign: React.FC = () => {
           <Card className="md:w-12/12 w-full md:order-1">
             <CardBody>
               <img
-                src={CardImage}
+                src={CardImage6}
                 alt="Marketing"
-                className="rounded-lg object-cover w-full h-64 md:h-auto"
+                className="rounded-lg object-cover w-full aspect-[2/1] h-64 md:h-auto"
               />
             </CardBody>
           </Card>
