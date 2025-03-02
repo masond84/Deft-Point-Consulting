@@ -201,11 +201,11 @@ const OurWork: React.FC = () => {
       {/* Bottom Button */}
       <div className="text-center mt-6">
         <Link
-          href="/portfolio"
+          href="/projects/all-projects"
           className="no-underline" // Prevent underline styling
         >
             <Button 
-            onPress={() => navigate('/portfolio#showcase')}
+            onPress={() => navigate('/projects/all-projects')}
             className="px-6 py-3 rounded-full border border-[#262626] bg-[#1A1A1A]/20 text-white font-sora hover:bg-[#1A1A1A]/40 text-sm font-light"
             >
               View All Projects <ArrowRightAltIcon className="ml-2" />

@@ -20,6 +20,8 @@ import WebsiteRedesign from './pages/subpages/WebsiteRedesign';
 import MaintenancePlans from './pages/subpages/MaintenacePlans';
 import Marketing from './pages/subpages/Marketing';
 import DataServices from './pages/subpages/DataServices';
+import AllProjects from './pages/AllProjects';
+// Projects Pages
 
 const App: React.FC = () => {
   return (
@@ -43,6 +45,7 @@ const App: React.FC = () => {
           <Route path="/services/website-maintenance-plans" element={<MaintenancePlans />} />
           <Route path="/services/marketing" element={<Marketing />} />
           <Route path="/services/data-solutions" element={<DataServices />} />
+          <Route path="projects/all-projects" element={<AllProjects />} />
         </Routes>
         <Footer />
       </div>
