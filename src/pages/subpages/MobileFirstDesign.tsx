@@ -35,7 +35,7 @@ const MobileFirstDesign: React.FC = () => {
             <img
               src={CardImage2}
               alt='Why Deft Point?'
-              className='w-full aspect-[2/1] rounded-xl object-cover'
+              className='w-full aspect-[21/9] rounded-xl object-cover'
             />
           </CardBody>
         </Card>
@@ -62,7 +62,7 @@ const MobileFirstDesign: React.FC = () => {
               <img
                 src={CardImage3}
                 alt="Strategy"
-                className="rounded-lg object-cover w-full h-64 aspect-[2/1] md:h-auto"
+                className="rounded-lg object-cover w-full h-64 aspect-[21/9] md:h-auto"
               />
             </CardBody>
           </Card>
@@ -122,7 +122,7 @@ const MobileFirstDesign: React.FC = () => {
               <img
                 src={CardImage4}
                 alt="Design"
-                className="rounded-lg object-cover w-full aspect-[2/1] h-64 md:h-auto"
+                className="rounded-lg object-cover w-full aspect-[21/9] h-64 md:h-auto"
               />
             </CardBody>
           </Card>
@@ -136,7 +136,7 @@ const MobileFirstDesign: React.FC = () => {
               <img
                 src={CardImage5}
                 alt="Development"
-                className="rounded-lg object-cover w-full aspect-[2/1] h-64 md:h-auto"
+                className="rounded-lg object-cover w-full aspect-[21/9] h-64 md:h-auto"
               />
             </CardBody>
           </Card>
@@ -196,7 +196,7 @@ const MobileFirstDesign: React.FC = () => {
               <img
                 src={CardImage6}
                 alt="Marketing"
-                className="rounded-lg object-cover w-full aspect-[2/1] h-64 md:h-auto"
+                className="rounded-lg object-cover w-full aspect-[21/9] h-64 md:h-auto"
               />
             </CardBody>
           </Card>
@@ -229,7 +229,7 @@ const MobileFirstDesign: React.FC = () => {
             {
               title: "End-to-End Transformation",
               description:
-                "We don’t just advise—we execute. From initial analysis to implementation and ongoing support, we’re with you every step of the way for long-term success.",              
+                "We don’t just advise—we execute. From initial analysis to implementation and ongoing support, we’re with you every step of the way.",              
               icon: LockIcon, // Replace with an icon or image
               overlay: abstractDesignSvg, // Replace with the actual overlay image
             },

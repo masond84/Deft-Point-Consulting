@@ -2,7 +2,10 @@ import React from 'react';
 import { Card, CardHeader, CardBody, CardFooter, Button } from "@nextui-org/react";
 import { motion } from "motion/react";
 
-import CardImage from '../../assets/images/DropdownCardImage2.jpg';
+import CardImage from '../../assets/images/card-image-6-website-design.png';
+import CardImage2 from '../../assets/images/card-image-1-website-design.png';
+import CardImage3 from '../../assets/images/card-image-5-website-design.png';
+import CardImage4 from '../../assets/images/card-image-7-website-design.png';
 import abstractDesignSvg from '@/assets/AbstractDesign.svg';
 import LockIcon from '../../assets/images/LockIcon.svg';
 import BoltIcon from '../../assets/images/BoltIcon.svg';
@@ -32,7 +35,7 @@ const WebsiteRedesign: React.FC = () => {
               <img
                 src={CardImage}
                 alt="Strategy"
-                className="rounded-lg object-cover w-full h-64 md:h-auto"
+                className="rounded-lg object-cover aspect-[21/9] w-full h-64 md:h-auto"
               />
             </CardBody>
           </Card>
@@ -90,7 +93,7 @@ const WebsiteRedesign: React.FC = () => {
           <Card className="md:w-12/12 w-full md:order-1">
             <CardBody>
               <img
-                src={CardImage}
+                src={CardImage2}
                 alt="Design"
                 className="rounded-lg object-cover w-full h-64 md:h-auto"
               />
@@ -104,9 +107,9 @@ const WebsiteRedesign: React.FC = () => {
           <Card className="md:w-12/12 w-full">
             <CardBody>
               <img
-                src={CardImage}
+                src={CardImage3}
                 alt="Development"
-                className="rounded-lg object-cover w-full h-64 md:h-auto"
+                className="rounded-lg object-cover w-full aspect-[21/9] h-64 md:h-auto"
               />
             </CardBody>
           </Card>
@@ -164,9 +167,9 @@ const WebsiteRedesign: React.FC = () => {
           <Card className="md:w-12/12 w-full md:order-1">
             <CardBody>
               <img
-                src={CardImage}
+                src={CardImage4}
                 alt="Marketing"
-                className="rounded-lg object-cover w-full h-64 md:h-auto"
+                className="rounded-lg object-cover w-full aspect-[21/9] md:h-auto"
               />
             </CardBody>
           </Card>
@@ -235,19 +238,10 @@ const WebsiteRedesign: React.FC = () => {
                 {/* Header */}
                 <CardHeader className="text-2xl font-bold mb-0 font-clash">{card.step} .</CardHeader>
 
-                {/* Image Body */}
-                <CardBody>
-                  <img
-                    src={card.image}
-                    alt={card.title}
-                    className="rounded-lg object-cover w-full h-32 md:h-40"
-                  />
-                </CardBody>
-
                 {/* Card Body */}
                 <CardBody>
-                  <h3 className="text-lg font-semibold mb-2 font-sora">{card.title}</h3>
-                  <p className="text-gray-200 font-clash">
+                  <h3 className="text-lg font-semibold mb-2 font-clash tracking-wider">{card.title}</h3>
+                  <p className="text-gray-200 font-sora">
                     {card.description}
                   </p>
                 </CardBody>
