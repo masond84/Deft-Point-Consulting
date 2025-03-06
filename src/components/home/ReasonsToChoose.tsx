@@ -132,48 +132,48 @@ const ReasonsToChoose: React.FC = () => {
             isHoverable
             className="bg-glass-bg shadow-glass backdrop-blur-glass border border-glass-border p-6 rounded-lg text-center flex flex-col items-center space-y-4 transition h-full w-72 max-w-sm"
           >
-          {/* Overlay Image */}
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `url(${abstractDesignSvg})`,
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-              opacity: 0.6, // Adjust opacity for better visibility of the backdrop
-            }}
-          ></div>
+            {/* Overlay Image */}
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `url(${abstractDesignSvg})`,
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+                opacity: 0.6, // Adjust opacity for better visibility of the backdrop
+              }}
+            ></div>
 
-          {/* Card Header */}
-          <CardHeader className="flex flex-col items-center pb-2">
-            {card.icon}
-          </CardHeader>
+            {/* Card Header */}
+            <CardHeader className="flex flex-col items-center pb-2">
+              {card.icon}
+            </CardHeader>
 
-          {/* Card Content */}
-          <CardBody className='flex flex-col items-center text-center flex-grow mb-4 justify-between h-52 overflow-visible'>
-            <h3 className="text-xl font-medium mb-4 font-sora">{card.title}</h3>
-            <p className="text-gray-200 text-sm font-clash leading-loose">{card.description}</p>
-          </CardBody>
+            {/* Card Content */}
+            <CardBody className='flex flex-col items-center text-center flex-grow mb-4 justify-between h-52 overflow-visible'>
+              <h3 className="text-xl font-medium mb-4 font-sora">{card.title}</h3>
+              <p className="text-gray-200 text-sm font-clash leading-loose">{card.description}</p>
+            </CardBody>
 
-          {/* Card Footer */}
-          <CardFooter className="flex justify-center pt-4">
-            {index < 3 && ( // Only show the button for the first three cards
-              <div className='flex items-center bg-[#1A1A1A]/20 border border-[#1F1F1F] rounded-full px-5 py-2 space-x-2 hover:bg-[#1A1A1A]/40 transition'>
-                <Link 
-                  className='text-white text-sm font-medium font-sora pr-4 cursor-default'
-                >
-                  Learn More
-                </Link>
-                <Button 
-                  onPress={() => handleButtonClick(card.link)} // Navigate programmatically
-                  className="w-12 h-2 p-4 bg-black rounded-full flex items-center justify-center"
-                >
-                  <ArrowRightAltIcon />
-                </Button>
-              </div>
-            )}
-          </CardFooter>
-        </Card>
+            {/* Card Footer */}
+            <CardFooter className="flex justify-center pt-4">
+              {index < 3 && ( // Only show the button for the first three cards
+                <div className='flex items-center bg-[#1A1A1A]/20 border border-[#1F1F1F] rounded-full px-5 py-2 space-x-2 hover:bg-[#1A1A1A]/40 transition'>
+                  <Link 
+                    className='text-white text-sm font-medium font-sora pr-4 cursor-default'
+                  >
+                    Learn More
+                  </Link>
+                  <Button 
+                    onPress={() => handleButtonClick(card.link)} // Navigate programmatically
+                    className="w-12 h-2 p-4 bg-black rounded-full flex items-center justify-center"
+                  >
+                    <ArrowRightAltIcon />
+                  </Button>
+                </div>
+              )}
+            </CardFooter>
+          </Card>
         </motionReact.div>
       ))}
     </div>

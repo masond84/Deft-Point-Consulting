@@ -82,7 +82,7 @@ const Hero: React.FC = () => {
                         Deftly.
                         {/* Subheader */}
                         <div className="font-clash text-gray-200 text-lg md:text-xl -mt-10 md:-mt-20 leading-snug text-left ml-4 md:ml-10">
-                            Crafted Websites
+                            Crafted Software
                         </div>
                     </div>
 
