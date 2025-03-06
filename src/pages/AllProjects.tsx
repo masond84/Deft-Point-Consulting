@@ -12,7 +12,7 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { BsChevronDoubleDown } from "react-icons/bs";
 
 interface Project {
-  _id: string;
+  id: string;
   title: string;
   description: string;
   image: string;
@@ -70,17 +70,37 @@ const AllProjects: React.FC = () => {
     // Fetch Projects from Backend
     useEffect(() => {
       fetch(`${API_BASE_URL}/projects`)
-          .then(response => response.json())
-          .then((data: Project[]) => {
-              setProjects(data);
-              setLoading(false);
-          })
-          .catch(error => {
-              console.error("Error fetching projects:", error);
-              setError("Failed to load projects. Please try again later.");
-              setLoading(false);
-          });
+        .then(response => response.json())
+        .then((data) => {
+          const formattedProjects = data.map((project: any) => ({
+            id: Number(project._id), // Convert _id (string) to number
+            title: project.title,
+            description: project.description,
+            image: project.image,
+            tags: project.tags,
+            category: project.category,
+            timeTaken: project.timeTaken,
+            startDate: project.startDate,
+            endDate: project.endDate,
+            technologies: project.technologies.map((tech: any) => ({
+              src: tech.src,
+              alt: tech.alt,
+            })),
+            methods: project.methods,
+          }));
+    
+          setProjects(formattedProjects);
+          setLoading(false);
+        })
+        .catch(error => {
+          console.error("Error fetching projects:", error);
+          setError("Failed to load projects. Please try again later.");
+          setLoading(false);
+        });
     }, []);
+    
+    
+
 
     return(
         <section className="py-12 px-6 bg-gradient-to-b from-[#0f0f0f] to-[#252525] min-h-screen">
@@ -101,7 +121,7 @@ const AllProjects: React.FC = () => {
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
-                  opacity: 0.6, 
+                  opacity: 0.9, 
                 }}
               ></div>
 
@@ -143,6 +163,17 @@ const AllProjects: React.FC = () => {
               className="md:col-span-1 w-full bg-glass-bg-dark shadow-glass backdrop-blur-glassmorphism rounded-lg border border-glass-border p-6 text-white relative"
               isHoverable
             >
+              {/* Background Overlay */}
+              <div
+                className="absolute inset-0 z-0 w-full h-full min-h-[250px]"
+                style={{
+                  backgroundImage: `url(${AbstractDesignSvg})`,
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  opacity: 0.99, 
+                }}
+              ></div>
               <CardBody className="relative z-10">
                 <h3 className="text-xl font-semibold font-sora">Designed for Impact</h3>
                 <p className="text-gray-300 mt-3 font-clash">
@@ -167,6 +198,17 @@ const AllProjects: React.FC = () => {
               className="md:col-span-1 w-full bg-glass-bg shadow-glass backdrop-blur-glassmorphism rounded-lg border border-glass-border p-6 text-white relative"
               isHoverable
             >
+              {/* Background Overlay */}
+              <div
+                className="absolute inset-0 z-0 w-full h-full min-h-[250px]"
+                style={{
+                  backgroundImage: `url(${AbstractDesignSvg})`,
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  opacity: 0.6, 
+                }}
+              ></div>
               <CardBody className="relative z-10">
                 <h3 className="text-xl font-semibold font-sora">Built for Scalability</h3>
                 <p className="text-gray-300 mt-3 font-clash">
@@ -208,7 +250,7 @@ const AllProjects: React.FC = () => {
                 <p className="text-red-400 text-center">{error}</p>
             ) : (
                 projects.map((project) => (
-                    <ProjectCard key={project._id} project={project} />
+                  <ProjectCard key={project.id} project={project} />
                 ))
             )}
           </div>

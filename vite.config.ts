@@ -11,9 +11,11 @@ export default defineConfig({
       '@': '/src',
     },
   },
-  plugins: [
-    react(),
-  ],
+  plugins: [react(),],
+  build: {
+    outDir: "dist",
+    target: "esnext", // Ensures correct module support
+  },
   css: {
     postcss: {
       plugins: [

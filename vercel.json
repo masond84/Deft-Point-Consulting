@@ -27,7 +27,12 @@
     {
       "source": "/(.*)", 
       "destination": "/index.html"
+    },
+    { 
+      "source": "/api/(.*)", 
+      "destination": "https://deft-point-backend.vercel.app/api/$1" 
     }
+
   ]
   }
   
