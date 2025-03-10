@@ -39,7 +39,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
         {/* Card Body */}
         <CardBody className="p-8 sm:p-6">
           <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center sm:items-start text-center sm:text-left sm:pl-4 sm:pr-4 mb-4 space-y-4 sm:space-y-0">
-            <h3 className="text-lg sm:text-xl font-medium font-sora whitespace-nowrap text-white">
+            <h3 className="text-lg sm:text-xl font-medium font-sora text-center sm:text-left leading-tight sm:whitespace-nowrap text-white">
               {project.title}
             </h3>
 

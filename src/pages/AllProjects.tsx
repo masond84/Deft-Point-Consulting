@@ -230,7 +230,7 @@ const AllProjects: React.FC = () => {
           {/* Projects Grid */}
           <div className="w-full max-w-5xl flex flex-col gap-8 mx-auto">
             {/* Header Section */}
-            <div ref={headerRef} className="text-center mb-12 max-w-3xl mx-auto px-12 sm:px-16 md:px-0">
+            <div ref={headerRef} className="text-center max-w-3xl mx-auto px-12 sm:px-16 md:px-0">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 font-sora leading-snug sm:leading-tight text-white">
                   Explore Our <span className="text-transparent bg-clip-text bg-gradient-to-l from-[#b4b4b4] to-[#e4e4e4]">Portfolio of Projects</span>
               </h2>
