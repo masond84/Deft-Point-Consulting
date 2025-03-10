@@ -20,7 +20,7 @@ const CustomWebsiteDevelopment: React.FC = () => {
       {/* Title Section */}
       <div className="mt-20 max-w-7xl mx-auto mb-8 px-6 flex flex-col md:flex-row items-start">
         <h1 className="text-3xl font-semibold text-left mb-4 font-sora md:mb-0 md:mr-12 w-full md:w-2/5 text-white">
-          Custom Website Design & Application Development
+          Custom Website Design & Software Development
         </h1>
         <p className="text-base sm:text-lg font-light font-clash w-full md:w-2/4 text-left text-gray-200">
           Full-service custom website development solutions to help your

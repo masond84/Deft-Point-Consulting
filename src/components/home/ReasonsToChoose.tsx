@@ -30,13 +30,13 @@ const ReasonsToChoose: React.FC = () => {
       icon: <img src={SparkleIcon} alt="Sparkle Icon" className="w-20 h-20" />,
       title: 'Custom Software Development',
       description: 'We develop businesses with custom applications and software tailored to their specific needs.',
-      link: '/services/custom-website-development',
+      link: '/services/custom-software-development',
     },
     {
       icon: <img src={LightBulbIcon} alt="Sparkle Icon" className="w-20 h-20" />,
       title: 'Consulting & Transformation',
       description: 'Unlock the full potential of your business with our strategic consulting and digital transformation services.',
-      link: '/services/mobile-first-designs',
+      link: '/services/consulting',
     },
     {
       icon: <img src={PointerIcon} alt="Sparkle Icon" className="w-20 h-20" />,
