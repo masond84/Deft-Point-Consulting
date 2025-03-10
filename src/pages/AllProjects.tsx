@@ -27,11 +27,14 @@ interface Project {
 }
 
 const AllProjects: React.FC = () => {
-    const navigate = useNavigate();
     const location = useLocation();
     const [projects, setProjects] = useState<Project[]>([]);
     const [ loading, setLoading] = useState(true);
     const [ error, setError ] = useState("");
+
+    // State to track which project is expanded
+    const [expandedProjectId, setExpandedProjectId] = useState<string | null>(null);
+
 
     const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api";
 
@@ -91,6 +94,11 @@ const AllProjects: React.FC = () => {
       if (headerRef.current) {
         headerRef.current.scrollIntoView({ behavior: "smooth" });
       }
+    };
+
+    // Function to toggle which project is expanded
+    const handleExpandProject = (projectId: string) => {
+      setExpandedProjectId(prevId => (prevId === projectId ? null : projectId)); // 🔹 If the same card is clicked again, collapse it
     };
 
     return(
@@ -248,7 +256,11 @@ const AllProjects: React.FC = () => {
             ) : (
                 projects.map((project) => (
                   <div key={project.id} ref={(el) => (projectRefs.current[project.id] = el)}>
-                    <ProjectCard project={project} />
+                    <ProjectCard 
+                      project={project}
+                      expanded={expandedProjectId === project.id} // Only expand if the ID matches
+                      onExpand={() => handleExpandProject(project.id)}
+                    />
                   </div>
                 ))
             )}

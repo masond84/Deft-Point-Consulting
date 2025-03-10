@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Card, CardBody, CardHeader, Button, Chip } from "@nextui-org/react";
-import { FaPalette, FaLaptopCode } from "react-icons/fa";
 import { TfiAngleDoubleUp, TfiAngleDown } from "react-icons/tfi";
 
 interface ProjectProps {
@@ -17,11 +16,11 @@ interface ProjectProps {
     technologies: { src: string; alt: string }[];
     methods: string[];
   };
+  expanded: boolean;
+  onExpand: () => void;
 }
 
-const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
-  const [expanded, setExpanded] = useState(false);
-
+const ProjectCard: React.FC<ProjectProps> = ({ project, expanded, onExpand }) => {
   return (
     <div id={String(project.id)} className="w-full">
       <Card className="bg-[#1A1A1A] shadow-lg rounded-lg border border-[#1F1F1F]">
@@ -43,13 +42,14 @@ const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
               {project.title}
             </h3>
 
+            {/* Expand Button */}
             <div className="flex items-center gap-2">
               <span className="text-[#666666] font-xs font-sora mr-2 sm:mr-0">
                 {expanded ? "Show Less" : "Show More"}
               </span>
               <div className="p-[2px] rounded-full bg-gradient-to-b from-[#1A1A1A] to-[#1A1A1A]/0">
                 <Button
-                  onPress={() => setExpanded(!expanded)}
+                  onPress={onExpand} 
                   className="p-3 bg-gradient-to-r from-[#222222] to-[#333333] text-white hover:text-white/80 border border-[#262626] rounded-full"
                   variant="ghost"
                 >
