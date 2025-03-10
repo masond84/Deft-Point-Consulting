@@ -5,16 +5,20 @@ import autoprefixer from 'autoprefixer';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './',
+  base: '/',
   resolve: {
     alias: {
       '@': '/src',
     },
   },
+  define: {
+    "import.meta.env": {}, // Ensures VITE environment variables are read correctly
+  },
   plugins: [react(),],
   build: {
     outDir: "dist",
     target: "esnext", // Ensures correct module support
+    sourcemap: true,
   },
   css: {
     postcss: {

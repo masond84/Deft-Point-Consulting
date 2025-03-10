@@ -99,8 +99,7 @@ const AllProjects: React.FC = () => {
         });
     }, []);
     
-    
-
+    console.log("VITE_API_BASE_URL:", import.meta.env.VITE_API_BASE_URL);
 
     return(
         <section className="py-12 px-6 bg-gradient-to-b from-[#0f0f0f] to-[#252525] min-h-screen">

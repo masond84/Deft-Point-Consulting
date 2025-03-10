@@ -1,38 +1,7 @@
 {
-  "rewrites": [
-    {
-      "source": "/services/:path*", 
-      "destination": "/index.html"
-    },
-    {
-      "source": "/portfolio", 
-      "destination": "/index.html"
-    },
-    {
-      "source": "/projects/:id", 
-      "destination": "/index.html"
-    },
-    {
-      "source": "/about", 
-      "destination": "/index.html"
-    },
-    {
-      "source": "/contact", 
-      "destination": "/index.html"
-    },
-    {
-      "source": "/get-quote", 
-      "destination": "/index.html"
-    },
-    {
-      "source": "/(.*)", 
-      "destination": "/index.html"
-    },
-    { 
-      "source": "/api/(.*)", 
-      "destination": "https://deft-point-backend.vercel.app/api/$1" 
-    }
-
+  "routes": [
+    { "src": "/api/(.*)", "dest": "https://deft-point-backend.vercel.app/api/$1" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
-  }
-  
+}
