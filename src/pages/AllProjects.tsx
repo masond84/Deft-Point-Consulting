@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Card, CardBody, CardFooter, Button, Link } from "@nextui-org/react";
 import { useNavigate } from "react-router-dom";
 
@@ -10,6 +10,7 @@ import CardImage from '../assets/images/DropdownCardImage2.jpg'
 import AbstractDesignSvg from '../assets/AbstractDesign.svg?url';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { BsChevronDoubleDown } from "react-icons/bs";
+import { BsChevronDoubleUp } from "react-icons/bs"; // Scroll up icon
 
 interface Project {
   id: string;
@@ -64,8 +65,11 @@ const AllProjects: React.FC = () => {
     const [projects, setProjects] = useState<Project[]>([]);
     const [ loading, setLoading] = useState(true);
     const [ error, setError ] = useState("");
+
     const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api";
 
+    // Reference for the header section to scroll back to
+    const headerRef = useRef<HTMLDivElement>(null);
 
     // Fetch Projects from Backend
     useEffect(() => {
@@ -99,7 +103,12 @@ const AllProjects: React.FC = () => {
         });
     }, []);
     
-    console.log("VITE_API_BASE_URL:", import.meta.env.VITE_API_BASE_URL);
+    // Scroll to header function
+    const scrollToTop = () => {
+      if (headerRef.current) {
+        headerRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    };
 
     return(
         <section className="py-12 px-6 bg-gradient-to-b from-[#0f0f0f] to-[#252525] min-h-screen">
@@ -232,7 +241,7 @@ const AllProjects: React.FC = () => {
           {/* Projects Grid */}
           <div className="w-full max-w-5xl flex flex-col gap-8 mx-auto">
             {/* Header Section */}
-            <div className="text-center mb-12 max-w-3xl mx-auto px-12 sm:px-16 md:px-0">
+            <div ref={headerRef} className="text-center mb-12 max-w-3xl mx-auto px-12 sm:px-16 md:px-0">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 font-sora leading-snug sm:leading-tight text-white">
                   Explore Our <span className="text-transparent bg-clip-text bg-gradient-to-l from-[#b4b4b4] to-[#e4e4e4]">Portfolio of Projects</span>
               </h2>
@@ -252,6 +261,16 @@ const AllProjects: React.FC = () => {
                   <ProjectCard key={project.id} project={project} />
                 ))
             )}
+          </div>
+
+          {/* Scroll To Top Button */}
+          <div className="inset-0 flex items-center justify-center mt-10">
+            <Button
+              onPress={scrollToTop}
+              className="px-6 py-3 rounded-full border border-[#262626] bg-[#1A1A1A]/20 text-white font-sora hover:bg-[#1A1A1A]/40 text-sm font-light flex items-center justify-center"
+            >
+              Scroll to Top <BsChevronDoubleUp className="ml-2" />
+            </Button>
           </div>
         </section>
     )
