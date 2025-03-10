@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Card, CardBody, CardFooter, Button, Link } from "@nextui-org/react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 // Import Components
 import ProjectCard from '../components/projects/ProjectCard';
@@ -26,42 +26,9 @@ interface Project {
   methods: string[];
 }
 
-// Update fake projects with real data
-const projects = [
-    {
-      id: 1,
-      title: "CostTracker",
-      description: "A Norwegian purchase order platform with a modernized UX.",
-      image: CardImage,
-      tags: ["Corporate website", "Design", "UI/UX", "WordPress"],
-      category: "Web Development",
-      timeTaken: "3 Months",
-      startDate: "Aug 20, 2024",
-      endDate: "Oct 16, 2024",
-      technologies: [
-        { src: "/assets/icons/react.svg", alt: "React.js" },
-        { src: "/assets/icons/nextjs.svg", alt: "Next.js" },
-        { src: "/assets/icons/tailwind.svg", alt: "Tailwind CSS" },
-      ],
-      methods: ["Full-Stack Development", "API Integration", "SEO Optimization"],
-    },
-    {
-      id: 2,
-      title: "E-Commerce Redesign",
-      description: "A Shopify-based online store with a seamless UX.",
-      image: CardImage,
-      tags: ["E-commerce", "Redesign", "Shopify"],
-      category: "Web Development",
-      timeTaken: "2 Months",
-      startDate: "Jul 10, 2024",
-      endDate: "Sep 5, 2024",
-      technologies: [{ src: "/assets/icons/shopify.svg", alt: "Shopify" }],
-      methods: ["UX Research", "Conversion Optimization"],
-    },
-];
-
 const AllProjects: React.FC = () => {
     const navigate = useNavigate();
+    const location = useLocation();
     const [projects, setProjects] = useState<Project[]>([]);
     const [ loading, setLoading] = useState(true);
     const [ error, setError ] = useState("");
@@ -70,6 +37,7 @@ const AllProjects: React.FC = () => {
 
     // Reference for the header section to scroll back to
     const headerRef = useRef<HTMLDivElement>(null);
+    const projectRefs = useRef<{ [key: string]: HTMLDivElement | null}>({});
 
     // Fetch Projects from Backend
     useEffect(() => {
@@ -102,6 +70,16 @@ const AllProjects: React.FC = () => {
           setLoading(false);
         });
     }, []);
+
+    // Scroll to prpject if a query parameter is present
+    useEffect(() => {
+      const params = new URLSearchParams(location.search);
+      const scrollToId = params.get("scrollTo");
+  
+      if (scrollToId && projectRefs.current[scrollToId]) {
+        projectRefs.current[scrollToId]?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, [location.search, projects]); // Run this after projects are loaded
     
     // Scroll to header function
     const scrollToTop = () => {
@@ -153,7 +131,7 @@ const AllProjects: React.FC = () => {
                       View Projects
                     </Link>
                     <Button 
-                      onPress={() => navigate("#projects")}
+                      onPress={scrollToTop}
                       className="w-12 h-2 p-4 text-white text-sm rounded-full border border-glass-bg transition-colors font-semibold tracking-wide font-clash"
                       style={{
                         backgroundImage: `linear-gradient(150deg, #4fadff 20%, #6dc1ff 55%, #0e73e6b9 100%)`,
@@ -258,7 +236,9 @@ const AllProjects: React.FC = () => {
                 <p className="text-red-400 text-center">{error}</p>
             ) : (
                 projects.map((project) => (
-                  <ProjectCard key={project.id} project={project} />
+                  <div key={project.id} ref={(el) => (projectRefs.current[project.id] = el)}>
+                    <ProjectCard project={project} />
+                  </div>
                 ))
             )}
           </div>
