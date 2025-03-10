@@ -21,7 +21,10 @@ import MaintenancePlans from './pages/subpages/MaintenacePlans';
 import Marketing from './pages/subpages/Marketing';
 import DataServices from './pages/subpages/DataServices';
 import AllProjects from './pages/AllProjects';
-// Projects Pages
+// Legal Pages
+import PrivacyPolicy from './pages/legalpages/PrivacyPolicy';
+import Terms from './pages/legalpages/Terms';
+import Cookies from './pages/legalpages/Cookie';
 
 const App: React.FC = () => {
   return (
@@ -46,6 +49,9 @@ const App: React.FC = () => {
           <Route path="/services/marketing" element={<Marketing />} />
           <Route path="/services/data-solutions" element={<DataServices />} />
           <Route path="projects/all-projects" element={<AllProjects />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<Terms />} />
+          <Route path="/cookie-policy" element={<Cookies />} />
         </Routes>
         <Footer />
       </div>

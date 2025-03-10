@@ -194,13 +194,13 @@ const CustomFooter: React.FC = () => {
           <div>
             <Footer.Title title="Legal" className="text-white font-sora" />
             <Footer.LinkGroup col>
-              <Footer.Link href="#" className="font-sora font-normal">
+              <Footer.Link href="/privacy-policy" className="font-sora font-normal">
                 Privacy Policy
               </Footer.Link>
-              <Footer.Link href="#" className="font-sora font-normal">
+              <Footer.Link href="/terms-and-conditions" className="font-sora font-normal">
                 Terms & Conditions
               </Footer.Link>
-              <Footer.Link href="#" className="font-sora font-normal">
+              <Footer.Link href="/cookie-policy" className="font-sora font-normal">
                 Cookie Policy
               </Footer.Link>
             </Footer.LinkGroup>
@@ -224,13 +224,13 @@ const CustomFooter: React.FC = () => {
 
           {/* Legal Links */}
           <div className="flex justify-center space-x-4 sm:space-x-6 sm:absolute sm:right-0">
-            <Footer.Link href="#" className="text-sm text-gray-400 hover:text-white">
+            <Footer.Link href="/privacy-policy" className="text-sm text-gray-400 hover:text-white">
               Privacy Policy
             </Footer.Link>
-            <Footer.Link href="#" className="text-sm text-gray-400 hover:text-white">
+            <Footer.Link href="/terms-and-conditions" className="text-sm text-gray-400 hover:text-white">
               Terms & Conditions
             </Footer.Link>
-            <Footer.Link href="#" className="text-sm text-gray-400 hover:text-white">
+            <Footer.Link href="/cookie-policy" className="text-sm text-gray-400 hover:text-white">
               Cookie Policy
             </Footer.Link>
           </div>
