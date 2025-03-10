@@ -45,7 +45,7 @@ const AllProjects: React.FC = () => {
         .then(response => response.json())
         .then((data) => {
           const formattedProjects = data.map((project: any) => ({
-            id: Number(project._id), // Convert _id (string) to number
+            id: project._id?.toString() || "", // Ensure ID is always a string
             title: project.title,
             description: project.description,
             image: project.image,
@@ -71,16 +71,21 @@ const AllProjects: React.FC = () => {
         });
     }, []);
 
-    // Scroll to prpject if a query parameter is present
+    // Scroll to project if a query parameter is present
     useEffect(() => {
       const params = new URLSearchParams(location.search);
       const scrollToId = params.get("scrollTo");
-  
-      if (scrollToId && projectRefs.current[scrollToId]) {
-        projectRefs.current[scrollToId]?.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      if (scrollToId) {
+        setTimeout(() => {
+          const targetElement = document.getElementById(scrollToId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }, 100); // Delay to allow rendering
       }
     }, [location.search, projects]); // Run this after projects are loaded
-    
+
     // Scroll to header function
     const scrollToTop = () => {
       if (headerRef.current) {
