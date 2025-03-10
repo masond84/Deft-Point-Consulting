@@ -94,7 +94,13 @@ const AllProjects: React.FC = () => {
     };
 
     return(
-        <section className="py-12 px-6 bg-gradient-to-b from-[#0f0f0f] to-[#252525] min-h-screen">
+        <section 
+          className="py-8 px-6 min-h-screen"
+          style={{
+            background: 'linear-gradient(285deg, #0F0F0F 60%, #0f0f0f98 92%)',
+            overflow: 'hidden',
+          }}
+        >
           
           {/* Hero Section */}
           <div className="max-w-7xl mx-auto px-6 py-24 grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">

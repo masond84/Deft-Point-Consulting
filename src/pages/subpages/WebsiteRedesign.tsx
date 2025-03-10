@@ -139,7 +139,7 @@ const WebsiteRedesign: React.FC = () => {
         </div>
 
         {/* Row 4: Text on left, Image on right */}
-        <div className="flex flex-col md:flex-row items-center md:items-start">
+        <div className="flex flex-col md:flex-row items-center md:items-start overflow-hidden">
           {/* Text Card */}
           <Card className="md:w-5/12 w-full h-full bg-glass-bg shadow-glass backdrop-blur-glass border border-glass-border p-6 rounded-lg flex flex-col justify-end">
             {/* Overlay Image */}
@@ -164,7 +164,7 @@ const WebsiteRedesign: React.FC = () => {
           </Card>
 
           {/* Image Card */}
-          <Card className="md:w-12/12 w-full md:order-1">
+          <Card className="hidden md:block md:w-12/12 w-full md:order-1">
             <CardBody>
               <img
                 src={CardImage4}
