@@ -6,7 +6,7 @@ import LockIcon from '../../assets/images/LockIcon.svg';
 import BoltIcon from '../../assets/images/BoltIcon.svg';
 import CardImage from '../../assets/images/DropdownCardImage2.jpg';
 import CardImage22 from '../../assets/images/DesignImage-custom-website-development.svg';
-import CardImage2 from '../../assets/images/image 1.svg';
+import CardImage2 from '../../assets/images/TestImage2.png';
 
 import CardImage3 from '../../assets/images/card-image-2-website-design.png';
 import CardImage4 from '../../assets/images/card-image-3-website-design.png';
