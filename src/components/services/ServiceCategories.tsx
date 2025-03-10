@@ -57,7 +57,7 @@ const ServiceCardOne: React.FC<ServiceCardOneProps> = ({ header, features }) => 
             {features.slice(0, Math.ceil(features.length / 2)).map((feature, index) => (
                 <div
                     key={`left-${index}`}
-                    className="flex flex-col justify-between min-h-[100px]" // Set a minimum height
+                    className="flex flex-col justify-between min-h-[100px] space-y-6 sm:space-y-4" // Set a minimum height
                 >
                     <h4 className="text-lg font-semibold text-white">{feature.title}</h4>
                     <p className="text-sm text-gray-400 mt-4">{feature.description}</p>
@@ -72,7 +72,7 @@ const ServiceCardOne: React.FC<ServiceCardOneProps> = ({ header, features }) => 
             {features.slice(Math.ceil(features.length / 2)).map((feature, index) => (
                 <div
                     key={`right-${index}`}
-                    className="flex flex-col justify-between min-h-[80px]" // Set a minimum height
+                    className="flex flex-col justify-between min-h-[80px] space-y-6 sm:space-y-4" // Set a minimum height
                 >
                     <h4 className="text-lg font-semibold text-white">{feature.title}</h4>
                     <p className="text-sm text-gray-400 mt-4">{feature.description}</p>
@@ -96,7 +96,7 @@ const ServiceCardTwo: React.FC<ServiceCardTwoProps> = ({ header, description, st
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
                 {/* Dynamically render steps */}
                 {steps.slice(0, Math.ceil(steps.length / 2)).map((step, index) => (
-                <div key={`left-${index}`} className="flex flex-col justify-between min-h-[100px]">
+                <div key={`left-${index}`} className="flex flex-col justify-between min-h-[100px] space-y-6 sm:space-y-4">
                     <h4 className="text-lg font-semibold text-white">{step.title}</h4>
                     <p className="text-sm text-gray-400 mt-4">{step.content}</p>
                     <hr className="border-t border-[#1F1F1F] w-full mt-auto" />
@@ -104,7 +104,7 @@ const ServiceCardTwo: React.FC<ServiceCardTwoProps> = ({ header, description, st
                 ))}
                 <div className="absolute left-1/2 top-0 h-full w-px bg-[#1F1F1F] hidden md:block"></div>
                 {steps.slice(Math.ceil(steps.length / 2)).map((step, index) => (
-                <div key={`right-${index}`} className="flex flex-col justify-between min-h-[80px]">
+                <div key={`right-${index}`} className="flex flex-col justify-between min-h-[80px] space-y-6 sm:space-y-4">
                     <h4 className="text-lg font-semibold text-white">{step.title}</h4>
                     <p className="text-sm text-gray-400 mt-4">{step.content}</p>
                 </div>
