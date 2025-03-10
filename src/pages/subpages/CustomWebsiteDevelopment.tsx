@@ -5,7 +5,9 @@ import { motion } from "motion/react";
 import LockIcon from '../../assets/images/LockIcon.svg';
 import BoltIcon from '../../assets/images/BoltIcon.svg';
 import CardImage from '../../assets/images/DropdownCardImage2.jpg';
-import CardImage2 from '../../assets/images/DesignImage-custom-website-development.svg';
+import CardImage22 from '../../assets/images/DesignImage-custom-website-development.svg';
+import CardImage2 from '../../assets/images/image 1.svg';
+
 import CardImage3 from '../../assets/images/card-image-2-website-design.png';
 import CardImage4 from '../../assets/images/card-image-3-website-design.png';
 import CardImage5 from '../../assets/images/card-image-4-website-design.png';
@@ -18,7 +20,7 @@ const CustomWebsiteDevelopment: React.FC = () => {
       {/* Title Section */}
       <div className="mt-20 max-w-7xl mx-auto mb-8 px-6 flex flex-col md:flex-row items-start">
         <h1 className="text-3xl font-semibold text-left mb-4 font-sora md:mb-0 md:mr-12 w-full md:w-2/5 text-white">
-          Website Design & Application Development
+          Custom Website Design & Application Development
         </h1>
         <p className="text-base sm:text-lg font-light font-clash w-full md:w-2/4 text-left text-gray-200">
           Full-service custom website development solutions to help your
