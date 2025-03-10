@@ -27,6 +27,7 @@ interface Project {
 }
 
 const AllProjects: React.FC = () => {
+    const navigate = useNavigate();
     const location = useLocation();
     const [projects, setProjects] = useState<Project[]>([]);
     const [ loading, setLoading] = useState(true);
@@ -130,7 +131,7 @@ const AllProjects: React.FC = () => {
                 }}
               ></div>
 
-              <CardBody className="relative z-10 text-white flex flex-col md:flex-row justify-between items-start w-full h-full">
+              <CardBody className="relative z-10 text-white flex flex-col md:flex-row justify-between items-start w-full h-full gap-4 md:gap-0">
                 {/* Left aligned content */}
                 <div className="w-full md:w-3/4">
                   <h1 className="text-2xl md:text-3xl font-semibold font-sora leading-tight">
@@ -191,6 +192,7 @@ const AllProjects: React.FC = () => {
                     Learn More
                   </Link>
                   <Button 
+                    onPress={() => navigate("/services")}
                     className="w-12 h-2 p-4 bg-black rounded-full flex items-center justify-center"
                   >
                     <ArrowRightAltIcon />
@@ -226,6 +228,7 @@ const AllProjects: React.FC = () => {
                     See How
                   </Link>
                   <Button 
+                    onPress={() => navigate("/about")}
                     className="w-12 h-2 p-4 bg-black rounded-full flex items-center justify-center"
                   >
                     <ArrowRightAltIcon />
