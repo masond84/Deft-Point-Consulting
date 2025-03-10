@@ -42,7 +42,7 @@ const ReasonsToChoose: React.FC = () => {
       icon: <img src={PointerIcon} alt="Sparkle Icon" className="w-20 h-20" />,
       title: 'Full-Scale Website Design',
       description: "We craft visually stunning, responsive websites that elevate your brand's digital presence.",
-      link: '/services/website-redesign',
+      link: '/services/website-design',
     },
     {
       icon: <img src={PhoneIcon} alt="Sparkle Icon" className="w-20 h-20" />,

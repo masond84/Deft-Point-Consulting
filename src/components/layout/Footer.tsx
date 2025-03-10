@@ -89,15 +89,11 @@ const CustomFooter: React.FC = () => {
                 <Footer.Link href="/services/custom-software-development" className="font-sora font-normal">
                   Custom Software Development
                 </Footer.Link>
-                <Footer.Link href="/services/website-redesign" className="font-sora font-normal">
-                  Website Redesign
+                <Footer.Link href="/services/consulting" className="font-sora font-normal">
+                  Consulting & Transformation
                 </Footer.Link>
-
-                <Footer.Link href="#" className="font-sora font-normal">
-                  App Development
-                </Footer.Link>
-                <Footer.Link href="/services/marketing" className="font-sora font-normal">
-                  Digital Marketing
+                <Footer.Link href="/services/website-design" className="font-sora font-normal">
+                  Website Design
                 </Footer.Link>
               </Footer.LinkGroup>
             </AccordionItem>
@@ -109,7 +105,7 @@ const CustomFooter: React.FC = () => {
                   Our Portfolio
                 </Footer.Link>
                 {/* Create and take users to all pages section */}
-                <Footer.Link href="#" className="font-sora font-normal">
+                <Footer.Link href="projects/all-projects" className="font-sora font-normal">
                   All Projects
                 </Footer.Link>
                 {/* Take user to portfolio page and showcase section */}
@@ -124,13 +120,13 @@ const CustomFooter: React.FC = () => {
 
             <AccordionItem title="Legal" className="text-white font-sora">
               <Footer.LinkGroup col className="mb-2">
-                <Footer.Link href="#" className="font-sora font-normal">
+                <Footer.Link href="/privacy-policy" className="font-sora font-normal">
                   Privacy Policy
                 </Footer.Link>
-                <Footer.Link href="#" className="font-sora font-normal">
+                <Footer.Link href="/terms-and-conditions" className="font-sora font-normal">
                   Terms & Conditions
                 </Footer.Link>
-                <Footer.Link href="#" className="font-sora font-normal">
+                <Footer.Link href="/cookie-policy" className="font-sora font-normal">
                   Cookie Policy
                 </Footer.Link>
               </Footer.LinkGroup>
@@ -166,7 +162,7 @@ const CustomFooter: React.FC = () => {
               <Footer.Link href="/services/consulting" className="font-sora font-normal">
                 Consulting & Transformation
               </Footer.Link>
-              <Footer.Link href="/services/website-redesign" className="font-sora font-normal">
+              <Footer.Link href="/services/website-design" className="font-sora font-normal">
                 Website Design
               </Footer.Link>
             </Footer.LinkGroup>
