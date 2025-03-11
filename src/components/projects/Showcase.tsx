@@ -127,17 +127,17 @@ const Showcase: React.FC = () => {
                     <h4 className="font-light text-white font-sora">Category</h4>
                     <p className="text-[#666666]">Website Development</p>
                   </div>
-                  <div className="hidden sm:block w-px bg-[#1f1f1f] h-12 mx-4"></div>
+                  <div className="hidden sm:block w-px bg-[#1f1f1f] h-16 mx-4"></div>
                   <div className='flex-1 text-center'>
                     <h4 className="font-light text-white font-sora">Time Taken</h4>
                     <p className="text-[#666666]">3 Months</p>
                   </div>
-                  <div className="hidden sm:block w-px bg-[#1f1f1f] h-12 mx-4"></div>
+                  <div className="hidden sm:block w-px bg-[#1f1f1f] h-16 mx-4"></div>
                   <div className='hidden sm:block flex-1 text-center'>
                     <h4 className="font-light text-white font-sora">Start Date</h4>
                     <p className="text-[#666666]">Aug 20, 2024</p>
                   </div>
-                  <div className="hidden sm:block w-px bg-[#1f1f1f] h-12 mx-4"></div>
+                  <div className="hidden sm:block w-px bg-[#1f1f1f] h-16 mx-4"></div>
                   <div className='hidden sm:block flex-1 text-center'>
                     <h4 className="font-light text-white font-sora">End Date</h4>
                     <p className="text-[#666666]">Oct 16, 2024</p>
@@ -299,7 +299,7 @@ const Showcase: React.FC = () => {
             {expandedCard === 2 && (
               <div className="space-y-6 p-4 sm:p-8 bg-[#0f0f0f] border border-[#1F1F1F] rounded-lg mx-0 sm:mx-4">
                 {/* Project Details */}
-                <div className="flex flex-col sm:flex-row font-clash items-center sm:items-start justify-center sm:justify-between border border-[#1F1F1F] rounded-lg p-4 space-y-4 sm:space-y-0">
+                <div className="flex flex-col sm:flex-row font-clash items-stretch justify-center sm:justify-between border border-[#1F1F1F] rounded-lg p-4 space-y-4 sm:space-y-0">
                   <div className='flex-1 text-center'>
                     <h4 className="font-light text-white font-sora">Category</h4>
                     <p className="text-[#666666]">Design & Branding</p>
@@ -391,7 +391,7 @@ const Showcase: React.FC = () => {
                       size="lg"
                       variant="bordered"
                     >
-                      Prototyping and Wirefreaming
+                      Prototyping and Wireframing
                     </Chip>
                   </div>
                 </div>

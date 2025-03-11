@@ -230,10 +230,12 @@ const ServiceCategories: React.FC = () => {
         if (location.state && location.state.tabValue !== undefined) {
             setTabValue(location.state.tabValue);
 
-            // Smooth scroll to the categories section
-            if (categoriesRef.current) {
-                categoriesRef.current.scrollIntoView({ behavior: 'smooth' });
-            }
+            // Smooth scroll to categories section
+            setTimeout(() => {
+                if (categoriesRef.current) {
+                categoriesRef.current.scrollIntoView({ behavior: "smooth" });
+                }
+            }, 300);
         }
     }, [location.state]);
 
@@ -405,7 +407,7 @@ const ServiceCategories: React.FC = () => {
                         {...swipeHandlers} // Attach swipe handlers here
                         orientation={isMobile ? 'horizontal' : 'vertical'}
                         value={tabValue}
-                        onChange={handleChange}
+                        onChange={(_, newValue) => setTabValue(newValue)}
                         variant={isMobile ? 'scrollable' : 'standard'}
                         scrollButtons="auto"
                         textColor="inherit"

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Card, CardHeader, CardBody, CardFooter, Button, Link } from "@nextui-org/react";
-import { Link as RouterLink } from "react-router-dom"; // Import Router Link
+import { Link as RouterLink, useNavigate } from "react-router-dom"; // Import Router Link
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import abstractDesignSvg from '@/assets/AbstractDesign.svg';
 import WebIcon from '../../assets/images/WebPIcon.svg';
@@ -10,6 +10,8 @@ import BoltIcon from '../../assets/images/BoltPIcon.svg';
 import PointerIcon from '../../assets/images/PointerPIcon.svg';
 
 const OurServices: React.FC = () => {
+  const navigate = useNavigate();
+
   const services = [
     {
       icon: <img src={WebIcon} alt="Website and Application Development" className="w-20 h-20" />,
@@ -102,7 +104,7 @@ const OurServices: React.FC = () => {
                 </span>
                 <Button 
                   onPress={() => {
-                    window.location.href = '/services#categories';
+                      navigate('/services', { state: {tabIndex: 1} });
                   }}
                   className="w-12 h-2 p-4 bg-black rounded-full flex items-center justify-center">
                   <ArrowRightAltIcon />
