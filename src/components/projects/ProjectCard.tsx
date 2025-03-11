@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Card, CardBody, CardHeader, Button, Chip } from "@nextui-org/react";
 import { TfiAngleDoubleUp, TfiAngleDown } from "react-icons/tfi";
+import { motion } from "motion/react";
 
 interface ProjectProps {
   project: {
@@ -110,19 +111,30 @@ const ProjectCard: React.FC<ProjectProps> = ({ project, expanded, onExpand }) =>
               </div>
 
               {/* Technologies Used */}
-              <div className="flex flex-wrap gap-4 justify-center">
-                {project.technologies.map((tech, index) => (
-                  <img key={index} src={tech.src} alt={tech.alt} className="w-10 h-10 sm:w-12 sm:h-12" />
-                ))}
+              <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start border border-[#1F1F1F] rounded-lg p-4 sm:pl-12">
+                <h4 className="text-md sm:text-lg font-light text-white font-sora text-center sm:text-left mb-2 sm:mb-0 flex">Technologies Used</h4>
+                <div className="flex flex-wrap justify-center sm:justify-start ml-0 sm:ml-8 items-center gap-4 sm:gap-8">
+                  {project.technologies.map((tech, index) => (
+                    <motion.div
+                      key={index}
+                      whileHover={{ y: [0, -6, 0, -3, 0], transition: { duration: 0.8, ease: "easeInOut" } }}
+                    >
+                      <img src={tech.src} alt={tech.alt} className="w-10 h-10 sm:w-12 sm:h-12" />
+                    </motion.div>
+                  ))}
+                </div>
               </div>
 
               {/* Methods Used */}
-              <div className="flex flex-wrap gap-4 justify-center">
-                {project.methods.map((method, index) => (
-                  <Chip key={index} className="bg-transparent text-[#A6A6A6] border border-[#272727] rounded-full px-3 py-1 text-xs sm:text-sm font-clash">
-                    {method}
-                  </Chip>
-                ))}
+              <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start border border-[#1F1F1F] rounded-lg p-4 sm:pl-12 space-y-4 sm:space-y-0 sm:space-x-10">
+                <h4 className="text-md sm:text-lg font-light text-white font-sora text-center sm:text-left mb-2 sm:mb-0">Methods Used</h4>
+                <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
+                  {project.methods.map((method, index) => (
+                    <Chip key={index} className="bg-transparent text-[#A6A6A6] border border-[#272727] rounded-full px-3 py-1 sm:p-4 text-xs sm:text-sm font-clash">
+                      {method}
+                    </Chip>
+                  ))}
+                </div>
               </div>
             </div>
           )}
