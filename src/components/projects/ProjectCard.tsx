@@ -27,11 +27,11 @@ const ProjectCard: React.FC<ProjectProps> = ({ project, expanded, onExpand }) =>
       <Card className="bg-[#1A1A1A] shadow-lg rounded-lg border border-[#1F1F1F]">
         {/* Card Header */}
         <CardHeader className="p-4">
-          <div className="bg-[#222222] shadow-glass rounded-lg overflow-hidden flex justify-center items-center h-fit">
+          <div className="bg-[#222222] shadow-glass rounded-lg overflow-hidden flex justify-center items-center w-full h-[150px] sm:h-[250px] md:h-[300px] lg:h-[400px]">
             <img
               src={project.image}
               alt={project.title}
-              className="rounded-lg object-cover w-full"
+              className="rounded-lg object-cover w-full h-full"
             />
           </div>
         </CardHeader>
