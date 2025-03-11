@@ -10,8 +10,8 @@ const ContactByEmail: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-8 sm:px-0">
         {[
           { title: "For General Inquiries", email: "deftpointdigital@outlook.com" },
-          { title: "For Business Collaborations", email: "deftpointdigitalbusines@outlook.com" },
-          { title: "For Job Opportunities", email: "deftpointdigitalcareers@outlook.com" },
+          { title: "For Business Collaborations", email: "dpdbusiness@outlook.com" },
+          { title: "For Job Opportunities", email: "dpdcareers@outlook.com" },
         ].map((item, index) => (
           <div
             key={index}
