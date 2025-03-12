@@ -9,9 +9,9 @@ const ContactByPhone: React.FC = () => {
       <h2 className="text-center text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#f0f0f0] to-[#ffffffcc] font-bold mb-6">Contact Us By Phone</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-8 sm:px-0">
         {[
-          { title: "General Enquiries", phone: "+1-XXX-XXX-XXXX" },
-          { title: "Business Collaborations", phone: "+1-XXX-XXX-XXXX" },
-          { title: "Free Consultation", phone: "+1-XXX-XXX-XXXX" },
+          { title: "General Enquiries", phone: "+1-(813) 563-3902" }, // Google Voice - dmasonone@gmail.com - 410-459-9139
+          { title: "Business Collaborations", phone: "+1-(813) 553-2084" }, // Google Voice - dev.rmason@gmail.com - 813-360-5411
+          { title: "Free Consultation", phone: "+1-(813) 563-3902" }, // Google Voice - 
         ].map((item, index) => (
           <div
             key={index}
