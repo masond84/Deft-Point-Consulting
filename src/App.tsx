@@ -1,7 +1,9 @@
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ScrollToHash } from "./utils/ScrollToHash"; // Import your utility
 import ScrollToTop from "./components/layout/ScrollToTop"; // Adjust path as needed
 import { Analytics } from "@vercel/analytics/react";
+import { initializeClarity } from './clarity';
 // Components
 import  Header from './components/layout/Header';
 import Footer  from './components/layout/Footer';
