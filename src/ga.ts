@@ -5,5 +5,5 @@ const PRODUCTION_ID = "G-BTW851KXSF";
 
 export const initializeGA = () => {
     ReactGA.initialize(TRACKING_ID);
-    ReactGA.initialize(PRODUCTION_ID, { gaOptions: { name: 'production' } });
+    ReactGA.initialize(PRODUCTION_ID);
 };
