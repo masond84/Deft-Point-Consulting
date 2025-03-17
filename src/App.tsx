@@ -1,9 +1,12 @@
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { ScrollToHash } from "./utils/ScrollToHash"; // Import your utility
 import ScrollToTop from "./components/layout/ScrollToTop"; // Adjust path as needed
 import { Analytics } from "@vercel/analytics/react";
 import { initializeClarity } from './clarity';
+import { initializeGA } from "./ga"; // Import GA setup
+import ReactGA from "react-ga4";
+
 // Components
 import  Header from './components/layout/Header';
 import Footer  from './components/layout/Footer';
@@ -29,9 +32,25 @@ import PrivacyPolicy from './pages/legalpages/PrivacyPolicy';
 import Terms from './pages/legalpages/Terms';
 import Cookies from './pages/legalpages/Cookie';
 
+const TrackPageView = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
+
+  return null;
+};
+
 const App: React.FC = () => {
+  useEffect(() => {
+    initializeClarity(); // Clarity
+    initializeGA(); // Initialize Google Analytics
+  }, []);
+
   return (
     <Router>
+      <TrackPageView />
       <ScrollToTop /> {/* Automatically scrolls to the top on route change */}
       <div className='bg-[#6E6E6E]'>
         {/* Preloader */}
