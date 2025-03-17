@@ -383,7 +383,7 @@ const CustomWebsiteDevelopment: React.FC = () => {
                   {/* Facebook Button */}
                   <Button 
                     className="flex items-center justify-center p-2 rounded-full bg-gradient-to-b from-[#0e0e0e] to-[#4d4d4d]/40"
-                    onPress={() => window.open("", "_blank")}
+                    onPress={() => window.open("https://www.facebook.com/profile.php?id=61572559884891", "_blank")}
                   >
                     <BsFacebook className="text-white text-xl" />
                   </Button>
