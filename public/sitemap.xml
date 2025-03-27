@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/chemas/sitemap/0.9">
+    <!-- Main Pages -->
+    <url>
+        <loc>https://deftpointconsulting.com/</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://deftpointconsulting.com/services</loc>
+    </url>
+    <url>
+        <loc>https://deftpointconsulting.com/portfolio</loc>
+    </url>
+    <url>
+        <loc>https://deftpointconsulting.com/about</loc>
+    </url>
+    <url>
+        <loc>https://deftpointconsulting.com/contact</loc>
+    </url>
+    <url>
+        <loc>https://deftpointconsulting.com/get-quote</loc>
+    </url>
+
+    <!-- Service Subpages -->
+    <url>
+        <loc>https://deftpointconsulting.com/services/custom-software-development</loc>
+    </url>
+    <url>
+        <loc>https://deftpointconsulting.com/services/consulting</loc>
+    </url>
+    <url>
+        <loc>https://deftpointconsulting.com/services/website-design</loc>
+    </url>
+    <url>
+        <loc>https://deftpointconsulting.com/services/website-maintenance-plans</loc>
+    </url>
+    <url>
+        <loc>https://deftpointconsulting.com/services/marketing</loc>
+    </url>
+    <url>
+        <loc>https://deftpointconsulting.com/services/data-solutions</loc>
+    </url>
+
+    <!-- Project Listings -->
+    <url>
+        <loc>https://deftpointconsulting.com/projects/all-projects</loc>
+    </url>
+
+    <!-- Legal Pages -->
+    <url>
+        <loc>https://deftpointconsulting.com/privacy-policy</loc>
+    </url>
+    <url>
+        <loc>https://deftpointconsulting.com/terms-and-conditions</loc>
+    </url>
+    <url>
+        <loc>https://deftpointconsulting.com/cookie-policy</loc>
+    </url>
+</urlset>
