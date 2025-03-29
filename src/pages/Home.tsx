@@ -10,7 +10,7 @@ const Home: React.FC = () => {
     return (
         <div>
             <Helmet>
-                <title>Deft Point Consulting</title>
+                <title>Deft Point Consulting | Web Design & Full-Scale Development Agency</title>
                 <meta name="description" content="Deft Point Consulting is a consulting firm that specializes in providing tailored software solutions to drive growth for small businesses and startups." />
             </Helmet>
             <Hero />
