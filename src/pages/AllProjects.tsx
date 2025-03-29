@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import { Helmet } from "react-helmet";
 import { Card, CardBody, CardFooter, Button, Link } from "@nextui-org/react";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -110,7 +111,18 @@ const AllProjects: React.FC = () => {
             overflow: 'hidden',
           }}
         >
-          
+          <Helmet>
+            <title>Our Works | Deft Point Consulting</title>
+            <meta 
+              name="description" 
+              content="Explore our portfolio of professional websites, web apps, CRM setups, and data focused projects built for small businesses and startups." 
+            />
+            <meta 
+              name="keywords" 
+              content="web design portfolio, custom websites, web app development, React portfolio, SEO projects, Deft Point Consulting" 
+            />
+          </Helmet>
+
           {/* Hero Section */}
           <div className="max-w-7xl mx-auto px-6 py-24 grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
             

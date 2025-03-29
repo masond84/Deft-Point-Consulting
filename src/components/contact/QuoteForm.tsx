@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import { Button } from '@nextui-org/react';
 import emailjs from "emailjs-com";
 import { Modal, Box, Typography } from "@mui/material";
@@ -84,6 +85,19 @@ const QuoteForm: React.FC = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-[#121212] text-white py-40">
+      <Helmet>
+        <title>Quote Inquiry | Deft Point Consulting</title>
+        <meta 
+          name="description" 
+          content="Start your project with Deft Point. Get a custom quote for full-stack development, web design, CRM systems, or branding solutions tailored to your needs." 
+        />
+        <meta 
+          name="keywords" 
+          content="get a quote website, custom web design quote, app development pricing, full stack development quote, Deft Point Consulting" 
+        />
+      </Helmet>
+
+
       {/* Modal */}
       <Modal
         open={modalOpen}
